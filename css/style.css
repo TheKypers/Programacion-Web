@@ -5,15 +5,29 @@ body{
 .center {
     text-align: center;
   }
-.banner1{
+.bannerTitulo{
     background: rgb(252,194,136);
     background: radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%);
 
     background-image:radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%),url(/img/BackBanner.jpg);
-    background-blend-mode:multiply,normal ;
+    background-blend-mode:multiply,normal;
     background-size: 1950px;
     background-position: right;
     border-radius: 20px;
+}
+.banner{
+    background-color:white;
+    margin: 40px;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s
     
 }
 
+.banner:hover{
+    background-color:rgb(233, 233, 233);
+    transition: 0.5s;
+}
+
+.banner:hover:
