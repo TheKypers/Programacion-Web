@@ -15,17 +15,33 @@ body{
     background-position: right;
     border-radius: 20px;
 }
+a{
+    text-decoration:none;
+}
 .banner{
     background-color:white;
+    /*
     margin: 40px;
     padding: 60px;
     text-align: center;
     border-radius: 10px;
     transition: 0.5s
-    
+    */
 }
-
+/*
 .banner:hover{
     background-color:rgb(233, 233, 233);
     transition: 0.5s;
+}
+*/
+#banner1{
+    display:flex;
+    justify-content: space-around;
+}
+#banner1 ul{
+    list-style: none;
+
+}
+#banner1 ul li{
+    display: grid;
 }
