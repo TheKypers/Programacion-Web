@@ -6,7 +6,6 @@ body{
 
 ul{
 padding-left: 0%;
-
 }
 
 .center {
@@ -35,6 +34,7 @@ a{
     border-radius: 10px;
     transition: 0.5s;
 }
+/* Principal */
 .banner:hover{
     background-color:rgb(199, 199, 199);
     transition: 0.5s;
@@ -43,33 +43,26 @@ a{
     background-color: red;
 }
 
-
-
-
-
 /* Banner Principal */
 #banner1 ul ul{
     display:none;
     list-style: none;
 }
-
 #banner1 ul:hover ul{
     display: block;
 }
 
-/* Sub Banner Despliegue */
 
+/* Sub Banner Despliegue Uno*/
 li.princ_banner li.sub-banner {
     display:none;
 }
 li.princ_banner:hover li.sub-banner {
     display:block;
-
 }
 
 
 /* Sub Banner Despliegue Dos*/
-
 li.sub-banner li.cont{
     display:none;
 }
