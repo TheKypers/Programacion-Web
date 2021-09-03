@@ -44,7 +44,7 @@ a{
 }
 
 .mat li{
-    display:none;
+    display:flex;
 }
 .mat li:hover li{
     display:block;
