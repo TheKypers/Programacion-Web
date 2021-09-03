@@ -2,6 +2,12 @@ body{
     background-color: rgb(248, 194, 123);
     padding:0px;
 }
+
+ul{
+padding-left: 0%;
+
+}
+
 .center {
     text-align: center;
   }
@@ -36,29 +42,28 @@ a{
 }
 
 
+
+
+
 /* Banner Principal */
 #banner1 ul ul{
     display:none;
     list-style: none;
-    margin-left: 0%;
 }
 
 #banner1 ul:hover ul{
     display: block;
-    margin-left: 0%;
 }
-
-li.princ_banner li a{
-    margin-left: 0%;
-}
-
 
 /* Sub Banner Despliegue */
+
+
+
+
 li.princ_banner li.sub-banner {
     display:none;
-    margin-left: 0%;
 }
 li.princ_banner:hover li.sub-banner {
     display:block;
-    margin-left: 0%;
+
 }
