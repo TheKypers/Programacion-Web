@@ -1,6 +1,7 @@
 body{
     background-color: rgb(248, 194, 123);
     padding:0px;
+    margin: 5px;
 }
 
 ul{
@@ -18,7 +19,8 @@ padding-left: 0%;
     background-blend-mode:multiply,normal;
     background-size: 1950px;
     background-position: right;
-    border-radius: 20px;
+    border-radius: 10px;
+
 }
 a{
     text-decoration:none;
@@ -57,13 +59,20 @@ a{
 
 /* Sub Banner Despliegue */
 
-
-
-
 li.princ_banner li.sub-banner {
     display:none;
 }
 li.princ_banner:hover li.sub-banner {
     display:block;
 
+}
+
+
+/* Sub Banner Despliegue Dos*/
+
+li.sub-banner li.cont{
+    display:none;
+}
+li.sub-banner:hover li.cont{
+    display:block;
 }
