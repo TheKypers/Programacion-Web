@@ -24,7 +24,6 @@ a{
 
     text-align: center;
 
-
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -35,17 +34,34 @@ a{
 #banner1 a:hover{
     background-color: red;
 }
+
+
+/* Banner Principal */
 #banner1 ul ul{
     display:none;
     list-style: none;
-}
-#banner1 ul:hover ul{
-    display: block;
+    margin-left: 0%;
 }
 
-.mat li{
-    display:none;
+#banner1 ul:hover ul{
+    display: block;
+    margin-left: 0%;
 }
-.mat li:hover li{
+
+li.princ_banner li a{
+    margin-left: 0%;
+}
+
+
+
+
+
+/* Sub Banner Despliegue */
+li.princ_banner li.sub-banner {
+    display:none;
+    margin-left: 0%;
+}
+li.princ_banner:hover li.sub-banner {
     display:block;
+    margin-left: 0%;
 }
