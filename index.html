@@ -6,17 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-     
+    
+    <!-- POP UP -->
+
     <body>
-        
+        <div class="wrapper" id="pop-up">
+            <div class="form-register">
+              <a href="#" class="close">X</a>
+              <div class="txt">
+              
+                <h3>Titulo en proceso</h3>
+                <label for="fname">First Name</label>
+                <input class="controls" type="text" id="nombres" name="firstname" placeholder="Nombre"><br>
+          
+                <label for="lname">Last Name</label>
+                <input class="controls" type="text" id="apellidos" name="lastname" placeholder="Apellido"><br>
+                
+                <label for="lname">Observation</label>
+                <input class="controls" type="text" id="observaciones" name="tablenumber" placeholder="Observaciones"><br>
+              
+                <label for="mesa1">Table Number</label>
+                <select class="controls" id="mesas" name="Mesa">
+                  <option value="mesa1">1</option>
+                  <option value="mesa2">2</option>
+                  <option value="mesa3">3</option>
+                  <option value="mesa4">4</option>
+                  <option value="mesa5">5</option>
+                  <option value="mesa6">6</option>
+                  <option value="mesa7">7</option>
+                  <option value="mesa8">8</option>
+                  <option value="mesa9">9</option>
+                  <option value="mesa10">10</option>
+                  <option value="mesa11">11</option>
+                  <option value="mesa12">12</option>
+                </select><br>
+                <input class="botons" type="submit" value="Subir pedido"> 
+          
+              </div>
+            </div>
+        </div>  
+    </div>
+          
+    <!-- MAIN BODY -->
+
     <div class="center bannerTitulo">
         <img src="img/Foodies-04.svg" alt="Foodies" style="padding: 10px;">
     </div>
 
-    <h2 style="text-align: center;">
-        App de orden de comida en el local foodink<br>
-        (titulo en tramite)
-    </h2>
+    <div class=" buscador">
+        <i ><img src="/img/lupa-busc.svg" alt="" class="lupa" ></i>
+        <input type="text" placeholder="Buscar" class="search-bar">
+    </div>
+
+
 
     <div class="banner" id="banner1"> 
         <!--<p>Burguer Menu</p>-->
@@ -202,6 +244,8 @@
  -->
         </div>
     </div>
+    
+    <a href="#pop-up" class="login-but">Enviar Orden</a>
 
     <footer>
         Iña, Fiore y Mate...
