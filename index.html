@@ -65,42 +65,65 @@
         <ul>
             <p id="burguer"><a hfer="#">Burguer Menu</a>
                 <ul>
-                    <li class="princ_banner"><a hfer="#">Armado!</a>
+                    <li class="princ_banner"><a hfer="#">Armado!</a>         
                         <ul>
                             <li class="sub-banner"><a hfer="#">Carne</a>
-                                <ul>
-                                    <li class="cont"><a hfer="#">70% CARNE , 30% CERDO</a></li>
-                                    <li class="cont"><a hfer="#">100% CARNE</a></li>
-                                    <li class="cont"><a hfer="#">100% POLLO</a></li>
-                                    <li class="cont"><a hfer="#">VEGANA (POROTOS NEGROS)</a></li>
-                                </ul>
+                                <form>
+                                    <ul>
+                                        <li><input type="checkbox" class="armado_carne" name="mix carne" id="op0.1">
+                                            <label for="op0.1">70% CARNE , 30% CERDO</label></li>
+                                        <li><input type="checkbox" class="armado_carne" name="carne" id="op0.2">
+                                            <label for="op0.2">100% CARNE</label></li>
+                                        <li><input type="checkbox" class="armado_carne" name="pollo" id="op0.3">
+                                            <label for="op0.3">100% POLLO</label></li>
+                                        <li><input type="checkbox" class="armado_carne" name="vegana" id="op0.4">
+                                            <label for="op0.4">VEGANA (POROTOS NEGROS)</label></li>
+                                    </ul>
+                                </form>
                             </li>
                             <li class="sub-banner"><a hfer="#">Pan</a>
-                                <ul>
-                                    <li class="cont"><a hfer="#">BRIOCHE</a></li>
-                                    <li class="cont"><a hfer="#">DE CAMPO</a></li>
-                                    <li class="cont"><a hfer="#">DE PAPA</a></li>
-                                    <li class="cont"><a hfer="#">DE REOMOLACHA</a></li>
-                                </ul>
+                                <form>
+                                    <ul>
+                                        <li><input type="checkbox" class="armado_pan_box" name="brioche" id="op1.1">
+                                            <label for="op1.1">BRIOCHE</label></li>
+                                        <li><input type="checkbox" class="armado_pan_box" name="campo" id="op1.2">
+                                            <label for="op1.2">DE CAMPO</label></li>
+                                        <li><input type="checkbox" class="armado_pan_box" name="papa" id="op1.3">
+                                            <label for="op1.3">DE PAPA</label></li>
+                                        <li><input type="checkbox" class="armado_pan_box" name="remolacha" id="op1.4">
+                                            <label for="op1.4">DE REOMOLACHA</label></li>
+                                        </ul>
+                                </form>
                             </li>
                             <li class="sub-banner"><a hfer="#">Aderesos</a>
-                                <ul>
-                                    <li class="cont"><a hfer="#">MAYONESA</a></li>
-                                    <li class="cont"><a hfer="#">KETCHUP</a></li>
-                                    <li class="cont"><a hfer="#">MOSTAZA</a></li>
-                                    <li class="cont"><a hfer="#">PEPINO</a></li>
-                                    <li class="cont"><a hfer="#">CEBOLLA CARAMELIZADA</a></li>
-                                    <li class="cont"><a hfer="#">CEBOLLA MORADA</a></li>
-                                    <li class="cont"><a hfer="#">PANZETA</a></li>
-                                    <li class="cont"><a hfer="#">QUESO CHEDDAR</a></li>
-                                </ul>
+                                <form>
+                                    <ul>                                  
+                                        <li><input type="checkbox" class="armado_ad_box" name="mayonesa" id="op2.1">
+                                            <label for="op2.1">MAYONESA</label></li>                                  
+                                        <li><input type="checkbox" class="armado_ad_box" name="ketchup" id="op2.2">
+                                            <label for="op2.2">KETCHUP</label></li>                                   
+                                        <li><input type="checkbox" class="armado_ad_box" name="mostaza" id="op2.3">
+                                            <label for="op2.3">MOSTAZA</label></li>
+                                        <li><input type="checkbox" class="armado_ad_box" name="pepino" id="op2.4">
+                                            <label for="op2.4">PEPINO</label></li>
+                                        <li><input type="checkbox" class="armado_ad_box" name="cebolla caramelizada" id="op2.5">
+                                            <label for="op2.5">CEBOLLA CARAMELIZADA</label></li>
+                                        <li><input type="checkbox" class="armado_ad_box" name="cebolla morada" id="op2.6">
+                                            <label for="op2.6">CEBOLLA MORADA</label></li>
+                                        <li><input type="checkbox" class="armado_ad_box" name="panzeta" id="op2.7">
+                                            <label for="op2.7">PANZETA</label></li>
+                                        <li><input type="checkbox" class="armado_ad_box" name="quso cheddar" id="op2.8">
+                                            <label for="op2.8">QUESO CHEDDAR</label></li>
+                                    </ul> 
+                                </form>
                             </li>
                         </ul>
+                        
                     </li>
-
                     <li class="princ_banner"><a hfer="#">Combos!</a>
                         <ul>
-                            <li class="sub-banner"><a hfer="#">Clasic</a>
+                            <li class="sub-banner"><input type="checkbox" name="Clasic" id="op3.1">
+                                <label for="op3.1">CLASSIC</label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">TOMATE</a></li>
@@ -109,7 +132,8 @@
                                     <li><a hfer="#">ADEREZO FOODIE</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">Vespa in Love</a>
+                            <li class="sub-banner"><input type="checkbox" name="vespa in love" id="op3.2">
+                                <label for="op3.2">VESPA IN LOVE</label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">PROVOLONE</a></li>
@@ -118,7 +142,8 @@
                                     <li><a hfer="#">PESTO GENOVÉS</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">French Burguer</a>
+                            <li class="sub-banner"><input type="checkbox" ame="french burguer" id="op3.3">
+                                <label for="op3.3">FRENCH BURGUER</label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">CEBOLLA CARAMELIZADA</a></li>
@@ -128,7 +153,8 @@
                                     <li><a hfer="#">MOSTAZA A LA ANTIGUA</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">London Park</a>
+                            <li class="sub-banner"><input type="checkbox" name="london park" id="op3.4">
+                                <label for="op3.4">LONDON PARK</label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">QUESO CHEDDAR</a></li>
@@ -139,7 +165,8 @@
                                     <li><a hfer="#">ADEREZO FOODIE</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">Old school</a>
+                            <li class="sub-banner"><input type="checkbox" name="old school" id="op3.5">
+                                <label for="op3.5">OLD SCHOOL</label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">MORRONES ASADOS</a></li>
@@ -151,7 +178,8 @@
                                     <li><a hfer="#">TOMATE</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">Sai Baba Burguer</a>
+                            <li class="sub-banner"><input type="checkbox" name="sai baba burguer" id="op3.6">
+                                <label for="op3.6">SAI BABA BURGUER</label>
                                 <ul>
                                     <li><a hfer="#">BURGER DE PAPA</a></li>
                                     <li><a hfer="#">HONGOS Y CEREALES</a></li>
@@ -162,7 +190,8 @@
                                     <li><a hfer="#">MAYONESA DE CURRY</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">Vegan Burguer</a>
+                            <li class="sub-banner"><input type="checkbox" name="vegan burguer" id="op3.7">
+                                <label for="op3.7">VEGAN BURGUER</label>
                                 <ul>
                                     <li><a hfer="#">BURGER DE QUINOA Y POROTOS NEGROS EN PAN DE REMOLACHA</a></li>
                                     <li><a hfer="#">LECHUGA</a></li>
@@ -171,7 +200,8 @@
                                     <li><a hfer="#">MAYONESA DE ZANAHORIA</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-banner"><a hfer="#">Chinga tu madre</a>
+                            <li class="sub-banner"><input type="checkbox" name="chinga tu madre" id="op3.8">
+                                <label for="op3.8">CHINGA TU MADRE</label>
                                 <ul>
                                     <li><a hfer="#">FOODIE BURGER</a></li>
                                     <li><a hfer="#">QUESO</a></li>
