@@ -65,12 +65,11 @@ a{
     background-color:rgb(199, 199, 199);
     transition: 0.5s;
 }
+
+/*---------Banner Burguer------------*/
 #banner1 a:hover{
     background-color: red;
 }
-
-/* Banner Principal */
-
 #banner1 ul ul{
     display:none;
     list-style: none;
@@ -81,27 +80,233 @@ a{
 }
 
 /* Sub Banner Despliegue Uno*/
-.sub-banner{
+.sub-banner1{
     text-align: left;
     margin-left:10%;
 }
 
-li.princ_banner li.sub-banner {
+li.princ_banner li.sub-banner1 {
     display:none;
 }
-li.princ_banner:hover li.sub-banner {
+li.princ_banner:hover li.sub-banner1 {
     display:block;
 }
 
-li.sub-banner li.cont{
+li.sub-banner1 li.cont{
     display:none;
 }
 
-li.sub-banner:hover li.cont{
+li.sub-banner1:hover li.cont{
     display:block;
     text-align: left;
 }
+/*---------Banner Pizzas------------*/
+#banner2 a:hover{
+    background-color: red;
+}
 
+#banner2 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner2 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner2{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.segundo_banner li.sub-banner2 {
+    display:none;
+}
+li.segundo_banner:hover li.sub-banner2 {
+    display:block;
+}
+
+li.sub-banner2 li.cont{
+    display:none;
+}
+
+li.sub-banner2:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Ensaladas------------*/
+#banner3 a:hover{
+    background-color: red;
+}
+
+#banner3 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner3 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner3{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.tercer_banner li.sub-banner3 {
+    display:none;
+}
+li.tercer_banner:hover li.sub-banner3 {
+    display:block;
+}
+
+li.sub-banner3 li.cont{
+    display:none;
+}
+
+li.sub-banner3:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Pastas------------*/
+#banner4 a:hover{
+    background-color: red;
+}
+#banner4 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner4 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner4{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.cuatro_banner li.sub-banner4 {
+    display:none;
+}
+li.cuatro_banner:hover li.sub-banner4 {
+    display:block;
+}
+
+li.sub-banner4 li.cont{
+    display:none;
+}
+
+li.sub-banner4:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Cafetería------------*/
+#banner5 a:hover{
+    background-color: red;
+}
+#banner5 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner5 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner5{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.quinto_banner li.sub-banner5 {
+    display:none;
+}
+li.quinto_banner:hover li.sub-banner5 {
+    display:block;
+}
+
+li.sub-banner5 li.cont{
+    display:none;
+}
+
+li.sub-banner5:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Agregados------------*/
+#banner6 a:hover{
+    background-color: red;
+}
+#banner6 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner6 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner6{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.sexto_banner li.sub-banner6 {
+    display:none;
+}
+li.sexto_banner:hover li.sub-banner6 {
+    display:block;
+}
+
+li.sexto-banner5 li.cont{
+    display:none;
+}
+
+li.sub-banner6:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Bebidas------------*/
+#banner7 a:hover{
+    background-color: red;
+}
+#banner7 ul ul{
+    display:none;
+    list-style: none;
+}
+
+#banner7 ul:hover ul{
+    display: block;
+}
+
+/* Sub Banner Despliegue Uno*/
+.sub-banner7{
+    text-align: left;
+    margin-left:10%;
+}
+
+li.septimo_banner li.sub-banner7 {
+    display:none;
+}
+li.septimo_banner:hover li.sub-banner7 {
+    display:block;
+}
+
+li.sub-banner7 li.cont{
+    display:none;
+}
+
+li.sub-banner7:hover li.cont{
+    display:block;
+    text-align: left;
+}
+/*---------Banner Juan------------*/
 /* CSS PARA POP UP ORDEN */
 
 *{
