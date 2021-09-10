@@ -53,6 +53,8 @@ a{
 .banner{
     background-color:white;
     margin: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 60px;
     text-align: center;
     border-radius: 10px;
@@ -411,4 +413,15 @@ li.sub-banner7:hover li.cont{
     padding: 10px;
     color: black;
 
+}
+
+
+.categTitulo{
+    font-family: Gobold;
+    font-size: 40px;
+}
+
+@font-face {
+    font-family: Gobold;
+    src: url(/img/Gobold\ Lowplus.otf);
 }
