@@ -1,7 +1,6 @@
 body{
     background-color: rgb(248, 194, 123);
     padding:0px;
-    margin: 5px;
 }
 
 ul{
@@ -19,6 +18,9 @@ padding-left: 0%;
     background-size: 1950px;
     background-position: right;
     border-radius: 10px;
+    border-radius: -20px;
+    border-style: solid;
+    margin: 3px;
 
 }
 
@@ -59,13 +61,14 @@ a{
     text-align: center;
     border-radius: 10px;
     transition: 0.5s;
+    
 }
 
 /* Principal */
 
 .banner:hover{
     background-color:rgb(199, 199, 199);
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 /*---------Banner Burguer------------*/
@@ -75,6 +78,7 @@ a{
     border-style: solid;
     border-width: 3px;
     padding: 6px;
+    transition: 0.4s;
 }
 #banner1 ul ul{
     display:none;
@@ -348,11 +352,10 @@ li.sub-banner7:hover li.cont{
 
 *{
     margin: 0;
-    padding:0;
+    padding:20;
     box-sizing: border-box;
 
 }
-
 
 .wrapper{
     position: fixed;
@@ -364,7 +367,7 @@ li.sub-banner7:hover li.cont{
     opacity: 0;
     display: grid;
     place-items: center;
-    z-index: 2;
+    margin-top: -3px;
 }
 
 .wrapper:target{
@@ -373,9 +376,6 @@ li.sub-banner7:hover li.cont{
     transition: 0.4s;
 }
 
-.txt{
-    padding: 20px;
-}
 
 .form-register{
     width: 400px;
@@ -384,11 +384,16 @@ li.sub-banner7:hover li.cont{
     border-radius: 4px;
     font-family:'Times New Roman', Times, serif;
     color:black;
-    box-shadow: 7px 13px 37px #FFC233;  
+    box-shadow: 7px 13px 37px #FFC233;
 }
 .form-register h3 {
     font-size: 22px;
     margin-bottom: 20px;
+}
+
+.form-register .txt{
+    padding: 20px ;
+    
 }
 .controls {
     width: 100%;
