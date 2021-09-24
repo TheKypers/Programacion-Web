@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" type="text/javascript" src="js/java.js"></script>
     <title>Document</title>
     
     <!-- POP UP -->
@@ -58,7 +59,7 @@
         <input type="search" placeholder="Buscar" class="search-bar">
     </div>
 
-
+    <!--------------------------MENU DE COMIDA------------------------------>
 
     <div class="banner" id="banner1"> 
         <!--<p>Burguer Menu</p>-->
@@ -68,7 +69,7 @@
                     <li class="princ_banner"><a hfer="#">Armado!</a>         
                         <ul>
                             <li class="sub-banner1"><a hfer="#">Carne</a>
-                                <form>
+                                <form> <!-- test -->
                                     <ul>
                                         <li><input type="checkbox" class="armado_carne" name="mix carne" id="op0.1">
                                             <label for="op0.1">70% CARNE , 30% CERDO</label></li>
@@ -80,7 +81,8 @@
                                             <label for="op0.4">VEGANA (POROTOS NEGROS)</label></li>
                                     </ul>
                                 </form>
-                            </li>
+                                <div id='error'></div>
+                            </li> <!-- test -->
                             <li class="sub-banner1"><a hfer="#">Pan</a>
                                 <form>
                                     <ul>
@@ -114,6 +116,8 @@
                                             <label for="op2.7">PANZETA</label></li>
                                         <li><input type="checkbox" class="armado_ad" name="quso cheddar" id="op2.8">
                                             <label for="op2.8">QUESO CHEDDAR</label></li>
+                                        <li><input type="checkbox" class="armado_ad" name="nada" id="op2.9">
+                                            <label for="op2.8">NADA</label></li>
                                     </ul> 
                                 </form>
                             </li>
