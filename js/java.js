@@ -17,6 +17,13 @@ function enviarCarne(){
     
     return false;
 }
+
 function myFunction1() {
-    alert("Si esta segur@ de enviar el pedido por favor continue.");
+    var txt;
+    if (confirm("Si esta segur@ de enviar el pedido por favor continue.")) {
+      txt = "You pressed OK!";
+    } else {
+      txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
   }
