@@ -94,7 +94,7 @@ a{
 /* Sub Banner Despliegue Uno*/
 .sub-banner1{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.primer_banner li.sub-banner1 {
@@ -134,7 +134,7 @@ li.sub-banner1:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner2{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.segundo_banner li.sub-banner2 {
@@ -174,7 +174,7 @@ li.sub-banner2:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner3{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.tercer_banner li.sub-banner3 {
@@ -213,7 +213,7 @@ li.sub-banner3:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner4{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.cuatro_banner li.sub-banner4 {
@@ -252,7 +252,7 @@ li.sub-banner4:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner5{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.quinto_banner li.sub-banner5 {
@@ -291,7 +291,7 @@ li.sub-banner5:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner6{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.sexto_banner li.sub-banner6 {
@@ -330,7 +330,7 @@ li.sub-banner6:hover li.cont{
 /* Sub Banner Despliegue Uno*/
 .sub-banner7{
     text-align: left;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 li.septimo_banner li.sub-banner7 {
@@ -468,7 +468,7 @@ li.sub-banner7:hover li.cont{
 
 .categContenidos{
     font-family: Gobold;
-    font-size: 20px;
+    font-size: 15px;
 }
 @font-face {
     font-family: Gobold;
