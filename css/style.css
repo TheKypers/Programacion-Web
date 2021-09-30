@@ -2,7 +2,10 @@ body{
     background-color: rgb(248, 194, 123);
     padding:0px;
 }
-
+.error{
+    color:red;
+    text-align: center;
+}
 ul{
 padding-left: 0%;
 }

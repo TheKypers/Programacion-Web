@@ -15,13 +15,11 @@
             <div class="form-register">
               <a href="#" class="close">X</a>
               <div class="txt">
-              
-                <h3>Titulo en proceso</h3>
                 <label for="fname">First Name</label>
-                <input class="controls" type="text" id="nombres" name="firstname" placeholder="Nombre"><br>
-          
+                <input class="controls" type="text" id="nombre" name="firstname" placeholder="Nombre"><br>
+                
                 <label for="lname">Last Name</label>
-                <input class="controls" type="text" id="apellidos" name="lastname" placeholder="Apellido"><br>
+                <input class="controls" type="text" id="apellido" name="lastname" placeholder="Apellido"><br>
                 
                 <label for="lname">Observation</label>
                 <input class="controls" type="text" id="observaciones" name="tablenumber" placeholder="Observaciones"><br>
@@ -41,8 +39,11 @@
                   <option value="mesa11">11</option>
                   <option value="mesa12">12</option>
                 </select><br>
-                <input class="botons" type="submit" value="Subir pedido"> 
-          
+                
+                <input class="botons" type="submit" value="Subir pedido" onclick="formulario()" > 
+                <p class="error" id="comentnombre"></p>
+                <p class="error" id="comentapellido"></p>
+                
               </div>
             </div>
         </div>  
@@ -445,51 +446,53 @@
                         
                     </li>
                     <li class="tercer_banner"><a hfer="#">Ensaladas ya preparadas por la casa!</a>
-                        <ul>
-                            <li class="sub-banner3"><input type="checkbox" ame="ensalada_normal" id="op5.31">
-                                <label for="op5.31">ENSALADA NORMAL</label>
-                                <ul>
-                                    <li><a hfer="#">LECHUGA</a></li>
-                                    <li><a hfer="#">TOMATE</a></li>
-                                    <li><a hfer="#">ALBAHACA</a></li>
-                                    <li><a hfer="#">ALCAPARRAS</a></li>
-                                    <li><a hfer="#">LOCOTE ROJO</a></li>
-                                    <li><a hfer="#">LOCOTE VERDE</a></li>
-                                </ul>
-                            </li>
-                            <li class="sub-banner3"><input type="checkbox" name="ensalada_italiana" id="op5.32">
-                                <label for="op5.32">ENSALADA ITALIANA</label>
-                                <ul>
-                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
-                                    <li><a hfer="#">TOMATE</a></li>
-                                    <li><a hfer="#">ACEITUNA</a></li>
-                                    <li><a hfer="#">ALBAHACA</a></li>
-                                    <li><a hfer="#">AGUACATE</a></li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="sub-banner3"><input type="checkbox" name="ensalada_niçoise" id="op5.33">
-                                <label for="op5.33">ENSALADA NICOISE</label>
-                                <ul>
-                                    <li><a hfer="#">LECHUGA</a></li>
-                                    <li><a hfer="#">HUEVO</a></li>
-                                    <li><a hfer="#">ALCAPARRAS</a></li>
-                                    <li><a hfer="#">ACEITUNA</a></li>
-                                    <li><a hfer="#">TOMATE</a></li>
-                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
-                                </ul>
-                            </li>
-                            <li class="sub-banner3"><input type="checkbox" ame="ensalada_cesar" id="op5.33">
-                                <label for="op5.33">ENSALADA CESAR</label>
-                                <ul>
-                                    <li><a hfer="#">LECHUGA</a></li>
-                                    <li><a hfer="#">ANCHOAS</a></li>
-                                    <li><a hfer="#">ALBAHACA</a></li>
-                                    <li><a hfer="#">HUEVO</a></li>
-                                    <li><a hfer="#">TROZOS DE PAN</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <form>
+                            <ul>
+                                <li class="sub-banner3"><input type="checkbox" ame="ensalada_normal" id="op5.31">
+                                    <label for="op5.31">ENSALADA NORMAL</label>
+                                    <ul>
+                                        <li><a hfer="#">LECHUGA</a></li>
+                                        <li><a hfer="#">TOMATE</a></li>
+                                        <li><a hfer="#">ALBAHACA</a></li>
+                                        <li><a hfer="#">ALCAPARRAS</a></li>
+                                        <li><a hfer="#">LOCOTE ROJO</a></li>
+                                        <li><a hfer="#">LOCOTE VERDE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-banner3"><input type="checkbox" name="ensalada_italiana" id="op5.32">
+                                    <label for="op5.32">ENSALADA ITALIANA</label>
+                                    <ul>
+                                        <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                        <li><a hfer="#">TOMATE</a></li>
+                                        <li><a hfer="#">ACEITUNA</a></li>
+                                        <li><a hfer="#">ALBAHACA</a></li>
+                                        <li><a hfer="#">AGUACATE</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="sub-banner3"><input type="checkbox" name="ensalada_niçoise" id="op5.33">
+                                    <label for="op5.33">ENSALADA NICOISE</label>
+                                    <ul>
+                                        <li><a hfer="#">LECHUGA</a></li>
+                                        <li><a hfer="#">HUEVO</a></li>
+                                        <li><a hfer="#">ALCAPARRAS</a></li>
+                                        <li><a hfer="#">ACEITUNA</a></li>
+                                        <li><a hfer="#">TOMATE</a></li>
+                                        <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-banner3"><input type="checkbox" ame="ensalada_cesar" id="op5.33">
+                                    <label for="op5.33">ENSALADA CESAR</label>
+                                    <ul>
+                                        <li><a hfer="#">LECHUGA</a></li>
+                                        <li><a hfer="#">ANCHOAS</a></li>
+                                        <li><a hfer="#">ALBAHACA</a></li>
+                                        <li><a hfer="#">HUEVO</a></li>
+                                        <li><a hfer="#">TROZOS DE PAN</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </form>
                     </li>
                 </ul>
             </p>
@@ -573,53 +576,55 @@
                             
                         </li>
                         <li class="cuatro_banner"><a hfer="#">Pastas preparadas!</a>
-                            <ul>
-                                <li class="sub-banner4"><input type="checkbox" ame="pasta_normal" id="op6.31">
-                                    <label for="op6.31">PASTA NORMAL</label>
-                                    <ul>
-                                        <li><a hfer="#">ÑOQUIS</a></li>
-                                        <li><a hfer="#">SALSA ROJA</a></li>
-                                        <li><a hfer="#">TOMATE</a></li>
-                                        <li><a hfer="#">CEBOLLA</a></li>
-                                        <li><a hfer="#">LOCOTE ROJO</a></li>
-                                        <li><a hfer="#">LOCOTE VERDE</a></li>
-                                    </ul>
-                                </li>
-                                <li class="sub-banner4"><input type="checkbox" name="pasta_italiana" id="op6.32">
-                                    <label for="op6.32">PASTA ITALIANA</label>
-                                    <ul>
-                                        <li><a hfer="#">SPAGHETTI</a></li>
-                                        <li><a hfer="#">SALSA BLANCA</a></li>
-                                        <li><a hfer="#">PALMITO</a></li>
-                                        <li><a hfer="#">QUESO</a></li>
-                                        <li><a hfer="#">ZANAHORIA</a></li>
-                                        <li><a hfer="#">JAMÓN</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="sub-banner4"><input type="checkbox" name="pasta_de_ravioles" id="op6.33">
-                                    <label for="op6.33">PASTA DE RAVIOLES</label>
-                                    <ul>
-                                        <li><a hfer="#">RAVIOLES</a></li>
-                                        <li><a hfer="#">SALSA VERDE</a></li>
-                                        <li><a hfer="#">ALCAPARRAS</a></li>
-                                        <li><a hfer="#">ACELGA</a></li>
-                                        <li><a hfer="#">QUESO</a></li>
-                                        <li><a hfer="#">CEBOLLA MORADA</a></li>
-                                    </ul>
-                                </li>
-                                <li class="sub-banner4"><input type="checkbox" ame="pasta_moñito" id="op6.34">
-                                    <label for="op6.34">PASTA MOÑITO</label>
-                                    <ul>
-                                        <li><a hfer="#">MOÑITO</a></li>
-                                        <li><a hfer="#">SALSA BLANCA</a></li>
-                                        <li><a hfer="#">QUESO</a></li>
-                                        <li><a hfer="#">ALBAHACA</a></li>
-                                        <li><a hfer="#">HUEVO</a></li>
-                                        <li><a hfer="#">JAMÓN</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <form>
+                                <ul>
+                                    <li class="sub-banner4"><input type="checkbox" ame="pasta_normal" id="op6.31">
+                                        <label for="op6.31">PASTA NORMAL</label>
+                                        <ul>
+                                            <li><a hfer="#">ÑOQUIS</a></li>
+                                            <li><a hfer="#">SALSA ROJA</a></li>
+                                            <li><a hfer="#">TOMATE</a></li>
+                                            <li><a hfer="#">CEBOLLA</a></li>
+                                            <li><a hfer="#">LOCOTE ROJO</a></li>
+                                            <li><a hfer="#">LOCOTE VERDE</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub-banner4"><input type="checkbox" name="pasta_italiana" id="op6.32">
+                                        <label for="op6.32">PASTA ITALIANA</label>
+                                        <ul>
+                                            <li><a hfer="#">SPAGHETTI</a></li>
+                                            <li><a hfer="#">SALSA BLANCA</a></li>
+                                            <li><a hfer="#">PALMITO</a></li>
+                                            <li><a hfer="#">QUESO</a></li>
+                                            <li><a hfer="#">ZANAHORIA</a></li>
+                                            <li><a hfer="#">JAMÓN</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="sub-banner4"><input type="checkbox" name="pasta_de_ravioles" id="op6.33">
+                                        <label for="op6.33">PASTA DE RAVIOLES</label>
+                                        <ul>
+                                            <li><a hfer="#">RAVIOLES</a></li>
+                                            <li><a hfer="#">SALSA VERDE</a></li>
+                                            <li><a hfer="#">ALCAPARRAS</a></li>
+                                            <li><a hfer="#">ACELGA</a></li>
+                                            <li><a hfer="#">QUESO</a></li>
+                                            <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub-banner4"><input type="checkbox" ame="pasta_moñito" id="op6.34">
+                                        <label for="op6.34">PASTA MOÑITO</label>
+                                        <ul>
+                                            <li><a hfer="#">MOÑITO</a></li>
+                                            <li><a hfer="#">SALSA BLANCA</a></li>
+                                            <li><a hfer="#">QUESO</a></li>
+                                            <li><a hfer="#">ALBAHACA</a></li>
+                                            <li><a hfer="#">HUEVO</a></li>
+                                            <li><a hfer="#">JAMÓN</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </form>
                         </li>
                     </ul>
                 </p>
@@ -864,8 +869,8 @@
         </ul>
     </div>
     
-    <a href="#pop-up" onclick="myFunction1()" class="login-but">Enviar Orden</a>
-
+    <a href="#pop-up" onclick="pedidoseguro()" class="login-but">Enviar Orden</a>
+    <p id="demo1"></p>
     <footer>
         Iña, Fiore y 🧉
     </footer>
