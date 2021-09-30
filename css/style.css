@@ -25,8 +25,10 @@ padding-left: 0%;
 }
 
 .buscador{
-    background-color: azure;
+    background-color: white;
     border-radius: 40px;
+    border-style: outset;
+    border-color: grey;
     padding: 20px;
     display: flex;
     margin-top: 20px;
@@ -53,7 +55,11 @@ a{
     text-decoration:none;
 }
 .banner{
-    background-color:white;
+    background-position: center;
+    background-size: auto;
+    border-radius: 40px;
+    border-style: outset;
+    border-color: grey;
     margin: 40px;
     margin-left: 10px;
     margin-right: 10px;
@@ -61,17 +67,50 @@ a{
     padding-bottom: 60px;
     text-align: center;
     border-radius: 10px;
-    transition: 0.5s;
-    
+
 }
 
 /* Principal */
 
-.banner:hover{
-    background-color:rgb(199, 199, 199);
-    transition: 0.4s;
+.backTit1{
+    background: transparent;
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/hamburguesa-2028707.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.backTit2{
+    
+}
+.backTit3{
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/hamburguesa-2028707.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.backTit4{
+    
+}
+.backTit5{
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/hamburguesa-2028707.jpg);
+    background-size: cover;    
+    background-position: center;
+}
+.backTit6{
+    
+}
+.backTit7{
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/hamburguesa-2028707.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
+.backTit1:hover{
+    -webkit-animation: breath 15s linear infinite;
+    background: transparent;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/hamburguesa-2028707.jpg);
+    background-position: center;
+    background-size: cover;    
+
+}
 /*---------Banner Burguer------------*/
 #banner1 a:hover{
     background-color: white;
@@ -79,7 +118,7 @@ a{
     border-style: solid;
     border-width: 3px;
     padding: 6px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 #banner1 ul ul{
     display:none;
@@ -315,7 +354,7 @@ li.sub-banner6:hover li.cont{
     border-radius: 10px;
     border-style: solid;
     border-width: 3px;
-    padding: 6px;
+    padding: 5px;
 }
 #banner7 ul ul{
     display:none;
@@ -460,10 +499,15 @@ li.sub-banner7:hover li.cont{
 .categTitulo{
     font-family: Gobold;
     font-size: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    padding: 2px;
 }
 .categSubTitulos{
     font-family: Gobold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .categContenidos{
