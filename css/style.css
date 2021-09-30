@@ -57,7 +57,8 @@ a{
     margin: 40px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
     border-radius: 10px;
     transition: 0.5s;
@@ -96,10 +97,10 @@ a{
     margin-left:10%;
 }
 
-li.princ_banner li.sub-banner1 {
+li.primer_banner li.sub-banner1 {
     display:none;
 }
-li.princ_banner:hover li.sub-banner1 {
+li.primer_banner:hover li.sub-banner1 {
     display:block;
 }
 
@@ -460,7 +461,15 @@ li.sub-banner7:hover li.cont{
     font-family: Gobold;
     font-size: 40px;
 }
+.categSubTitulos{
+    font-family: Gobold;
+    font-size: 30px;
+}
 
+.categContenidos{
+    font-family: Gobold;
+    font-size: 20px;
+}
 @font-face {
     font-family: Gobold;
     src: url(/img/Gobold\ Lowplus.otf);
