@@ -76,44 +76,88 @@ a{
 /* Principal */
 
 .backTit1{
-    background: transparent;
     background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/hamburguesa-2028707.jpg);
     background-size: cover;
     background-position: center;
 }
 .backTit2{
-    
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/pizza-bckgr.jpeg);
+    background-size: cover;    
+    background-position: center;
 }
 .backTit3{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/hamburguesa-2028707.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/ensaladas-bkgr.jpg);
     background-size: cover;
     background-position: center;
 }
 .backTit4{
-    
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/pasta-bckgr.jpeg);
+    background-size: cover;    
+    background-position: center;
 }
 .backTit5{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/hamburguesa-2028707.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/cafe-bckgr.png);
     background-size: cover;    
     background-position: center;
 }
 .backTit6{
-    
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/agregados.png);
+    background-size: cover;    
+    background-position: center;
 }
 .backTit7{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/hamburguesa-2028707.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/gaseosas-bkgr.jpg);
     background-size: cover;
     background-position: center;
 }
 
+
 .backTit1:hover{
-    -webkit-animation: breath 15s linear infinite;
-    background: transparent;
     background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/hamburguesa-2028707.jpg);
     background-position: center;
     background-size: cover;    
-
 }
+
+.backTit2:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/pizza-bckgr.jpeg);
+    background-position: center;
+    background-size: cover;    
+}
+
+.backTit3:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/ensaladas-bkgr.jpg);
+    background-position: center;
+    background-size: cover;    
+}
+
+.backTit4:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/pasta-bckgr.jpeg);
+    background-position: center;
+    background-size: cover;    
+}
+
+.backTit5:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/cafe-bckgr.png);
+    background-position: center;
+    background-size: cover;    
+}
+
+.backTit6:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/agregados.png);
+    background-position: center;
+    background-size: cover;    
+}
+
+.backTit7:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/gaseosas-bkgr.jpg);
+    background-position: center;
+    background-size: cover;    
+}
+
+
+
+
+
 /*---------Banner Burguer------------*/
 #banner1 a:hover{
     background-color: white;
@@ -137,6 +181,7 @@ a{
 .sub-banner1{
     text-align: left;
     margin-left:5%;
+    
 }
 
 li.primer_banner li.sub-banner1 {
@@ -494,7 +539,10 @@ li.sub-banner7:hover li.cont{
     border-radius: 20px;
     border-width: 4px;
     padding: 10px;
+    background-color: white;
     color: black;
+    margin-left: 20%;
+    margin-right: 20%;
 
 }
 
