@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script lanuage = "javascript" type="text/javascript" src="javascript.js"></script>
+    <script lanuage = "javascript" type="text/javascript" src="js/javacargaMenu.js"></script>
     <link rel="stylesheet" href="css/styleMenu.css">
     <title>Document</title>
 </head>
@@ -20,9 +20,9 @@
         
         
             <p>Nombre de categoria:</p>
-            <input type="text" class="field"> <br/>
+            <input type="text" class="field" id="nombre de categoria"> <br/>
         
-            <label for="imges">Imagen de fondo</label>
+            <label for="imges">Imagen de fondo: </label>
             <p class="center-content">
                 <input type="file" class="btn btn-green" name="imges"value="Enviar Datos">
             </p>
@@ -43,18 +43,25 @@
                 </select>
             
                 <p>Sub menu:</p>
-                <input type="text" class="field"> <br/>
+                <input type="text" class="field" id="submenu"> <br/>
             
                 <p>Nombre:</p>
-                <input type="text" class="field"> <br/>
+                <input type="text" class="field" id="nombre"> <br/>
             
                 <p>Descripcion:</p>
-                <textarea class="field"></textarea> <br/>
+                <textarea class="field" id="descripcion"></textarea> <br/>
                 <label for="">Imagenes</label>
                 
                 <p class="center-content">
                     <input type="file" class="btn btn-green" value="Enviar Datos">
                 </p>
+
+                <input class="botons" type="submit" value="SUBIR" onclick="subirmorfi()" > 
+                <p class="error" id="enombrecategoria"></p>
+                <p class="error" id="esubmenu"></p>
+                <p class="error" id="enombre"></p>
+                <p class="error" id="edescripcion"></p>
+                
             </form>
         </div>
 </body>
