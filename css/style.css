@@ -76,12 +76,12 @@ a{
 /* Principal */
 
 .backTit1{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/hamburguesa-2028707.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(../img/hamburguesa-2028707.jpg);
     background-size: cover;
     background-position: center;
 }
 .backTit2{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/pizza-bckgr.jpeg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(../img/pizza-bckgr.jpeg);
     background-size: cover;    
     background-position: center;
 }
@@ -567,5 +567,5 @@ li.sub-banner7:hover li.cont{
 }
 @font-face {
     font-family: Gobold;
-    src: url(/img/Gobold\ Lowplus.otf);
+    src: url(../img/Gobold-Lowplus.otf);
 }
