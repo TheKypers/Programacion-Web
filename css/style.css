@@ -16,7 +16,7 @@ padding-left: 0%;
 .bannerTitulo{
     background: rgb(252,194,136);
     background: radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%);
-    background-image:radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%),url(/img/BackBanner.jpg);
+    background-image:radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%),url(../img/BackBanner.jpg);
     background-blend-mode:multiply,normal;
     background-size: 1950px;
     background-position: right;
@@ -86,70 +86,70 @@ a{
     background-position: center;
 }
 .backTit3{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(/img/ensaladas-bkgr.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.6)),url(../img/ensaladas-bkgr.jpg);
     background-size: cover;
     background-position: center;
 }
 .backTit4{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/pasta-bckgr.jpeg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(../img/pasta-bckgr.jpeg);
     background-size: cover;    
     background-position: center;
 }
 .backTit5{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/cafe-bckgr.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(../img/cafe-bckgr.png);
     background-size: cover;    
     background-position: center;
 }
 .backTit6{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/agregados.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(../img/agregados.png);
     background-size: cover;    
     background-position: center;
 }
 .backTit7{
-    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(/img/gaseosas-bkgr.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)),url(../img/gaseosas-bkgr.jpg);
     background-size: cover;
     background-position: center;
 }
 
 
 .backTit1:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/hamburguesa-2028707.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/hamburguesa-2028707.jpg);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit2:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/pizza-bckgr.jpeg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/pizza-bckgr.jpeg);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit3:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/ensaladas-bkgr.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/ensaladas-bkgr.jpg);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit4:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/pasta-bckgr.jpeg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/pasta-bckgr.jpeg);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit5:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/cafe-bckgr.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/cafe-bckgr.png);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit6:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/agregados.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/agregados.png);
     background-position: center;
     background-size: cover;    
 }
 
 .backTit7:hover{
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(/img/gaseosas-bkgr.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1)),url(../img/gaseosas-bkgr.jpg);
     background-position: center;
     background-size: cover;    
 }
