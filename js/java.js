@@ -231,31 +231,36 @@ function tedioso(coso1,coso2,coso3,coso4){
   var b29 = document.getElementById("7.1.1.0.0.0.0.8").checked
   var b30 = document.getElementById("7.1.1.0.0.0.0.9").checked
   var b31 = document.getElementById("7.1.1.0.0.0.0.10").checked
-
+  //bandera de pedido
+  var listo = true
 
   //CONDICIONALES
   //-------------------------------hamburguesa
   if (h01 == false & h02 == false & h03 == false & h04 == false){ //no carne
     if ((h05 == true | h06 == true | h07 == true | h08 == true)){ //si pan
       alert("Seleccione la carne de la hamburguesa")
+      var listo = false
     }
   }
 
   else if((h01 == true | h02 == true | h03 == true | h04 == true)){
     if(h05 == false & h05 == false & h06 == false & h07 == false & h08 == false){
       alert("Seleccione el pan de la hamburguesa")
+      var listo = false
     }
   }
   //---------------------------------pizzas
   if (p01 == false & p02 == false & p03 == false & p04 == false){ 
     if ((p05 == true | p06 == true | p07 == true | p08 == true | p09 == true | p10 == true )){
       alert("Seleccione el tamaño de la pizza")
+      var listo = false
     }
   }
 
   else if((p01 == true | p02 == true | p03 == true | p04 == true)){
     if(p05 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false){
       alert("Seleccione el queso de la pizza")
+      var listo = false
     }
   }
 
@@ -263,37 +268,42 @@ function tedioso(coso1,coso2,coso3,coso4){
   if (e01 == false & e02 == false & e03 == false){ 
     if (e04 == true | e05 == true | e06 == true | e07 == true | e08 == true | e09 == true | e10 == true | e11 == true | e12 == true | e13 == true | e14 == true | e15 == true | e16 == true | e17 == true | e18 == true | e19 == true | e20 == true | e21 == true | e22 == true | e23 == true | e24 == true | e25 == true | e26 == true | e27 == true | e28 == true | e29 == true){
       alert("Seleccione el tamaño de la ensalada")
+      var listo = false
     }
   }
 
   else if(e01 == true | e02 == true | e03 == true){
     if(e04 == false & e05 == false & e06 == false & e07 == false & e08 == false & e09 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false){
       alert("Seleccione los incredientes de la ensalada")
+      var listo = false
     }
   }
   //----------------------------------pastas y salsas
   if (pys01 == false & pys02 == false & pys03 == false){ 
     if (pys04 == true | pys05 == true | pys06 == true | pys07 == true | pys08 == true | pys09 == true | pys10 == true | pys11 == true | pys12 == true | pys13 == true | pys14 == true | pys15 == true | pys16 == true | pys17 == true | pys18 == true | pys19 == true | pys20 == true | pys21 == true | pys22 == true | pys23 == true | pys24 == true | pys25 == true | pys26 == true ){
       alert("Seleccione el tipo de salsa")
+      var listo = false
     }
   }
 
   else if(pys01 == true | pys02 == true | pys03 == true){
     if(pys04 == false & pys05 == false & pys06 == false & pys07 == false & pys08 == false & pys09 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false){
       alert("Seleccione el tipo pasta")
+      var listo = false
     }
   }
   //--------------CONDICION TOTAL-----------------
   //h25 | p35 | pys26 | c32 | a09 | b31
   
   if ( h01 == false & h02 == false & h03 == false & h04 == false & h05 == false & h06 == false & h07 == false & h08 == false & h09 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false){
-    if( p01 == false & p02 == false & p03 == false & p04 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & h18 == false & h19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
+    if( p01 == false & p02 == false & p03 == false & p04 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & p18 == false & p19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
       if( e01 == false & e02 == false & e03 == false & e04 == false & e05 == false & e06 == false & e07 == false & e08 == false & e09 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
         if( pys01 == false & pys02 == false & pys03 == false & pys04 == false & pys05 == false & pys06 == false & pys07 == false & pys08 == false & pys09 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
           if( c01 == false & c02 == false & c03 == false & c04 == false & c05 == false & c06 == false & c07 == false & c08 == false & c09 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false & c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false){
             if( a01 == false & a02 == false & a03 == false & a04 == false & a05 == false & a06 == false & a07 == false & a08 == false & a09 == false ){
-              if( b01 == false & b02 == false & b03 == false & b04 == false & e05 == false & b06 == false & b07 == false & b08 == false & b09 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
+              if( b01 == false & b02 == false & b03 == false & b04 == false & b05 == false & b06 == false & b07 == false & b08 == false & b09 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
                 alert("No ha seleccionado nada del menu")
+                var listo = false
               }
             }
           }
@@ -301,5 +311,22 @@ function tedioso(coso1,coso2,coso3,coso4){
       }
     }
   }
-  
+  /////////////////////////////////// HACER WHILES QUE VEAN CUAL VAR ES TRUE Y MANDARLOS AL COSO
+  var pedido= []
+  if (listo){
+    var i=0
+    while(i<0){
+      while(ped){
+        elpedido(b01)
+        i+=1
+      }
+      while(!(ped)){
+        i+=1
+      }
+    }  
+  }
+  //////////////////////////////////
+}
+function elpedido(){
+
 }
