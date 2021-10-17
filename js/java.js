@@ -190,15 +190,15 @@ function tedioso(coso1,coso2,coso3,coso4){
   var c31 = document.getElementById("5.1.1.0.0.0.0.5").checked
   var c32 = document.getElementById("5.1.1.0.0.0.0.6").checked
   //AGREGADOS VARS
-  var a1 = document.getElementById("6.1.1.1").checked
-  var a2 = document.getElementById("6.1.1.2").checked
-  var a3 = document.getElementById("6.1.1.3").checked
-  var a4 = document.getElementById("6.1.1.4").checked
-  var a5 = document.getElementById("6.1.1.0.1").checked
-  var a6 = document.getElementById("6.1.1.0.2").checked
-  var a7 = document.getElementById("6.1.1.0.3").checked
-  var a8 = document.getElementById("6.1.1.0.4").checked
-  var a9 = document.getElementById("6.1.1.0.5").checked
+  var a01 = document.getElementById("6.1.1.1").checked
+  var a02 = document.getElementById("6.1.1.2").checked
+  var a03 = document.getElementById("6.1.1.3").checked
+  var a04 = document.getElementById("6.1.1.4").checked
+  var a05 = document.getElementById("6.1.1.0.1").checked
+  var a06 = document.getElementById("6.1.1.0.2").checked
+  var a07 = document.getElementById("6.1.1.0.3").checked
+  var a08 = document.getElementById("6.1.1.0.4").checked
+  var a09 = document.getElementById("6.1.1.0.5").checked
   //BEBIDAS VARS
   var b01 = document.getElementById("7.1.1.1").checked
   var b02 = document.getElementById("7.1.1.2").checked
@@ -284,10 +284,22 @@ function tedioso(coso1,coso2,coso3,coso4){
     }
   }
   //--------------CONDICION TOTAL-----------------
-  //h01-h25 | p01-p35 |
-  if ( h01 == false & h02 == false & h03 == false & h04 == false & h05 == false & h06 == false & h07 == false & h08 == false & h09 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false & h25){
-    if( p01 == false & p02 == false & p03 == false & p04 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & h18 == false & h19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
-        //falta hacer el resto, solo esta hamburguesa y pastas 
+  //h25 | p35 | pys26 | c32 | a09 | b31
+  
+  if ( h01 == false & h02 == false & h03 == false & h04 == false & h05 == false & h06 == false & h07 == false & h08 == false & h09 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false){
+    if( p01 == false & p02 == false & p03 == false & p04 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & h18 == false & h19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
+      if( e01 == false & e02 == false & e03 == false & e04 == false & e05 == false & e06 == false & e07 == false & e08 == false & e09 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
+        if( pys01 == false & pys02 == false & pys03 == false & pys04 == false & pys05 == false & pys06 == false & pys07 == false & pys08 == false & pys09 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
+          if( c01 == false & c02 == false & c03 == false & c04 == false & c05 == false & c06 == false & c07 == false & c08 == false & c09 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false & c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false){
+            if( a01 == false & a02 == false & a03 == false & a04 == false & a05 == false & a06 == false & a07 == false & a08 == false & a09 == false ){
+              if( b01 == false & b02 == false & b03 == false & b04 == false & e05 == false & b06 == false & b07 == false & b08 == false & b09 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
+                alert("No ha seleccionado nada del menu")
+              }
+            }
+          }
+        }
+      }
     }
   }
+  
 }
