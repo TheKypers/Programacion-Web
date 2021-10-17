@@ -32,15 +32,15 @@ function formularioN(parametro1, parametro2) {
 //--------------el tedioso------------------//
 function tedioso(coso1,coso2,coso3,coso4){
   //BURGUER VARS
-  var h01 = document.getElementById("1.1.1.1").checked
-  var h02 = document.getElementById("1.1.1.2").checked
-  var h03 = document.getElementById("1.1.1.3").checked
-  var h04 = document.getElementById("1.1.1.4").checked
-  var h05 = document.getElementById("1.1.1.0.1").checked
-  var h06 = document.getElementById("1.1.1.0.2").checked
-  var h07 = document.getElementById("1.1.1.0.3").checked
-  var h08 = document.getElementById("1.1.1.0.4").checked
-  var h09 = document.getElementById("1.1.1.0.0.1").checked
+  var h1 = document.getElementById("1.1.1.1").checked
+  var h2 = document.getElementById("1.1.1.2").checked
+  var h3 = document.getElementById("1.1.1.3").checked
+  var h4 = document.getElementById("1.1.1.4").checked
+  var h5 = document.getElementById("1.1.1.0.1").checked
+  var h6 = document.getElementById("1.1.1.0.2").checked
+  var h7 = document.getElementById("1.1.1.0.3").checked
+  var h8 = document.getElementById("1.1.1.0.4").checked
+  var h9 = document.getElementById("1.1.1.0.0.1").checked
   var h10 = document.getElementById("1.1.1.0.0.2").checked
   var h11 = document.getElementById("1.1.1.0.0.3").checked
   var h12 = document.getElementById("1.1.1.0.0.4").checked
@@ -58,15 +58,15 @@ function tedioso(coso1,coso2,coso3,coso4){
   var h24 = document.getElementById("1.2.8").checked
   var h25 = document.getElementById("1.2.9").checked
   //PIZZA VARS
-  var p01 = document.getElementById("2.1.1.1").checked
-  var p02 = document.getElementById("2.1.1.2").checked
-  var p03 = document.getElementById("2.1.1.3").checked
-  var p04 = document.getElementById("2.1.1.4").checked
-  var p05 = document.getElementById("2.1.1.0.1").checked
-  var p06 = document.getElementById("2.1.1.0.2").checked
-  var p07 = document.getElementById("2.1.1.0.3").checked
-  var p08 = document.getElementById("2.1.1.0.4").checked
-  var p09 = document.getElementById("2.1.1.0.5").checked
+  var p1 = document.getElementById("2.1.1.1").checked
+  var p2 = document.getElementById("2.1.1.2").checked
+  var p3 = document.getElementById("2.1.1.3").checked
+  var p4 = document.getElementById("2.1.1.4").checked
+  var p5 = document.getElementById("2.1.1.0.1").checked
+  var p6 = document.getElementById("2.1.1.0.2").checked
+  var p7 = document.getElementById("2.1.1.0.3").checked
+  var p8 = document.getElementById("2.1.1.0.4").checked
+  var p9 = document.getElementById("2.1.1.0.5").checked
   var p10 = document.getElementById("2.1.1.0.6").checked
   var p11 = document.getElementById("2.1.1.0.0.1").checked
   var p12 = document.getElementById("2.1.1.0.0.2").checked
@@ -94,15 +94,15 @@ function tedioso(coso1,coso2,coso3,coso4){
   var p34 = document.getElementById("2.2.5").checked
   var p35 = document.getElementById("2.2.6").checked
   //ENSALADA VARS
-  var e01 = document.getElementById("3.1.1.1").checked
-  var e02 = document.getElementById("3.1.1.2").checked
-  var e03 = document.getElementById("3.1.1.3").checked
-  var e04 = document.getElementById("3.1.1.0.1").checked
-  var e05 = document.getElementById("3.1.1.0.2").checked
-  var e06 = document.getElementById("3.1.1.0.3").checked
-  var e07 = document.getElementById("3.1.1.0.4").checked
-  var e08 = document.getElementById("3.1.1.0.5").checked
-  var e09 = document.getElementById("3.1.1.0.6").checked
+  var e1 = document.getElementById("3.1.1.1").checked
+  var e2 = document.getElementById("3.1.1.2").checked
+  var e3 = document.getElementById("3.1.1.3").checked
+  var e4 = document.getElementById("3.1.1.0.1").checked
+  var e5 = document.getElementById("3.1.1.0.2").checked
+  var e6 = document.getElementById("3.1.1.0.3").checked
+  var e7 = document.getElementById("3.1.1.0.4").checked
+  var e8 = document.getElementById("3.1.1.0.5").checked
+  var e9 = document.getElementById("3.1.1.0.6").checked
   var e10 = document.getElementById("3.1.1.0.7").checked
   var e11 = document.getElementById("3.1.1.0.8").checked
   var e12 = document.getElementById("3.1.1.0.9").checked
@@ -127,15 +127,15 @@ function tedioso(coso1,coso2,coso3,coso4){
   var e31 = document.getElementById("3.1.4").checked
   var e32 = document.getElementById("3.1.5").checked
   //PASTAS Y SALSAS VARS 
-  var pys01 = document.getElementById("4.1.1.1").checked
-  var pys02 = document.getElementById("4.1.1.2").checked
-  var pys03 = document.getElementById("4.1.1.3").checked
-  var pys04 = document.getElementById("4.1.1.0.1").checked
-  var pys05 = document.getElementById("4.1.1.0.2").checked
-  var pys06 = document.getElementById("4.1.1.0.3").checked
-  var pys07 = document.getElementById("4.1.1.0.4").checked
-  var pys08 = document.getElementById("4.1.1.0.5").checked
-  var pys09 = document.getElementById("4.1.1.0.6").checked
+  var pys1 = document.getElementById("4.1.1.1").checked
+  var pys2 = document.getElementById("4.1.1.2").checked
+  var pys3 = document.getElementById("4.1.1.3").checked
+  var pys4 = document.getElementById("4.1.1.0.1").checked
+  var pys5 = document.getElementById("4.1.1.0.2").checked
+  var pys6 = document.getElementById("4.1.1.0.3").checked
+  var pys7 = document.getElementById("4.1.1.0.4").checked
+  var pys8 = document.getElementById("4.1.1.0.5").checked
+  var pys9 = document.getElementById("4.1.1.0.6").checked
   var pys10 = document.getElementById("4.1.1.0.0.1").checked
   var pys11 = document.getElementById("4.1.1.0.0.2").checked
   var pys12 = document.getElementById("4.1.1.0.0.3").checked
@@ -157,15 +157,15 @@ function tedioso(coso1,coso2,coso3,coso4){
   var pys28 = document.getElementById("4.2.4").checked
   var pys29 = document.getElementById("4.2.5").checked
   //CAFE VARS
-  var c01 = document.getElementById("5.1.1.1").checked
-  var c02 = document.getElementById("5.1.1.2").checked
-  var c03 = document.getElementById("5.1.1.3").checked
-  var c04 = document.getElementById("5.1.1.4").checked
-  var c05 = document.getElementById("5.1.1.5").checked
-  var c06 = document.getElementById("5.1.1.0.1").checked
-  var c07 = document.getElementById("5.1.1.0.2").checked
-  var c08 = document.getElementById("5.1.1.0.3").checked
-  var c09 = document.getElementById("5.1.1.0.4").checked
+  var c1 = document.getElementById("5.1.1.1").checked
+  var c2 = document.getElementById("5.1.1.2").checked
+  var c3 = document.getElementById("5.1.1.3").checked
+  var c4 = document.getElementById("5.1.1.4").checked
+  var c5 = document.getElementById("5.1.1.5").checked
+  var c6 = document.getElementById("5.1.1.0.1").checked
+  var c7 = document.getElementById("5.1.1.0.2").checked
+  var c8 = document.getElementById("5.1.1.0.3").checked
+  var c9 = document.getElementById("5.1.1.0.4").checked
   var c10 = document.getElementById("5.1.1.0.5").checked
   var c11 = document.getElementById("5.1.1.0.6").checked
   var c12 = document.getElementById("5.1.1.0.7").checked
@@ -190,25 +190,25 @@ function tedioso(coso1,coso2,coso3,coso4){
   var c31 = document.getElementById("5.1.1.0.0.0.0.5").checked
   var c32 = document.getElementById("5.1.1.0.0.0.0.6").checked
   //AGREGADOS VARS
-  var a01 = document.getElementById("6.1.1.1").checked
-  var a02 = document.getElementById("6.1.1.2").checked
-  var a03 = document.getElementById("6.1.1.3").checked
-  var a04 = document.getElementById("6.1.1.4").checked
-  var a05 = document.getElementById("6.1.1.0.1").checked
-  var a06 = document.getElementById("6.1.1.0.2").checked
-  var a07 = document.getElementById("6.1.1.0.3").checked
-  var a08 = document.getElementById("6.1.1.0.4").checked
-  var a09 = document.getElementById("6.1.1.0.5").checked
+  var a1 = document.getElementById("6.1.1.1").checked
+  var a2 = document.getElementById("6.1.1.2").checked
+  var a3 = document.getElementById("6.1.1.3").checked
+  var a4 = document.getElementById("6.1.1.4").checked
+  var a5 = document.getElementById("6.1.1.0.1").checked
+  var a6 = document.getElementById("6.1.1.0.2").checked
+  var a7 = document.getElementById("6.1.1.0.3").checked
+  var a8 = document.getElementById("6.1.1.0.4").checked
+  var a9 = document.getElementById("6.1.1.0.5").checked
   //BEBIDAS VARS
-  var b01 = document.getElementById("7.1.1.1").checked
-  var b02 = document.getElementById("7.1.1.2").checked
-  var b03 = document.getElementById("7.1.1.3").checked
-  var b04 = document.getElementById("7.1.1.0.1").checked
-  var b05 = document.getElementById("7.1.1.0.2").checked
-  var b06 = document.getElementById("7.1.1.0.3").checked
-  var b07 = document.getElementById("7.1.1.0.4").checked
-  var b08 = document.getElementById("7.1.1.0.5").checked
-  var b09 = document.getElementById("7.1.1.0.6").checked
+  var b1 = document.getElementById("7.1.1.1").checked
+  var b2 = document.getElementById("7.1.1.2").checked
+  var b3 = document.getElementById("7.1.1.3").checked
+  var b4 = document.getElementById("7.1.1.0.1").checked
+  var b5 = document.getElementById("7.1.1.0.2").checked
+  var b6 = document.getElementById("7.1.1.0.3").checked
+  var b7 = document.getElementById("7.1.1.0.4").checked
+  var b8 = document.getElementById("7.1.1.0.5").checked
+  var b9 = document.getElementById("7.1.1.0.6").checked
   var b10 = document.getElementById("7.1.1.0.7").checked
   var b11 = document.getElementById("7.1.1.0.8").checked 
   var b12 = document.getElementById("7.1.1.0.0.1").checked
@@ -236,58 +236,58 @@ function tedioso(coso1,coso2,coso3,coso4){
 
   //CONDICIONALES
   //-------------------------------hamburguesa
-  if (h01 == false & h02 == false & h03 == false & h04 == false){ //no carne
-    if ((h05 == true | h06 == true | h07 == true | h08 == true)){ //si pan
+  if (h1 == false & h2 == false & h3 == false & h4 == false){ //no carne
+    if ((h5 == true | h6 == true | h7 == true | h8 == true)){ //si pan
       alert("Seleccione la carne de la hamburguesa")
       var listo = false
     }
   }
 
-  else if((h01 == true | h02 == true | h03 == true | h04 == true)){
-    if(h05 == false & h05 == false & h06 == false & h07 == false & h08 == false){
+  else if((h1 == true | h2 == true | h3 == true | h4 == true)){
+    if(h5 == false & h5 == false & h6 == false & h7 == false & h8 == false){
       alert("Seleccione el pan de la hamburguesa")
       var listo = false
     }
   }
   //---------------------------------pizzas
-  if (p01 == false & p02 == false & p03 == false & p04 == false){ 
-    if ((p05 == true | p06 == true | p07 == true | p08 == true | p09 == true | p10 == true )){
+  if (p1 == false & p2 == false & p3 == false & p4 == false){ 
+    if ((p5 == true | p6 == true | p7 == true | p8 == true | p9 == true | p10 == true )){
       alert("Seleccione el tamaño de la pizza")
       var listo = false
     }
   }
 
-  else if((p01 == true | p02 == true | p03 == true | p04 == true)){
-    if(p05 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false){
+  else if((p1 == true | p2 == true | p3 == true | p4 == true)){
+    if(p5 == false & p5 == false & p6 == false & p7 == false & p8 == false & p9 == false & p10 == false){
       alert("Seleccione el queso de la pizza")
       var listo = false
     }
   }
 
   //--------------------------------ensalada
-  if (e01 == false & e02 == false & e03 == false){ 
-    if (e04 == true | e05 == true | e06 == true | e07 == true | e08 == true | e09 == true | e10 == true | e11 == true | e12 == true | e13 == true | e14 == true | e15 == true | e16 == true | e17 == true | e18 == true | e19 == true | e20 == true | e21 == true | e22 == true | e23 == true | e24 == true | e25 == true | e26 == true | e27 == true | e28 == true | e29 == true){
+  if (e1 == false & e2 == false & e3 == false){ 
+    if (e4 == true | e5 == true | e6 == true | e7 == true | e8 == true | e9 == true | e10 == true | e11 == true | e12 == true | e13 == true | e14 == true | e15 == true | e16 == true | e17 == true | e18 == true | e19 == true | e20 == true | e21 == true | e22 == true | e23 == true | e24 == true | e25 == true | e26 == true | e27 == true | e28 == true | e29 == true){
       alert("Seleccione el tamaño de la ensalada")
       var listo = false
     }
   }
 
-  else if(e01 == true | e02 == true | e03 == true){
-    if(e04 == false & e05 == false & e06 == false & e07 == false & e08 == false & e09 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false){
+  else if(e1 == true | e2 == true | e3 == true){
+    if(e4 == false & e5 == false & e6 == false & e7 == false & e8 == false & e9 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false){
       alert("Seleccione los incredientes de la ensalada")
       var listo = false
     }
   }
   //----------------------------------pastas y salsas
-  if (pys01 == false & pys02 == false & pys03 == false){ 
-    if (pys04 == true | pys05 == true | pys06 == true | pys07 == true | pys08 == true | pys09 == true | pys10 == true | pys11 == true | pys12 == true | pys13 == true | pys14 == true | pys15 == true | pys16 == true | pys17 == true | pys18 == true | pys19 == true | pys20 == true | pys21 == true | pys22 == true | pys23 == true | pys24 == true | pys25 == true | pys26 == true ){
+  if (pys1 == false & pys2 == false & pys3 == false){ 
+    if (pys4 == true | pys5 == true | pys6 == true | pys7 == true | pys8 == true | pys9 == true | pys10 == true | pys11 == true | pys12 == true | pys13 == true | pys14 == true | pys15 == true | pys16 == true | pys17 == true | pys18 == true | pys19 == true | pys20 == true | pys21 == true | pys22 == true | pys23 == true | pys24 == true | pys25 == true | pys26 == true ){
       alert("Seleccione el tipo de salsa")
       var listo = false
     }
   }
 
-  else if(pys01 == true | pys02 == true | pys03 == true){
-    if(pys04 == false & pys05 == false & pys06 == false & pys07 == false & pys08 == false & pys09 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false){
+  else if(pys1 == true | pys2 == true | pys3 == true){
+    if(pys4 == false & pys5 == false & pys6 == false & pys7 == false & pys8 == false & pys9 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false){
       alert("Seleccione el tipo pasta")
       var listo = false
     }
@@ -295,13 +295,13 @@ function tedioso(coso1,coso2,coso3,coso4){
   //--------------CONDICION TOTAL-----------------
   //h25 | p35 | pys26 | c32 | a09 | b31
   
-  if ( h01 == false & h02 == false & h03 == false & h04 == false & h05 == false & h06 == false & h07 == false & h08 == false & h09 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false){
-    if( p01 == false & p02 == false & p03 == false & p04 == false & p05 == false & p06 == false & p07 == false & p08 == false & p09 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & p18 == false & p19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
-      if( e01 == false & e02 == false & e03 == false & e04 == false & e05 == false & e06 == false & e07 == false & e08 == false & e09 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
-        if( pys01 == false & pys02 == false & pys03 == false & pys04 == false & pys05 == false & pys06 == false & pys07 == false & pys08 == false & pys09 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
-          if( c01 == false & c02 == false & c03 == false & c04 == false & c05 == false & c06 == false & c07 == false & c08 == false & c09 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false & c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false){
-            if( a01 == false & a02 == false & a03 == false & a04 == false & a05 == false & a06 == false & a07 == false & a08 == false & a09 == false ){
-              if( b01 == false & b02 == false & b03 == false & b04 == false & b05 == false & b06 == false & b07 == false & b08 == false & b09 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
+  if ( h1 == false & h2 == false & h3 == false & h4 == false & h5 == false & h6 == false & h7 == false & h8 == false & h9 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false){
+    if( p1 == false & p2 == false & p3 == false & p4 == false & p5 == false & p6 == false & p7 == false & p8 == false & p9 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & p18 == false & p19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
+      if( e1 == false & e2 == false & e3 == false & e4 == false & e5 == false & e6 == false & e7 == false & e8 == false & e9 == false & e10 == false & e11 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
+        if( pys1 == false & pys2 == false & pys3 == false & pys4 == false & pys5 == false & pys6 == false & pys7 == false & pys8 == false & pys9 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
+          if( c1 == false & c2 == false & c3 == false & c4 == false & c5 == false & c6 == false & c7 == false & c8 == false & c9 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false & c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false){
+            if( a1 == false & a2 == false & a3 == false & a4 == false & a5 == false & a6 == false & a7 == false & a8 == false & a9 == false ){
+              if( b1 == false & b2 == false & b3 == false & b4 == false & b5 == false & b6 == false & b7 == false & b8 == false & b9 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
                 alert("No ha seleccionado nada del menu")
                 var listo = false
               }
@@ -317,7 +317,7 @@ function tedioso(coso1,coso2,coso3,coso4){
     var i=0
     while(i<0){
       while(ped){
-        elpedido(b01)
+        elpedido(b1)
         i+=1
       }
       while(!(ped)){
