@@ -29,8 +29,8 @@ function formularioN(parametro1, parametro2) {
     else message.innerHTML = "*Por favor, " + err;
   }
 }
-//--------------el tedioso------------------//
-function tedioso(coso1,coso2,coso3,coso4){
+//--------------el tedioso------------------🧉
+function tedioso(){
   //BURGUER VARS
   var h1 = document.getElementById("h1").checked
   var h2 = document.getElementById("h2").checked
