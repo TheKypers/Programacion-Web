@@ -295,7 +295,7 @@ function tedioso(){
   //--------------CONDICION TOTAL-----------------
   //h25 | p35 | e32 | pys26 | c32 | a9 | b31
   
-  if ( h1 == false & h2 == false & h3 == false & h4 == false & h5 == false & h6 == false & h7 == false & h8 == false & h9 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false){
+  if ( h1 == false & h2 == false & h3 == false & h4 == false & h5 == false & h6 == false & h7 == false & h8 == false & h9 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false & h25 == false){
     if( p1 == false & p2 == false & p3 == false & p4 == false & p5 == false & p6 == false & p7 == false & p8 == false & p9 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & p18 == false & p19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
       if( e1 == false & e2 == false & e3 == false & e4 == false & e5 == false & e6 == false & e7 == false & e8 == false & e9 == false & e10 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
         if( pys1 == false & pys2 == false & pys3 == false & pys4 == false & pys5 == false & pys6 == false & pys7 == false & pys8 == false & pys9 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
@@ -319,14 +319,14 @@ function tedioso(){
     while(i<=25){ //hamburguesa
       var variable = "h" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
     while(i<=35){ //pizza
       var variable = "p" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
@@ -337,7 +337,7 @@ function tedioso(){
         i+=1
       }
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
@@ -345,7 +345,7 @@ function tedioso(){
     while(i<=26){ // pys
       var variable = "pys" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
@@ -353,7 +353,7 @@ function tedioso(){
     while(i<=32){ // cafe
       var variable = "c" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
@@ -361,7 +361,7 @@ function tedioso(){
     while(i<=9){ // agregados
       var variable = "a" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
@@ -369,12 +369,17 @@ function tedioso(){
     while(i<=31){ // bebidas
       var variable = "b" + String(i)
       if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " | " 
+        pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     } 
     
   }  
-  
 }
-
+/*
+1 - op1 y op2
+1´- op1´ y op2´
+1´´- op1´´ y op2´´
+1´´´-op1´´´ y op´´´
+2 - agregados
+*/
