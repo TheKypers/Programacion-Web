@@ -31,132 +31,7 @@ function formularioN(parametro1, parametro2) {
 }
 //--------------el tedioso------------------🧉
 function tedioso(){
-  //BURGUER VARS
-  var h1 = document.getElementById("h1").checked
-  var h2 = document.getElementById("h2").checked
-  var h3 = document.getElementById("h3").checked
-  var h4 = document.getElementById("h4").checked
-  var h5 = document.getElementById("h5").checked
-  var h6 = document.getElementById("h6").checked
-  var h7 = document.getElementById("h7").checked
-  var h8 = document.getElementById("h8").checked
-  var h9 = document.getElementById("h9").checked
-  var h10 = document.getElementById("h10").checked
-  var h11 = document.getElementById("h11").checked
-  var h12 = document.getElementById("h12").checked
-  var h13 = document.getElementById("h13").checked
-  var h14 = document.getElementById("h14").checked
-  var h15 = document.getElementById("h15").checked
-  var h16 = document.getElementById("h16").checked
-  var h17 = document.getElementById("h17").checked
-  var h18 = document.getElementById("h18").checked
-  var h19 = document.getElementById("h19").checked
-  var h20 = document.getElementById("h20").checked
-  var h21 = document.getElementById("h21").checked
-  var h22 = document.getElementById("h22").checked
-  var h23 = document.getElementById("h23").checked
-  var h24 = document.getElementById("h24").checked
-  var h25 = document.getElementById("h25").checked
-  //PIZZA VARS
-  var p1 = document.getElementById("p1").checked
-  var p2 = document.getElementById("p2").checked
-  var p3 = document.getElementById("p3").checked
-  var p4 = document.getElementById("p4").checked
-  var p5 = document.getElementById("p5").checked
-  var p6 = document.getElementById("p6").checked
-  var p7 = document.getElementById("p7").checked
-  var p8 = document.getElementById("p8").checked
-  var p9 = document.getElementById("p9").checked
-  var p10 = document.getElementById("p10").checked
-  var p11 = document.getElementById("p11").checked
-  var p12 = document.getElementById("p12").checked
-  var p13 = document.getElementById("p13").checked
-  var p14 = document.getElementById("p14").checked
-  var p15 = document.getElementById("p15").checked
-  var p16 = document.getElementById("p16").checked
-  var p17 = document.getElementById("p17").checked
-  var p18 = document.getElementById("p18").checked
-  var p19 = document.getElementById("p19").checked
-  var p20 = document.getElementById("p20").checked
-  var p21 = document.getElementById("p21").checked
-  var p22 = document.getElementById("p22").checked
-  var p23 = document.getElementById("p23").checked
-  var p24 = document.getElementById("p24").checked
-  var p25 = document.getElementById("p25").checked
-  var p26 = document.getElementById("p26").checked
-  var p27 = document.getElementById("p27").checked
-  var p28 = document.getElementById("p28").checked
-  var p29 = document.getElementById("p29").checked
-  var p30 = document.getElementById("p30").checked
-  var p31 = document.getElementById("p31").checked
-  var p32 = document.getElementById("p32").checked
-  var p33 = document.getElementById("p33").checked
-  var p34 = document.getElementById("p34").checked
-  var p35 = document.getElementById("p35").checked
-  //ENSALADA VARS
-  var e1 = document.getElementById("e1").checked
-  var e2 = document.getElementById("e2").checked
-  var e3 = document.getElementById("e3").checked
-  var e4 = document.getElementById("e4").checked
-  var e5 = document.getElementById("e5").checked
-  var e6 = document.getElementById("e6").checked
-  var e7 = document.getElementById("e7").checked
-  var e8 = document.getElementById("e8").checked
-  var e9 = document.getElementById("e9").checked
-  var e10 = document.getElementById("e10").checked
-  //var e11 = document.getElementById("e11").checked
-  var e12 = document.getElementById("e12").checked
-  var e13 = document.getElementById("e13").checked
-  var e14 = document.getElementById("e14").checked
-  var e15 = document.getElementById("e15").checked
-  var e16 = document.getElementById("e16").checked
-  var e17 = document.getElementById("e17").checked
-  var e18 = document.getElementById("e18").checked
-  var e19 = document.getElementById("e19").checked
-  var e20 = document.getElementById("e20").checked
-  var e21 = document.getElementById("e21").checked
-  var e22 = document.getElementById("e22").checked
-  var e23 = document.getElementById("e23").checked
-  var e24 = document.getElementById("e24").checked
-  var e25 = document.getElementById("e25").checked
-  var e26 = document.getElementById("e26").checked
-  var e27 = document.getElementById("e27").checked
-  var e28 = document.getElementById("e28").checked
-  var e29 = document.getElementById("e29").checked
-  var e30 = document.getElementById("e30").checked
-  var e31 = document.getElementById("e31").checked
-  var e32 = document.getElementById("e32").checked
-  //PASTAS Y SALSAS VARS 
-  var pys1 = document.getElementById("pys1").checked
-  var pys2 = document.getElementById("pys2").checked
-  var pys3 = document.getElementById("pys3").checked
-  var pys4 = document.getElementById("pys4").checked
-  var pys5 = document.getElementById("pys5").checked
-  var pys6 = document.getElementById("pys6").checked
-  var pys7 = document.getElementById("pys7").checked
-  var pys8 = document.getElementById("pys8").checked
-  var pys9 = document.getElementById("pys9").checked
-  var pys10 = document.getElementById("pys10").checked
-  var pys11 = document.getElementById("pys11").checked
-  var pys12 = document.getElementById("pys12").checked
-  var pys13 = document.getElementById("pys13").checked
-  var pys14 = document.getElementById("pys14").checked
-  var pys15 = document.getElementById("pys15").checked
-  var pys16 = document.getElementById("pys16").checked
-  var pys17 = document.getElementById("pys17").checked
-  var pys18 = document.getElementById("pys18").checked
-  var pys19 = document.getElementById("pys19").checked
-  var pys20 = document.getElementById("pys20").checked
-  var pys21 = document.getElementById("pys21").checked
-  var pys22 = document.getElementById("pys22").checked
-  var pys23 = document.getElementById("pys23").checked
-  var pys24 = document.getElementById("pys24").checked
-  var pys25 = document.getElementById("pys25").checked
-  var pys26 = document.getElementById("pys26").checked
-  var pys27 = document.getElementById("pys27").checked
-  var pys28 = document.getElementById("pys28").checked
-  var pys29 = document.getElementById("pys29").checked
-  //CAFE VARS
+  //BURGUER VARS c1-c25
   var c1 = document.getElementById("c1").checked
   var c2 = document.getElementById("c2").checked
   var c3 = document.getElementById("c3").checked
@@ -182,112 +57,237 @@ function tedioso(){
   var c23 = document.getElementById("c23").checked
   var c24 = document.getElementById("c24").checked
   var c25 = document.getElementById("c25").checked
-  var c26 = document.getElementById("c26").checked
+  //PIZZA VARS c26-c60
+  var c26 = document.getElementById("c26").checked //p1
   var c27 = document.getElementById("c27").checked
   var c28 = document.getElementById("c28").checked
   var c29 = document.getElementById("c29").checked
   var c30 = document.getElementById("c30").checked
   var c31 = document.getElementById("c31").checked
   var c32 = document.getElementById("c32").checked
-  //AGREGADOS VARS
-  var a1 = document.getElementById("a1").checked
-  var a2 = document.getElementById("a2").checked
-  var a3 = document.getElementById("a3").checked
-  var a4 = document.getElementById("a4").checked
-  var a5 = document.getElementById("a5").checked
-  var a6 = document.getElementById("a6").checked
-  var a7 = document.getElementById("a7").checked
-  var a8 = document.getElementById("a8").checked
-  var a9 = document.getElementById("a9").checked
-  //BEBIDAS VARS
-  var b1 = document.getElementById("b1").checked
-  var b2 = document.getElementById("b2").checked
-  var b3 = document.getElementById("b3").checked
-  var b4 = document.getElementById("b4").checked
-  var b5 = document.getElementById("b5").checked
-  var b6 = document.getElementById("b6").checked
-  var b7 = document.getElementById("b7").checked
-  var b8 = document.getElementById("b8").checked
-  var b9 = document.getElementById("b9").checked
-  var b10 = document.getElementById("b10").checked
-  var b11 = document.getElementById("b11").checked 
-  var b12 = document.getElementById("b12").checked
-  var b13 = document.getElementById("b13").checked
-  var b14 = document.getElementById("b14").checked
-  var b15 = document.getElementById("b15").checked
-  var b16 = document.getElementById("b16").checked
-  var b17 = document.getElementById("b17").checked
-  var b18 = document.getElementById("b18").checked
-  var b19 = document.getElementById("b19").checked
-  var b20 = document.getElementById("b20").checked
-  var b21 = document.getElementById("b21").checked
-  var b22 = document.getElementById("b22").checked
-  var b23 = document.getElementById("b23").checked
-  var b24 = document.getElementById("b24").checked
-  var b25 = document.getElementById("b25").checked
-  var b26 = document.getElementById("b26").checked
-  var b27 = document.getElementById("b27").checked
-  var b28 = document.getElementById("b28").checked
-  var b29 = document.getElementById("b29").checked
-  var b30 = document.getElementById("b30").checked
-  var b31 = document.getElementById("b31").checked
+  var c33 = document.getElementById("c33").checked
+  var c34 = document.getElementById("c34").checked
+  var c35 = document.getElementById("c35").checked
+  var c36 = document.getElementById("c36").checked
+  var c37 = document.getElementById("c37").checked
+  var c38 = document.getElementById("c38").checked
+  var c39 = document.getElementById("c39").checked
+  var c40 = document.getElementById("c40").checked
+  var c41 = document.getElementById("c41").checked
+  var c42 = document.getElementById("c42").checked
+  var c43 = document.getElementById("c43").checked
+  var c44 = document.getElementById("c44").checked
+  var c45 = document.getElementById("c45").checked
+  var c46 = document.getElementById("c46").checked
+  var c47 = document.getElementById("c47").checked
+  var c48 = document.getElementById("c48").checked
+  var c49 = document.getElementById("c49").checked
+  var c50 = document.getElementById("c50").checked
+  var c51 = document.getElementById("c51").checked
+  var c52 = document.getElementById("c52").checked
+  var c53 = document.getElementById("c53").checked
+  var c54 = document.getElementById("c54").checked
+  var c55 = document.getElementById("c55").checked
+  var c56 = document.getElementById("c56").checked
+  var c57 = document.getElementById("c57").checked
+  var c58 = document.getElementById("c58").checked
+  var c59 = document.getElementById("c59").checked
+  var c60 = document.getElementById("c60").checked
+  //ENSALADA VARS c61-c92
+  var c61 = document.getElementById("c61").checked //e1
+  var c62 = document.getElementById("c62").checked
+  var c63 = document.getElementById("c63").checked
+  var c64 = document.getElementById("c64").checked
+  var c65 = document.getElementById("c65").checked
+  var c66 = document.getElementById("c66").checked
+  var c67 = document.getElementById("c67").checked
+  var c68 = document.getElementById("c68").checked
+  var c69 = document.getElementById("c69").checked
+  var c70 = document.getElementById("c70").checked
+  var c71 = document.getElementById("c71").checked
+  var c72 = document.getElementById("c72").checked
+  var c73 = document.getElementById("c73").checked
+  var c74 = document.getElementById("c74").checked
+  var c75 = document.getElementById("c75").checked
+  var c76 = document.getElementById("c76").checked
+  var c77 = document.getElementById("c77").checked
+  var c78 = document.getElementById("c78").checked
+  var c79 = document.getElementById("c79").checked
+  var c80 = document.getElementById("c80").checked
+  var c81 = document.getElementById("c81").checked
+  var c82 = document.getElementById("c82").checked
+  var c83 = document.getElementById("c83").checked
+  var c84 = document.getElementById("c84").checked
+  var c85 = document.getElementById("c85").checked
+  var c86 = document.getElementById("c86").checked
+  var c87 = document.getElementById("c87").checked
+  var c88 = document.getElementById("c88").checked
+  var c89 = document.getElementById("c89").checked
+  var c90 = document.getElementById("c90").checked
+  var c91 = document.getElementById("c91").checked
+  //PASTAS Y SALSAS VARS c93-c121
+  var c92 = document.getElementById("c92").checked //pys1
+  var c93 = document.getElementById("c93").checked
+  var c94 = document.getElementById("c94").checked
+  var c95 = document.getElementById("c95").checked
+  var c96 = document.getElementById("c96").checked
+  var c97 = document.getElementById("c97").checked
+  var c98 = document.getElementById("c98").checked
+  var c99 = document.getElementById("c99").checked
+  var c100 = document.getElementById("c100").checked
+  var c101 = document.getElementById("c101").checked
+  var c102 = document.getElementById("c102").checked
+  var c103 = document.getElementById("c103").checked
+  var c104 = document.getElementById("c104").checked
+  var c105 = document.getElementById("c105").checked
+  var c106 = document.getElementById("c106").checked
+  var c107 = document.getElementById("c107").checked
+  var c108 = document.getElementById("c108").checked
+  var c109 = document.getElementById("c109").checked
+  var c110 = document.getElementById("c110").checked
+  var c111 = document.getElementById("c111").checked
+  var c112 = document.getElementById("c112").checked
+  var c113 = document.getElementById("c113").checked
+  var c114 = document.getElementById("c114").checked
+  var c115 = document.getElementById("c115").checked
+  var c116 = document.getElementById("c116").checked
+  var c117 = document.getElementById("c117").checked
+  var c118 = document.getElementById("c118").checked
+  var c119 = document.getElementById("c119").checked
+  var c120 = document.getElementById("c120").checked
+  //CAFE VARS c121-c152
+  var c121 = document.getElementById("c121").checked //c1
+  var c122 = document.getElementById("c122").checked
+  var c123 = document.getElementById("c123").checked
+  var c124 = document.getElementById("c124").checked
+  var c125 = document.getElementById("c125").checked
+  var c126 = document.getElementById("c126").checked
+  var c127 = document.getElementById("c127").checked
+  var c128 = document.getElementById("c128").checked
+  var c129 = document.getElementById("c129").checked
+  var c130 = document.getElementById("c130").checked
+  var c131 = document.getElementById("c131").checked
+  var c132 = document.getElementById("c132").checked
+  var c133 = document.getElementById("c133").checked
+  var c134 = document.getElementById("c134").checked
+  var c135 = document.getElementById("c135").checked
+  var c136 = document.getElementById("c136").checked
+  var c137 = document.getElementById("c137").checked
+  var c138 = document.getElementById("c138").checked
+  var c139 = document.getElementById("c139").checked
+  var c140 = document.getElementById("c140").checked
+  var c141 = document.getElementById("c141").checked
+  var c142 = document.getElementById("c142").checked
+  var c143 = document.getElementById("c143").checked
+  var c144 = document.getElementById("c144").checked
+  var c145 = document.getElementById("c145").checked
+  var c146 = document.getElementById("c146").checked
+  var c147 = document.getElementById("c147").checked
+  var c148 = document.getElementById("c148").checked
+  var c149 = document.getElementById("c149").checked
+  var c150 = document.getElementById("c150").checked
+  var c151 = document.getElementById("c151").checked
+  var c152 = document.getElementById("c152").checked
+  //AGREGADOS VARS c153-c161
+  var c153 = document.getElementById("c153").checked //a1
+  var c154 = document.getElementById("c154").checked
+  var c155 = document.getElementById("c155").checked
+  var c156 = document.getElementById("c156").checked
+  var c157 = document.getElementById("c157").checked
+  var c158 = document.getElementById("c158").checked
+  var c159 = document.getElementById("c159").checked
+  var c160 = document.getElementById("c160").checked
+  var c161 = document.getElementById("c161").checked
+  //BEBIDAS VARS c163-c193
+  var c162 = document.getElementById("c162").checked //b1
+  var c163 = document.getElementById("c163").checked
+  var c164 = document.getElementById("c164").checked
+  var c165 = document.getElementById("c165").checked
+  var c166 = document.getElementById("c166").checked
+  var c167 = document.getElementById("c167").checked
+  var c168 = document.getElementById("c168").checked
+  var c169 = document.getElementById("c169").checked
+  var c170 = document.getElementById("c170").checked
+  var c171 = document.getElementById("c171").checked
+  var c172 = document.getElementById("c172").checked
+  var c173 = document.getElementById("c173").checked 
+  var c174 = document.getElementById("c174").checked
+  var c175 = document.getElementById("c175").checked
+  var c176 = document.getElementById("c176").checked
+  var c177 = document.getElementById("c177").checked
+  var c178 = document.getElementById("c178").checked
+  var c179 = document.getElementById("c179").checked
+  var c180 = document.getElementById("c180").checked
+  var c181 = document.getElementById("c181").checked
+  var c182 = document.getElementById("c182").checked
+  var c183 = document.getElementById("c183").checked
+  var c184 = document.getElementById("c184").checked
+  var c185 = document.getElementById("c185").checked
+  var c186 = document.getElementById("c186").checked
+  var c187 = document.getElementById("c187").checked
+  var c188 = document.getElementById("c188").checked
+  var c189 = document.getElementById("c189").checked
+  var c190 = document.getElementById("c190").checked
+  var c191 = document.getElementById("c191").checked
+  var c192 = document.getElementById("c192").checked
+  //var c193 = document.getElementById("c193").checked
   //bandera de pedido
   var listo = true
 
   //CONDICIONALES
   //-------------------------------hamburguesa
-  if (h1 == false & h2 == false & h3 == false & h4 == false){ //no carne
-    if ((h5 == true | h6 == true | h7 == true | h8 == true)){ //si pan
+  if (c1 == false & c2 == false & c3 == false & c4 == false){ //no carne
+    if ((c5 == true | c6 == true | c7 == true | c8 == true)){ //si pan
       alert("Seleccione la carne de la hamburguesa")
       var listo = false
     }
   }
 
-  else if((h1 == true | h2 == true | h3 == true | h4 == true)){
-    if(h5 == false & h5 == false & h6 == false & h7 == false & h8 == false){
+  else if((c1 == true | c2 == true | c3 == true | c4 == true)){
+    if(c5 == false & c5 == false & c6 == false & c7 == false & c8 == false){
       alert("Seleccione el pan de la hamburguesa")
       var listo = false
     }
   }
   //---------------------------------pizzas
-  if (p1 == false & p2 == false & p3 == false & p4 == false){ 
-    if ((p5 == true | p6 == true | p7 == true | p8 == true | p9 == true | p10 == true )){
+  if (c26 == false & c27 == false & c28 == false & c29 == false){ 
+    if(c30 == true | c31 == true | c32 == true | c33 == true | c34 == true | c35 == true | c36 == true){
       alert("Seleccione el tamaño de la pizza")
       var listo = false
     }
   }
 
-  else if((p1 == true | p2 == true | p3 == true | p4 == true)){
-    if(p5 == false & p5 == false & p6 == false & p7 == false & p8 == false & p9 == false & p10 == false){
+  else if((c26 == true | c27 == true | c28 == true | c29 == true)){
+    if(c30 == false & c31 == false & c32 == false & c33 == false & c34 == false & c35 == false & c36 == false){
       alert("Seleccione el queso de la pizza")
       var listo = false
     }
   }
 
   //--------------------------------ensalada
-  if (e1 == false & e2 == false & e3 == false){ 
-    if (e4 == true | e5 == true | e6 == true | e7 == true | e8 == true | e9 == true | e10 == true | e12 == true | e13 == true | e14 == true | e15 == true | e16 == true | e17 == true | e18 == true | e19 == true | e20 == true | e21 == true | e22 == true | e23 == true | e24 == true | e25 == true | e26 == true | e27 == true | e28 == true | e29 == true){
+  if (c61 == false & c62 == false & c63 == false){ 
+    if (c64 == true | c65 == true | c66 == true | c67 == true | c68 == true | c69 == true | c70 == true | c71 == true | c72 == true | c73 == true | c74 == true | c75 == true | c76 == true | c77 == true | c78 == true | c79 == true | c80 == true | c81 == true | c82 == true | c83 == true | c84 == true | c85 == true | c86 == true | c87 == true | c88 == true){
       alert("Seleccione el tamaño de la ensalada")
       var listo = false
     }
   }
 
-  else if(e1 == true | e2 == true | e3 == true){
-    if(e4 == false & e5 == false & e6 == false & e7 == false & e8 == false & e9 == false & e10 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false){
+  else if(c61 == true | c62 == true | c63 == true){
+    if(c64 == false & c65 == false & c66 == false & c67 == false & c68 == false & c69 == false & c70 == false & c71 == false & c72 == false & c73 == false & c74 == false & c75 == false & c76 == false & c77 == false & c78 == false & c79 == false & c80 == false & c81 == false & c82 == false & c83 == false & c84 == false & c85 == false & c86 == false & c87 == false & c88 == false){
       alert("Seleccione los incredientes de la ensalada")
       var listo = false
     }
   }
   //----------------------------------pastas y salsas
-  if (pys1 == false & pys2 == false & pys3 == false){ 
-    if (pys4 == true | pys5 == true | pys6 == true | pys7 == true | pys8 == true | pys9 == true | pys10 == true | pys11 == true | pys12 == true | pys13 == true | pys14 == true | pys15 == true | pys16 == true | pys17 == true | pys18 == true | pys19 == true | pys20 == true | pys21 == true | pys22 == true | pys23 == true | pys24 == true | pys25 == true | pys26 == true ){
+  if (c92 == false & c93 == false & c94 == false){ 
+    if (c95 == true | c96 == true | c97 == true | c98 == true | c99 == true | c100 == true | c101 == true | c102 == true | c103 == true | c104 == true | c105 == true | c106 == true | c107 == true | c108 == true | c109 == true | c110 == true | c111 == true | c112 == true | c113 == true | c114 == true | c115 == true | c116 == true | c117 == true){
       alert("Seleccione el tipo de salsa")
       var listo = false
     }
   }
 
-  else if(pys1 == true | pys2 == true | pys3 == true){
-    if(pys4 == false & pys5 == false & pys6 == false & pys7 == false & pys8 == false & pys9 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false){
+  else if(c92 == true |c93 == true | c94 == true){
+    if(c95 == false & c96 == false & c97 == false & c98 == false & c99 == false & c100 == false & c101 == false & c102 == false & c103 == false & c104 == false & c105 == false & c106 == false & c107 == false & c108 == false & c109 == false & c110 == false & c111 == false & c112 == false & c113 == false & c114 == false & c115 == false & c116 == false & c117 == false){
       alert("Seleccione el tipo pasta")
       var listo = false
     }
@@ -295,13 +295,13 @@ function tedioso(){
   //--------------CONDICION TOTAL-----------------
   //h25 | p35 | e32 | pys26 | c32 | a9 | b31
   
-  if ( h1 == false & h2 == false & h3 == false & h4 == false & h5 == false & h6 == false & h7 == false & h8 == false & h9 == false & h10 == false & h11 == false & h12 == false & h13 == false & h14 == false & h15 == false & h16 == false & h17 == false & h18 == false & h19 == false & h20 == false & h21 == false & h22 == false & h23 == false & h24 == false & h25 == false){
-    if( p1 == false & p2 == false & p3 == false & p4 == false & p5 == false & p6 == false & p7 == false & p8 == false & p9 == false & p10 == false & p11 == false & p12 == false & p13 == false & p14 == false & p15 == false & p16 == false & p17 == false & p18 == false & p19 == false & p20 == false & p21 == false & p22 == false & p23 == false & p24 == false & p25 == false & p26 == false & p27 == false & p28 == false & p29 == false & p30 == false & p31 == false & p32 == false & p33 == false & p34 == false & p35 == false){
-      if( e1 == false & e2 == false & e3 == false & e4 == false & e5 == false & e6 == false & e7 == false & e8 == false & e9 == false & e10 == false & e12 == false & e13 == false & e14 == false & e15 == false & e16 == false & e17 == false & e18 == false & e19 == false & e20 == false & e21 == false & e22 == false & e23 == false & e24 == false & e25 == false & e26 == false & e27 == false & e28 == false & e29 == false & e30 == false & e31 == false & e32 == false){
-        if( pys1 == false & pys2 == false & pys3 == false & pys4 == false & pys5 == false & pys6 == false & pys7 == false & pys8 == false & pys9 == false & pys10 == false & pys11 == false & pys12 == false & pys13 == false & pys14 == false & pys15 == false & pys16 == false & pys17 == false & pys18 == false & pys19 == false & pys20 == false & pys21 == false & pys22 == false & pys23 == false & pys24 == false & pys25 == false & pys26 == false & pys27 == false & pys28 == false & pys29 == false){
-          if( c1 == false & c2 == false & c3 == false & c4 == false & c5 == false & c6 == false & c7 == false & c8 == false & c9 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false & c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false){
-            if( a1 == false & a2 == false & a3 == false & a4 == false & a5 == false & a6 == false & a7 == false & a8 == false & a9 == false ){
-              if( b1 == false & b2 == false & b3 == false & b4 == false & b5 == false & b6 == false & b7 == false & b8 == false & b9 == false & b10 == false & b11 == false & b12 == false & b13 == false & b14 == false & b15 == false & b16 == false & b17 == false & b18 == false & b19 == false & b20 == false & b21 == false & b22 == false & b23 == false & b24 == false & b25 == false & b26 == false & b27 == false & b28 == false & b29 == false & b30 == false & b31 == false){
+  if ( c1 == false & c2 == false & c3 == false & c4 == false & c5 == false & c6 == false & c7 == false & c8 == false & c9 == false & c10 == false & c11 == false & c12 == false & c13 == false & c14 == false & c15 == false & c16 == false & c17 == false & c18 == false & c19 == false & c20 == false & c21 == false & c22 == false & c23 == false & c24 == false & c25 == false){
+    if( c26 == false & c27 == false & c28 == false & c29 == false & c30 == false & c31 == false & c32 == false & c33 == false & c34 == false & c35 == false & c36 == false & c37 == false & c38 == false & c39 == false & c40 == false & c41 == false & c42 == false & c43 == false & c44 == false & c45 == false & c46 == false & c47 == false & c48 == false & c49 == false & c50 == false & c51 == false & c52 == false & c53 == false & c54 == false & c55 == false & c56 == false & c57 == false & c58 == false & c59 == false & c60 == false){
+      if( c61 == false & c62 == false & c63 == false & c64 == false & c65 == false & c66 == false & c67 == false & c68 == false & c69 == false & c70 == false & c71 == false & c72 == false & c73 == false & c74 == false & c75 == false & c76 == false & c77 == false & c78 == false & c79 == false & c80 == false & c81 == false & c82 == false & c83 == false & c84 == false & c85 == false & c86 == false & c87 == false & c88 == false & c89 == false & c90 == false & c91 == false){
+        if( c92 == false & c93 == false & c94 == false & c95 == false & c96 == false & c97 == false & c98 == false & c99 == false & c100 == false & c101 == false & c102 == false & c103 == false & c104 == false & c105 == false & c106 == false & c107 == false & c108 == false & c109 == false & c110 == false & c111 == false & c112 == false & c113 == false & c114 == false & c115 == false & c116 == false & c117 == false & c118 == false & c119 == false & c120 == false){
+          if( c121 == false & c122 == false & c123 == false & c124 == false & c125 == false & c126 == false & c127 == false & c128 == false & c129 == false & c130 == false & c131 == false & c132 == false & c133 == false & c134 == false & c135 == false & c136 == false & c137 == false & c138 == false & c139 == false & c140 == false & c141 == false & c142 == false & c143 == false & c144 == false & c145 == false & c146 == false & c147 == false & c148 == false & c149 == false & c150 == false & c151 == false & c152 == false){
+            if( c153 == false & c154 == false & c155 == false & c156 == false & c157 == false & c158 == false & c159 == false & c160 == false & c161 == false ){
+              if( c162 == false & c163 == false & c164 == false & c165 == false & c166 == false & c167 == false & c168 == false & c169 == false & c170 == false & c171 == false & c172 == false & c173 == false & c174 == false & c175 == false & c176 == false & c177 == false & c178 == false & c179 == false & c180 == false & c181 == false & c182 == false & c183 == false & c184 == false & c185 == false & c186 == false & c187 == false & c188 == false & c189 == false & c190 == false & c191 == false & c192 == false){
                 alert("No ha seleccionado nada del menu")
                 var listo = false
               }
@@ -311,75 +311,16 @@ function tedioso(){
       }
     }
   }
-  /////////////////////////////////// WHILES DE PEDIDO 
-  
+  /////////////////////////////////// WHILES DE PEDIDO  -----> pasar a formato y pegar en PHP
   var pedido= " "
   if (listo){
     var i = 1
-    while(i<=25){ //hamburguesa
-      var variable = "h" + String(i)
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    }
-    while(i<=35){ //pizza
-      var variable = "p" + String(i)
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    }
-    var i = 1
-    while(i<=32){ //ensalada
-      var variable = "e" + String(i)
-      if (variable == 'e11'){
-        i+=1
-      }
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    }
-    var i = 1
-    while(i<=26){ // pys
-      var variable = "pys" + String(i)
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    }
-    var i = 1
-    while(i<=32){ // cafe
+    while(i<=192){ //pedido formato Victoria
       var variable = "c" + String(i)
       if(variable){
         pedido= pedido + document.getElementsByName(variable) + " , " 
       }
       i+=1
     }
-    var i = 1
-    while(i<=9){ // agregados
-      var variable = "a" + String(i)
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    }
-    var i = 1
-    while(i<=31){ // bebidas
-      var variable = "b" + String(i)
-      if(variable){
-        pedido= pedido + document.getElementsByName(variable) + " , " 
-      }
-      i+=1
-    } 
-    
   }  
 }
-/*
-1 - op1 y op2
-1´- op1´ y op2´
-1´´- op1´´ y op2´´
-1´´´-op1´´´ y op´´´
-2 - agregados
-*/
