@@ -15,7 +15,7 @@
 <body>
     <div class="wrapper" id="pop-up">
         <div class="form-register">
-            <a href="#" class="close">X</a>
+            <a href="#" class="close" ondblclick="Bluhr_PopAd">X</a>
             <div class="txt">
                 <label for="fname">First Name</label>
                 <input class="controls" type="text" id="nombre" name="firstname" placeholder="Nombre"><br>
@@ -51,7 +51,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <!-- MAIN BODY -->
 
@@ -65,7 +64,7 @@
     </div>
 -->
     <!--------------------------MENU DE COMIDA------------------------------>
-    <form>
+    <form id="Form_Orden">
         <div class="banner backTit1" id="banner1">
             <!--<p>Burguer Menu</p>-->
             <ul>
@@ -144,7 +143,7 @@
                     <li class="primer_banner"><a hfer="#" class="categSubTitulos">Combos!</a>
                         <ul class="categContenidos">
                             <li class="sub-banner1"><input type="checkbox" name="Clasic" id="h18">
-                                <label for="h18">CLASSIC</label>
+                                <label for="h18"><a href="">CLASSIC</a></label>
                                 <ul>
                                     <li><a hfer="#">BURGER</a></li>
                                     <li><a hfer="#">TOMATE</a></li>
@@ -242,7 +241,7 @@
                 <p id="Pizza"><a class="categTitulo titulo_tamaño" hfer="#">Pizzas</a><br><br>
                 <ul>
                     <li class="segundo_banner"><a hfer="#" class="categSubTitulos">Armado!</a>
-                        <ul>
+                        <ul class="categContenidos">
                             <li class="sub-banner2"><a hfer="#">Tamaño de la pizza</a>
                                 <ul>
                                     <li><input type="checkbox" class="armado_pizza" name="tamaño_pequeño" id="p1">
@@ -362,7 +361,7 @@
                         </ul>
                     </li>
                     <li class="segundo_banner"><a hfer="#" class="categSubTitulos">Tipos de pizzas!</a>
-                        <ul>
+                        <ul class="categContenidos">
                             <li class="sub-banner2"><input type="checkbox" name="margarita" id="p31">
                                 <label for="p31">MARGARITA</label>
                                 <ul>
@@ -426,10 +425,10 @@
         </div>
         <div class="banner backTit3" id="banner3">
             <ul>
-                <p id="ensaladas"><a class="categTitulo titulo_tamaño" hfer="#">Ensaladas</a>
+                <p id="ensaladas"><a class="categTitulo titulo_tamaño" hfer="#">Ensaladas</a><br><br>
                 <ul>
-                    <li class="tercer_banner"><a hfer="#">Preparate tu ensalada!</a>
-                        <ul>
+                    <li class="tercer_banner"><a hfer="#" class="categSubTitulos">Preparate tu ensalada!</a>
+                        <ul class="categContenidos">
                             <li class="sub-banner3"><a hfer="#">Tamaño de la ensalada</a>
                                 <ul>
                                     <li><input type="checkbox" class="armado_ensalada" name="tamaño_pequeño" id="e1">
@@ -522,8 +521,8 @@
                         </ul>
 
                     </li>
-                    <li class="tercer_banner"><a hfer="#">Ensaladas ya preparadas por la casa!</a>
-                        <ul>
+                    <li class="tercer_banner"><a hfer="#" class="categSubTitulos">Ensaladas ya preparadas por la casa!</a>
+                        <ul class="categContenidos">
                             <li class="sub-banner3"><input type="checkbox" ame="ensalada_normal" id="e29">
                                 <label for="e29">ENSALADA NORMAL</label>
                                 <ul>
@@ -575,10 +574,10 @@
         </div>
         <div class="banner backTit4" id="banner4">
             <ul>
-                <p id="pasta_salsas"><a class="categTitulo titulo_tamaño hfer=" #">Pastas y salsas</a>
+                <p id="pasta_salsas"><a class="categTitulo titulo_tamaño" hfer="#">Pastas y salsas</a> <br><br>
                 <ul>
-                    <li class="cuatro_banner"><a hfer="#">Arma tu plato!</a>
-                        <ul>
+                    <li class="cuatro_banner"><a hfer="#" class="categSubTitulos">Arma tu plato!</a>
+                        <ul class="categContenidos">
                             <li class="sub-banner4"><a hfer="#">Tipos de salsas</a>
                                 <ul>
                                     <li><input type="checkbox" class="armado_salsas" name="salsa_blanca" id="pys1">
@@ -669,8 +668,8 @@
                         </ul>
 
                     </li>
-                    <li class="cuatro_banner"><a hfer="#">Pastas preparadas!</a>
-                        <ul>
+                    <li class="cuatro_banner"><a hfer="#" class="categSubTitulos">Pastas preparadas!</a>
+                        <ul class="categContenidos">
                             <li class="sub-banner4"><input type="checkbox" ame="pasta_normal" id="pys26">
                                 <label for="pys26">PASTA NORMAL</label>
                                 <ul>
@@ -725,7 +724,7 @@
         <div class="banner backTit5" id="banner5">
             <ul>
                 <p id="quinto_banner"><a class="categTitulo titulo_tamaño" hfer="#">Cafetería</a>
-                <ul>
+                <ul class="categContenidos">
                     <li class="sub-banner5"><a hfer="#">Cafe</a>
                         <ul>
                             <li><input type="checkbox" class="Cafe" name="clasico" id="c1">
@@ -850,7 +849,7 @@
         <div class="banner backTit6" id="banner6">
             <ul>
                 <p id="sexto_banner"><a class="categTitulo titulo_tamaño" hfer="#">Agregados</a>
-                <ul>
+                <ul class="categContenidos">
                     <li class="sub-banner6"><a hfer="#">Papas</a>
                         <ul>
                             <li><input type="checkbox" class="Papas" name="p clasicas" id="a1">
@@ -894,125 +893,125 @@
         <div class="banner backTit7" id="banner7">
             <ul>
                 <p id="septimo_banner"><a class="categTitulo titulo_tamaño" hfer="#">Bebidas</a>
-                <ul>
-                    <li class="sub-banner7"><a hfer="#">Agua</a>
-                        <ul>
-                            <li><input type="checkbox" class="Agua" name="agua" id="b1">
-                                <label for="b1">AGUA</label>
-                            </li>
-                            <li><input type="checkbox" class="Agua" name="agua c gas" id="b2">
-                                <label for="b2">AGUA CON GAS</label>
-                            </li>
-                            <li><input type="checkbox" class="Agua" name="agua saborizada" id="b3">
-                                <label for="b3">AGUA SABORIZADA</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub-banner7"><a hfer="#">Gaseosas</a>
-                        <ul>
-                            <li><input type="checkbox" class="Gaseosa" name="coca" id="b4">
-                                <label for="b4">COCA COLA</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="coca zero" id="b5">
-                                <label for="b5">COCA COLA ZERO</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="coca light" id="b6">
-                                <label for="b6">COCA COLA LIGHT</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="sprite" id="b7">
-                                <label for="b7">SPRITE</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="fanta" id="b8">
-                                <label for="b8">FANTA</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="pso de toros" id="b9">
-                                <label for="b9">PASO DE LOS TOROS</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="schewppes" id="b10">
-                                <label for="b10">SCHEWPPES</label>
-                            </li>
-                            <li><input type="checkbox" class="Gaseosa" name="agua tonica" id="b11">
-                                <label for="b11">AGUA TONICA</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub-banner7"><a hfer="#">Jugos</a>
-                        <ul>
-                            <li><input type="checkbox" class="Jugos" name="j naranja" id="b12">
-                                <label for="b12">NARANJA</label>
-                            </li>
-                            <li><input type="checkbox" class="Jugos" name="j mandarina" id="b13">
-                                <label for="b13">MANDARINA</label>
-                            </li>
-                            <li><input type="checkbox" class="Jugos" name="j manzana" id="b14">
-                                <label for="b14">MANZANA</label>
-                            </li>
-                            <li><input type="checkbox" class="Jugos" name="j limon" id="b15">
-                                <label for="b15">LIMON</label>
-                            </li>
-                            <li><input type="checkbox" class="Jugos" name="j pomelo" id="b16">
-                                <label for="b16">POMELO</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub-banner7"><a hfer="#">Cervezas</a>
-                        <ul>
-                            <li><input type="checkbox" class="Cervezas" name="c sol" id="b17">
-                                <label for="b17">SOL</label>
-                            </li>
-                            <li><input type="checkbox" class="Cervezas" name="c heineken" id="b18">
-                                <label for="b18">HEINEKEN</label>
-                            </li>
-                            <li><input type="checkbox" class="Cervezas" name="c corona" id="b19">
-                                <label for="b19">CORONA EXTRA</label>
-                            </li>
-                            <li><input type="checkbox" class="Cervezas" name="c qulmes" id="b20">
-                                <label for="b20">QUILMES</label>
-                            </li>
-                            <li><input type="checkbox" class="Cervezas" name="c pilsen" id="b21">
-                                <label for="b21">PILSEN</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub-banner7"><a hfer="#">Tragos</a>
-                        <ul>
-                            <li><input type="checkbox" class="Tragos" name="vino blanco" id="b22">
-                                <label for="b22">VINO BLANCO</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="vino tinto" id="b23">
-                                <label for="b23">VINO TINTO</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="negroni" id="b24">
-                                <label for="b24">NEGRONI</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="martini" id="b25">
-                                <label for="b25">MARTINI</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="vodka" id="b26">
-                                <label for="b26">VODKA</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="manhattan" id="b27">
-                                <label for="b27">MANHATTAN</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="caipirinha" id="b28">
-                                <label for="b28">CAIPIRINHA</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="margarita" id="b29">
-                                <label for="b29">MARGARITA</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="daikiri" id="b30">
-                                <label for="b30">DAIKIRI</label>
-                            </li>
-                            <li><input type="checkbox" class="Tragos" name="long island" id="b31">
-                                <label for="b31">LONG ISLAND</label>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                    <ul class="categContenidos">
+                        <li class="sub-banner7"><a hfer="#">Agua</a>
+                            <ul>
+                                <li><input type="checkbox" class="Agua" name="agua" id="b1">
+                                    <label for="b1">AGUA</label>
+                                </li>
+                                <li><input type="checkbox" class="Agua" name="agua c gas" id="b2">
+                                    <label for="b2">AGUA CON GAS</label>
+                                </li>
+                                <li><input type="checkbox" class="Agua" name="agua saborizada" id="b3">
+                                    <label for="b3">AGUA SABORIZADA</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-banner7"><a hfer="#">Gaseosas</a>
+                            <ul>
+                                <li><input type="checkbox" class="Gaseosa" name="coca" id="b4">
+                                    <label for="b4">COCA COLA</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="coca zero" id="b5">
+                                    <label for="b5">COCA COLA ZERO</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="coca light" id="b6">
+                                    <label for="b6">COCA COLA LIGHT</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="sprite" id="b7">
+                                    <label for="b7">SPRITE</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="fanta" id="b8">
+                                    <label for="b8">FANTA</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="pso de toros" id="b9">
+                                    <label for="b9">PASO DE LOS TOROS</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="schewppes" id="b10">
+                                    <label for="b10">SCHEWPPES</label>
+                                </li>
+                                <li><input type="checkbox" class="Gaseosa" name="agua tonica" id="b11">
+                                    <label for="b11">AGUA TONICA</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-banner7"><a hfer="#">Jugos</a>
+                            <ul>
+                                <li><input type="checkbox" class="Jugos" name="j naranja" id="b12">
+                                    <label for="b12">NARANJA</label>
+                                </li>
+                                <li><input type="checkbox" class="Jugos" name="j mandarina" id="b13">
+                                    <label for="b13">MANDARINA</label>
+                                </li>
+                                <li><input type="checkbox" class="Jugos" name="j manzana" id="b14">
+                                    <label for="b14">MANZANA</label>
+                                </li>
+                                <li><input type="checkbox" class="Jugos" name="j limon" id="b15">
+                                    <label for="b15">LIMON</label>
+                                </li>
+                                <li><input type="checkbox" class="Jugos" name="j pomelo" id="b16">
+                                    <label for="b16">POMELO</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-banner7"><a hfer="#">Cervezas</a>
+                            <ul>
+                                <li><input type="checkbox" class="Cervezas" name="c sol" id="b17">
+                                    <label for="b17">SOL</label>
+                                </li>
+                                <li><input type="checkbox" class="Cervezas" name="c heineken" id="b18">
+                                    <label for="b18">HEINEKEN</label>
+                                </li>
+                                <li><input type="checkbox" class="Cervezas" name="c corona" id="b19">
+                                    <label for="b19">CORONA EXTRA</label>
+                                </li>
+                                <li><input type="checkbox" class="Cervezas" name="c qulmes" id="b20">
+                                    <label for="b20">QUILMES</label>
+                                </li>
+                                <li><input type="checkbox" class="Cervezas" name="c pilsen" id="b21">
+                                    <label for="b21">PILSEN</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-banner7"><a hfer="#">Tragos</a>
+                            <ul>
+                                <li><input type="checkbox" class="Tragos" name="vino blanco" id="b22">
+                                    <label for="b22">VINO BLANCO</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="vino tinto" id="b23">
+                                    <label for="b23">VINO TINTO</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="negroni" id="b24">
+                                    <label for="b24">NEGRONI</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="martini" id="b25">
+                                    <label for="b25">MARTINI</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="vodka" id="b26">
+                                    <label for="b26">VODKA</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="manhattan" id="b27">
+                                    <label for="b27">MANHATTAN</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="caipirinha" id="b28">
+                                    <label for="b28">CAIPIRINHA</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="margarita" id="b29">
+                                    <label for="b29">MARGARITA</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="daikiri" id="b30">
+                                    <label for="b30">DAIKIRI</label>
+                                </li>
+                                <li><input type="checkbox" class="Tragos" name="long island" id="b31">
+                                    <label for="b31">LONG ISLAND</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </p>
             </ul>
         </div>
-        <a href="#pop-up" onclick="pedidoseguro()" class="login-but categSubTitulos">Enviar Orden</a>
+        <a href="#pop-up" onclick="pedidoseguro()" ondblclick="Bluhr_PopAd" class="login-but categSubTitulos">Enviar Orden</a>
         <br>
     </form>
     <!--
