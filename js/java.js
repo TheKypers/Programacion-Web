@@ -198,7 +198,7 @@ function tedioso(){
   var c159 = document.getElementById("c159").checked
   var c160 = document.getElementById("c160").checked
   var c161 = document.getElementById("c161").checked
-  //BEBIDAS VARS c163-c193
+  //BEBIDAS VARS c162-c193
   var c162 = document.getElementById("c162").checked //b1
   var c163 = document.getElementById("c163").checked
   var c164 = document.getElementById("c164").checked
@@ -233,7 +233,7 @@ function tedioso(){
   //var c193 = document.getElementById("c193").checked
   //bandera de pedido
   var listo = true
-
+  var coca = true 
   //CONDICIONALES
   //-------------------------------hamburguesa
   if (c1 == false & c2 == false & c3 == false & c4 == false){ //no carne
@@ -292,6 +292,8 @@ function tedioso(){
       var listo = false
     }
   }
+  
+    
   //--------------CONDICION TOTAL-----------------
   //h25 | p35 | e32 | pys26 | c32 | a9 | b31
   
@@ -304,12 +306,17 @@ function tedioso(){
               if( c162 == false & c163 == false & c164 == false & c165 == false & c166 == false & c167 == false & c168 == false & c169 == false & c170 == false & c171 == false & c172 == false & c173 == false & c174 == false & c175 == false & c176 == false & c177 == false & c178 == false & c179 == false & c180 == false & c181 == false & c182 == false & c183 == false & c184 == false & c185 == false & c186 == false & c187 == false & c188 == false & c189 == false & c190 == false & c191 == false & c192 == false){
                 alert("No ha seleccionado nada del menu")
                 var listo = false
+                var coca = false
               }
             }
           }
         }
       }
     }
+  }
+  //----------------------------------bebidas si o si
+  if((c162 == false & c163 == false & c164 == false & c165 == false & c166 == false & c167 == false & c168 == false & c169 == false & c170 == false & c171 == false & c172 == false & c173 == false & c174 == false & c175 == false & c176 == false & c177 == false & c178 == false & c179 == false & c180 == false & c181 == false & c182 == false & c183 == false & c184 == false & c185 == false & c186 == false & c187 == false & c188 == false & c189 == false & c190 == false & c191 == false & c192 == false) & (coca)){
+    alert("Seleccione bebida")
   }
   /////////////////////////////////// WHILES DE PEDIDO  -----> pasar a formato y pegar en PHP
   var pedido= " "
