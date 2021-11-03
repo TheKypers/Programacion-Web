@@ -104,7 +104,6 @@ a{
     padding-bottom: 60px;
     text-align: center;
     border-radius: 10px;
-
 }
 
 /* Principal */
@@ -233,27 +232,25 @@ a{
 }
 
 /* Sub Banner Despliegue Uno*/
+
 .sub-banner1{
     text-align: left;
-    margin-left:5%;
-    
+    margin-left:5%;  
 }
-
 li.primer_banner li.sub-banner1 {
     display:none;
 }
 li.primer_banner:hover li.sub-banner1 {
     display:block;
 }
-
 li.sub-banner1 li.cont{
     display:none;
 }
-
 li.sub-banner1:hover li.cont{
     display:block;
     text-align: left;
 }
+
 /*---------Banner Pizzas------------*/
 #banner2 a:hover{
     background-color: white;
