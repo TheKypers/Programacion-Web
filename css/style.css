@@ -1,9 +1,3 @@
-body{
-    background: rgb(252,166,79);
-    background: linear-gradient(90deg, rgba(252,166,79,1) 0%, rgb(250, 143, 90) 100%);
-    padding:2px;
-}
-
 @-webkit-keyframes Animation {
     0%{background-position:20% 20%}
     50%{background-position:100% 20%}
@@ -11,13 +5,32 @@ body{
 }
 @-moz-keyframes Animation {
     0%{background-position:20% 20%}
-    50%{background-position:100% 20%}
+    50%{background-position:100% 100%}
     100%{background-position:20% 20%}
 }
 @keyframes Animation { 
     0%{background-position:30% 20%}
-    50%{background-position:100% 20%}
+    50%{background-position:100% 50%}
     100%{background-position:30% 20%}
+}
+body{
+    background: rgb(252,166,79);
+    background: linear-gradient(90deg, rgba(252,166,79,1) 0%, rgb(252, 119, 53) 100%);
+    padding:2px;
+    -webkit-animation: Animation 50s ease infinite;
+    -moz-animation: Animation 50s ease infinite;
+    animation: Animation 50s ease infinite;
+}
+
+.logoFoodies{
+    padding: 10px;
+    transition: 1s;
+}
+
+.logoFoodies:hover{
+    padding: 10px;
+    -webkit-transform: scale(105%);
+    transition: 1s;
 }
 
 .error{
@@ -33,14 +46,14 @@ padding-left: 0%;
   }
 .bannerTitulo{
     background: rgb(252,194,136);
-    background-image:url(/img/BackBanner.jpg) ,radial-gradient(circle, rgba(252,194,136,1) 0%, rgb(241, 76, 11) 120%);
+    background-image:url(../img/BackBanner.jpg) ,radial-gradient(circle, rgba(252,194,136,1) 0%, rgb(241, 76, 11) 120%);
     background-blend-mode: multiply,darken;
     background-size: 1950px;
     background-position: right;
     border-radius: 10px;
-    border-width: 10px;
-    border-color: grey;
-    border-style: outset;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
     margin: 3px;
     -webkit-animation: Animation 100s ease infinite;
     -moz-animation: Animation 100s ease infinite;
@@ -144,6 +157,7 @@ a{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/hamburguesa-2028707.jpg);
     background-position: center;
     background-size: cover;    
+    -webkit-transform: scale(101%);
     transition: 0.2s;
 }
 
@@ -151,41 +165,47 @@ a{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/pizza-bckgr.jpeg);
     background-position: center;
     background-size: cover;    
+    -webkit-transform: scale(101%);
     transition: 0.2s;
 }
 
 .backTit3:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255,0.3)),url(../img/ensaladas-bkgr.jpg);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;  
+    -webkit-transform: scale(101%);  
     transition: 0.2s;
 }
 
 .backTit4:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/pasta-bckgr.jpeg);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;   
+    -webkit-transform: scale(101%); 
     transition: 0.2s;
 }
 
 .backTit5:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/cafe-bckgr.png);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;  
+    -webkit-transform: scale(101%);  
     transition: 0.2s;
 }
 
 .backTit6:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/agregados.png);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;   
+    -webkit-transform: scale(101%); 
     transition: 0.2s;
 }
 
 .backTit7:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3)),url(../img/gaseosas-bkgr.jpg);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;  
+    -webkit-transform: scale(101%);  
     transition: 0.2s;
 }
 
@@ -476,7 +496,6 @@ li.sub-banner7:hover li.cont{
     box-sizing: border-box;
 
 }
-
 .wrapper{
     position: fixed;
     height: 100%;
@@ -499,7 +518,6 @@ li.sub-banner7:hover li.cont{
 .wrapper:target #Form_Orden{
     filter: blur(10px);
 }
-
 
 .form-register{
     width: 400px;
