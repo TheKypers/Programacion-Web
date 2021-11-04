@@ -107,7 +107,6 @@ a{
     padding-bottom: 60px;
     text-align: center;
     border-radius: 10px;
-    border-
 }
 
 /* Principal */
@@ -211,8 +210,13 @@ a{
     -webkit-transform: scale(101%);  
     transition: 0.2s;
 }
-
-
+.precio{
+    text-align: right;
+    display:flex;
+    align-items: flex-end;
+    margin-right:20%;
+    font-size: 12px;
+}
 
 
 
