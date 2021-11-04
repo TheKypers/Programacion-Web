@@ -315,7 +315,7 @@ function tedioso(){
     }
   }
   //----------------------------------bebidas si o si
-  if((c162 == false & c163 == false & c164 == false & c165 == false & c166 == false & c167 == false & c168 == false & c169 == false & c170 == false & c171 == false & c172 == false & c173 == false & c174 == false & c175 == false & c176 == false & c177 == false & c178 == false & c179 == false & c180 == false & c181 == false & c182 == false & c183 == false & c184 == false & c185 == false & c186 == false & c187 == false & c188 == false & c189 == false & c190 == false & c191 == false & c192 == false) & (coca)){
+  if((c162 == false & c163 == false & c164 == false & c165 == false & c166 == false & c167 == false & c168 == false & c169 == false & c170 == false & c171 == false & c172 == false & c173 == false & c174 == false & c175 == false & c176 == false & c177 == false & c178 == false & c179 == false & c180 == false & c181 == false & c182 == false & c183 == false & c184 == false & c185 == false & c186 == false & c187 == false & c188 == false & c189 == false & c190 == false & c191 == false & c192 == false & c121 == false & c122 == false & c123 == false & c124 == false & c125 == false) & (coca)){
     alert("Seleccione bebida")
   }
   /////////////////////////////////// WHILES DE PEDIDO  -----> pasar a formato y pegar en PHP
@@ -329,5 +329,6 @@ function tedioso(){
       }
       i+=1
     }
-  }  
+  }
+    
 }
