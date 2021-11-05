@@ -12,13 +12,19 @@ body{
 
 }
 .bannerTitulo{
-    background: rgb(252,194,136);
-    background: radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%);
-    background-image:radial-gradient(circle, rgba(252,194,136,1) 0%, rgba(242,105,34,1) 120%),url(../img/BackBanner.jpg);
-    background-blend-mode:multiply,normal;
-    background-size: 1950px;
-    background-position: right;
-    border-radius: 10px;
+  background: rgb(252,194,136);
+  background-image:url(../img/BackBanner.jpg) ,radial-gradient(circle, rgba(252,194,136,1) 0%, rgb(241, 76, 11) 120%);
+  background-blend-mode: multiply,darken;
+  background-size: 1950px;
+  background-position: right;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  margin: 3px;
+  -webkit-animation: Animation 100s ease infinite;
+  -moz-animation: Animation 100s ease infinite;
+  animation: Animation 100s ease infinite;
 }
 
 form{
@@ -26,6 +32,7 @@ form{
   border-radius: 3px;
   color: #999;
   font-size: 0.8em;
+  font-family: Gobold;
   padding: 20px;
   width: 300px;
   border-radius: 20px;
@@ -57,8 +64,12 @@ input, textarea{
 }
 
 .formulario{
-  margin-top: 10px;
+margin-top: 10px;
 width: 800px;
+border-style: groove;
+border-color: black;
+font-size: 18px;
+padding: 5px;
 }
 
 .form-wrapper{
@@ -76,6 +87,8 @@ h1.addMenuTitle{
   margin-left: 30%;
   margin-right: 30%;
   border-radius: 20px;
+  border-style: solid;
+  border-color: black;
 }
 /*
 .btn-green{
@@ -85,4 +98,21 @@ h1.addMenuTitle{
 @font-face {
   font-family: Gobold;
   src: url(../img/Gobold-Lowplus.otf);
+}
+
+
+@-webkit-keyframes Animation {
+  0%{background-position:20% 20%}
+  50%{background-position:100% 20%}
+  100%{background-position:20% 20%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:20% 20%}
+  50%{background-position:100% 100%}
+  100%{background-position:20% 20%}
+}
+@keyframes Animation { 
+  0%{background-position:30% 20%}
+  50%{background-position:100% 50%}
+  100%{background-position:30% 20%}
 }
