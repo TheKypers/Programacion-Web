@@ -13,7 +13,10 @@ function formulario1(parametro1, parametro2) {
       else throw "bien";
     }
     catch(err) {
-      if(err == "bien") message.innerHTML = " ";
+      if(err == "bien") 
+      {
+        message.innerHTML = " ";
+      }
       else message.innerHTML = "*Por favor, " + err;
     }
   }
@@ -26,7 +29,10 @@ function formulario2(parametro1, parametro2) {
         else throw "bien";
     }
     catch(err) {
-        if(err == "bien") message.innerHTML = " ";
+        if(err == "bien") {
+          message.innerHTML = " ";
+          location.href='../cargaMenu.html'
+        }
         else message.innerHTML = "*Por favor, " + err;
     }
 }
