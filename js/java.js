@@ -13,7 +13,7 @@ function pedidoseguro() {
 function formulario(){
   formularioN("comentnombre","nombre")
   formularioN("comentapellido","apellido")
-  tedioso("1.1.1.1","1.1.1.2","1.1.1.3","1.1.1.4")
+  tedioso()
 }
 
 function formularioN(parametro1, parametro2) {
