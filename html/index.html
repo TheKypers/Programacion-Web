@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel=icon href="/img/Foodies-04.svg" sizes="any" type="image/svg+xml">
+    <script language="javascript" type="text/javascript" src="js/java.js"></script>
+    <title>Foodies Carta Virtual</title>
+
+    <!-- POP UP -->
+
+<body>
+    <div class="wrapper" id="pop-up">
+        <div class="form-register">
+            <a href="#" class="close">X</a>
+            <div class="txt categContenidos" >
+                <label for="fname" >First Name</label>
+                <input class="controls" type="text" id="nombre" name="firstname" placeholder="Nombre" style="font-family:Gobold"><br>
+
+                <label for="lname">Last Name</label>
+                <input class="controls" type="text" id="apellido" name="lastname" placeholder="Apellido" style="font-family:Gobold;"><br>
+
+                <label for="lname">Observation</label>
+                <input class="controls" type="text" id="observaciones" name="tablenumber" style="font-family:Gobold" placeholder="Observaciones"><br>
+                <label for="mesa1">Table Number</label>
+                <select class="controls" id="mesas" name="Mesa" style="font-family:Gobold">
+                    <option value="mesa1">1</option>
+                    <option value="mesa2">2</option>
+                    <option value="mesa3">3</option>
+                    <option value="mesa4">4</option>
+                    <option value="mesa5">5</option>
+                    <option value="mesa6">6</option>
+                    <option value="mesa7">7</option>
+                    <option value="mesa8">8</option>
+                    <option value="mesa9">9</option>
+                    <option value="mesa10">10</option>
+                    <option value="mesa11">11</option>
+                    <option value="mesa12">12</option>
+                </select><br>
+
+                <input class="botons" type="submit" value="Subir pedido" onclick="formulario()">
+                <p class="error" id="comentnombre"></p>
+                <p class="error" id="comentapellido"></p>
+                <!--<p class="error" id="La_orden">ALERTA DE CHECKBOX</p>-->
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- MAIN BODY -->
+
+    <div class="center bannerTitulo">
+        <img src="img/Foodies-04.svg" alt="Foodies" class='logoFoodies'>
+    </div>
+<!--
+    <div class=" buscador">
+        <i><img src="/img/lupa-busc.svg" alt="" class="lupa"></i>
+        <input type="search" placeholder="Buscar" class="search-bar">
+    </div>
+-->
+    <!--------------------------MENU DE COMIDA------------------------------>
+    <form>
+        <div class="banner backTit1" id="banner1">
+            <!--<p>Burguer Menu</p>-->
+            <ul>
+                <p id="burguer"><a class="categTitulo" hfer="#">Burguer Menu</a> <br><br>
+                <ul>
+                    <li class="primer_banner "><a hfer="#" class="categSubTitulos">Armado!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner1"><a hfer="#">Carne</a>
+                                <!-- test -->
+                                <ul>
+                                    <li><input type="checkbox" class="armado_carne" name="mix_carne" id="c1">
+                                        <label for="c1">70% CARNE , 30% CERDO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_carne" name="carne" id="c2">
+                                        <label for="c2">100% CARNE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_carne" name="pollo" id="c3">
+                                        <label for="c3">100% POLLO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_carne" name="vegana" id="c4">
+                                        <label for="c4">VEGANA (POROTOS NEGROS)</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                                <div id='error'></div>
+                            </li> <!-- test -->
+                            <li class="sub-banner1"><a hfer="#">Pan</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_pan" name="brioche" id="c5">
+                                        <label for="c5">BRIOCHE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pan" name="campo" id="c6">
+                                        <label for="c6">DE CAMPO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pan" name="papa" id="c7">
+                                        <label for="c7">DE PAPA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pan" name="remolacha" id="c8">
+                                        <label for="c8">DE REOMOLACHA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><a hfer="#">Aderesos</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_ad" name="mayonesa" id="c9">
+                                        <label for="c9">MAYONESA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="ketchup" id="c10">
+                                        <label for="c10">KETCHUP</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="mostaza" id="c11">
+                                        <label for="c11">MOSTAZA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="pepino" id="c12">
+                                        <label for="c12">PEPINO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="cebolla caramelizada" id="c13">
+                                        <label for="c13">CEBOLLA CARAMELIZADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="cebolla morada" id="c14">
+                                        <label for="c14">CEBOLLA MORADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="panzeta" id="c15">
+                                        <label for="c15">PANZETA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="queso cheddar" id="c16">
+                                        <label for="c16">QUESO CHEDDAR</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ad" name="queso comandante" id="c17">
+                                        <label for="c17">QUESO ROQUEFORT</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="primer_banner"><a hfer="#" class="categSubTitulos">Combos!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner1"><input type="checkbox" name="Clasic" id="c18">
+                                <label for="c18"><a href="#popad1">CLASSIC</a></label><a href=""></a>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                    <li><a hfer="#">ADEREZO FOODIE</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="vespa in love" id="c19">
+                                <label for="c19"><a href="#popad2">VESPA IN LOVE</a></label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER</a></li>
+                                    <li><a hfer="#">PROVOLONE</a></li>
+                                    <li><a hfer="#">CHUTNEY DE TOMATES CHERRIES</a></li>
+                                    <li><a hfer="#">RÚCULA</a></li>
+                                    <li><a hfer="#">PESTO GENOVÉS</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" ame="french burguer" id="c20">
+                                <label for="c20">FRENCH BURGUER</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER</a></li>
+                                    <li><a hfer="#">CEBOLLA CARAMELIZADA</a></li>
+                                    <li><a hfer="#">QUESO BRIE</a></li>
+                                    <li><a hfer="#">HONGOS CONFITADOS</a></li>
+                                    <li><a hfer="#">RÚCULA</a></li>
+                                    <li><a hfer="#">MOSTAZA A LA ANTIGUA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="london park" id="c21">
+                                <label for="c21">LONDON PARK</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER</a></li>
+                                    <li><a hfer="#">QUESO CHEDDAR</a></li>
+                                    <li><a hfer="#">BACON</a></li>
+                                    <li><a hfer="#">RÚCULA</a></li>
+                                    <li><a hfer="#">CHUHTNEY DE CEBOLLA MORADA</a></li>
+                                    <li><a hfer="#">PEPINO</a></li>
+                                    <li><a hfer="#">ADEREZO FOODIE</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="old school" id="c22">
+                                <label for="c22">OLD SCHOOL</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER</a></li>
+                                    <li><a hfer="#">MORRONES ASADOS</a></li>
+                                    <li><a hfer="#">AJIES EN VINAGRE</a></li>
+                                    <li><a hfer="#">PANCETA</a></li>
+                                    <li><a hfer="#">HUEVO</a></li>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">MUZZARELLA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="sai baba burguer" id="c23">
+                                <label for="c23">SAI BABA BURGUER</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER DE PAPA</a></li>
+                                    <li><a hfer="#">HONGOS Y CEREALES</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">QUESO FUNDIDO</a></li>
+                                    <li><a hfer="#">ESPINACA</a></li>
+                                    <li><a hfer="#">CHUHTNEY DE CEBOLLA MORADA</a></li>
+                                    <li><a hfer="#">MAYONESA DE CURRY</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="vegan burguer" id="c24">
+                                <label for="c24">VEGAN BURGUER</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">BURGER DE QUINOA Y POROTOS NEGROS EN PAN DE REMOLACHA</a></li>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">PALTA</a></li>
+                                    <li><a hfer="#">MAYONESA DE ZANAHORIA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner1"><input type="checkbox" name="chinga tu madre" id="c25">
+                                <label for="c25">CHINGA TU MADRE</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">FOODIE BURGER</a></li>
+                                    <li><a hfer="#">QUESO</a></li>
+                                    <li><a hfer="#">CEBOLLA DESFLEMADA</a></li>
+                                    <li><a hfer="#">GUACAMOLE</a></li>
+                                    <li><a hfer="#">MAÍZ FRITO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit2" id="banner2">
+            <ul>
+                <p id="Pizza"><a class="categTitulo titulo_tamaño" hfer="#">Pizzas</a><br><br>
+                <ul>
+                    <li class="segundo_banner"><a hfer="#" class="categSubTitulos">Armado!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner2"><a hfer="#">Tamaño de la pizza</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_pizza" name="tamaño_pequeño" id="c26">
+                                        <label for="c26">PEQUEÑO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza" name="tamaño_mediano" id="c27">
+                                        <label for="c27">MEDIANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza" name="tamaño_grande" id="c28">
+                                        <label for="c28">GRANDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza" name="tamaño_extragrande" id="c29">
+                                        <label for="c29">EXTRA GRANDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><a hfer="#">Tipos de queso</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_muzzarella" id="c30">
+                                        <label for="c30">QUESO MOZZARELLA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_feto" id="c31">
+                                        <label for="c31">QUESO FETO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_gorgonzola" id="c32">
+                                        <label for="c32">QUESO GORGONZOLA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_cheddar" id="c33">
+                                        <label for="c33">QUESO CHEDDAR</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_parmesano" id="c34">
+                                        <label for="c34">QUESO PARMESANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_quesos" name="Queso_ricota" id="c35">
+                                        <label for="c35">QUESO RICOTA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><a hfer="#">Ingredientes</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="salsa_tomate"
+                                            id="c36">
+                                        <label for="c36">SALSA DE TOMATE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="tomate" id="c37">
+                                        <label for="c37">TOMATE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="acelga" id="c38">
+                                        <label for="c38">ACELGA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="jamón" id="c39">
+                                        <label for="c39">JAMÓN</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="pepino" id="c40">
+                                        <label for="c40">PEPINO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes"
+                                            name="cebolla caramelizada" id="c41">
+                                        <label for="c41">CEBOLLA CARAMELIZADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="cebolla morada"
+                                            id="c42">
+                                        <label for="c42">CEBOLLA MORADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="panzeta"
+                                            id="c43">
+                                        <label for="c43">PANZETA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="zanahoria"
+                                            id="c44">
+                                        <label for="c44">ZANAHORIA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="palmito"
+                                            id="c45">
+                                        <label for="c45">PALMITO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="choclo" id="c46">
+                                        <label for="c46">CHOCLO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="locote_verde"
+                                            id="c47">
+                                        <label for="c47">LOCOTE VERDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="locote_rojo"
+                                            id="c48">
+                                        <label for="c48">LOCOTE ROJO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="albahaca"
+                                            id="c49">
+                                        <label for="c49">ALBAHACA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="orégano"
+                                            id="c50">
+                                        <label for="c50">ORÉGANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="anchoas"
+                                            id="c51">
+                                        <label for="c51">ANCHOAS</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="alcaparras"
+                                            id="c52">
+                                        <label for="c52">ALCAPARRAS</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="huevo" id="c53">
+                                        <label for="c53">HUEVO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="pepperoni"
+                                            id="c54">
+                                        <label for="c54">PEPPERONI</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pizza_ingredientes" name="aceituna"
+                                            id="c55">
+                                        <label for="c55">ACEITUNA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="segundo_banner"><a hfer="#" class="categSubTitulos">Tipos de pizzas!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner2"><input type="checkbox" name="margarita" id="c56">
+                                <label for="c56">MARGARITA</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SALSA DE TOMATE</a></li>
+                                    <li><a hfer="#">QUESO MOZZARELLA</a></li>
+                                    <li><a hfer="#">ALBAHACA</a></li>
+                                    <li><a hfer="#">ORÉGANO</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><input type="checkbox" name="napolitana" id="c57">
+                                <label for="c57">NAPOLITANA</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SALSA DE TOMATE</a></li>
+                                    <li><a hfer="#">QUESO MOZZARELLA</a></li>
+                                    <li><a hfer="#">ALCAPARRAS</a></li>
+                                    <li><a hfer="#">ANCHOAS</a></li>
+                                    <li><a hfer="#">ORÉGANO</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><input type="checkbox" ame="cuatro_quesos" id="c58">
+                                <label for="c58">CUATRO QUESOS</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SALSA DE TOMATE</a></li>
+                                    <li><a hfer="#">QUESO MOZZARELLA</a></li>
+                                    <li><a hfer="#">QUESO PARMESANO</a></li>
+                                    <li><a hfer="#">QUESO FETO</a></li>
+                                    <li><a hfer="#">QUESO GORGONZOLA</a></li>
+                                    <li><a hfer="#">ORÉGANO</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><input type="checkbox" name="carbonara" id="c59">
+                                <label for="c59">CARBONARA</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SALSA DE TOMATE</a></li>
+                                    <li><a hfer="#">QUESO MOZZARELLA</a></li>
+                                    <li><a hfer="#">BACON</a></li>
+                                    <li><a hfer="#">JAMÓN</a></li>
+                                    <li><a hfer="#">HUEVO</a></li>
+                                    <li><a hfer="#">ORÉGANO</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner2"><input type="checkbox" name="pepperoni" id="c60">
+                                <label for="c60">PEPPERONI</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SALSA DE TOMATE</a></li>
+                                    <li><a hfer="#">MUZZARELLA</a></li>
+                                    <li><a hfer="#">PEPPERONI</a></li>
+                                    <li><a hfer="#">ORÉGANO</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit3" id="banner3">
+            <ul>
+                <p id="ensaladas"><a class="categTitulo titulo_tamaño" hfer="#">Ensaladas</a><br><br>
+                <ul>
+                    <li class="tercer_banner"><a hfer="#" class="categSubTitulos">Preparate tu ensalada!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner3"><a hfer="#">Tamaño de la ensalada</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_ensalada" name="tamaño_pequeño" id="c61">
+                                        <label for="c61">PEQUEÑO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="tamaño_mediano" id="c62">
+                                        <label for="c62">MEDIANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="tamaño_grande" id="c63">
+                                        <label for="c63">GRANDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner3"><a hfer="#">Ingredientes</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_ensalada" name="lechuga" id="c64">
+                                        <label for="c64">LECHUGA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="tomate" id="c65">
+                                        <label for="c65">TOMATE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="repollo_verde" id="c66">
+                                        <label for="c66">REPOLLO VERDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="repollo_morado" id="c67">
+                                        <label for="c67">REPOLLO MORADO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="aguacate" id="c68">
+                                        <label for="c68">AGUACATE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="trozos_de_pan" id="c69">
+                                        <label for="c69">TROZOS DE PAN</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="acelga" id="c70">
+                                        <label for="c70">ACELGA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="jamón" id="c71">
+                                        <label for="c71">JAMÓN</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="pepino" id="c72">
+                                        <label for="c72">PEPINO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="cebolla caramelizada" id="c73">
+                                        <label for="c73">CEBOLLA CARAMELIZADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="cebolla morada" id="c74">
+                                        <label for="c74">CEBOLLA MORADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="panzeta" id="c75">
+                                        <label for="c75">PANZETA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="zanahoria" id="c76">
+                                        <label for="c76">ZANAHORIA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="palmito" id="c77">
+                                        <label for="c77">PALMITO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="choclo" id="c78">
+                                        <label for="c78">CHOCLO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="locote_verde" id="c79">
+                                        <label for="c79">LOCOTE VERDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="locote_rojo" id="c80">
+                                        <label for="c80">LOCOTE ROJO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="albahaca" id="c81">
+                                        <label for="c81">ALBAHACA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="orégano" id="c82">
+                                        <label for="c82">ORÉGANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="anchoas" id="c83">
+                                        <label for="c83">ANCHOAS</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="alcaparras" id="c84">
+                                        <label for="c84">ALCAPARRAS</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="huevo" id="c85">
+                                        <label for="c85">HUEVO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="pepperoni" id="c86">
+                                        <label for="c86">PEPPERONI</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_ensalada" name="aceituna" id="c87">
+                                        <label for="c87">ACEITUNA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="tercer_banner"><a hfer="#" class="categSubTitulos">Ensaladas ya preparadas!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner3"><input type="checkbox" ame="ensalada_normal" id="c88">
+                                <label for="c88">ENSALADA NORMAL</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">ALBAHACA</a></li>
+                                    <li><a hfer="#">ALCAPARRAS</a></li>
+                                    <li><a hfer="#">LOCOTE ROJO</a></li>
+                                    <li><a hfer="#">LOCOTE VERDE</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner3"><input type="checkbox" name="ensalada_italiana" id="c89">
+                                <label for="c89">ENSALADA ITALIANA</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                    <li><a hfer="#">ALBAHACA</a></li>
+                                    <li><a hfer="#">AGUACATE</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="sub-banner3"><input type="checkbox" name="ensalada_niçoise" id="c90">
+                                <label for="c90">ENSALADA NICOISE</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">HUEVO</a></li>
+                                    <li><a hfer="#">ALCAPARRAS</a></li>
+                                    <li><a hfer="#">ACEITUNA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner3"><input type="checkbox" ame="ensalada_cesar" id="c91">
+                                <label for="c91">ENSALADA CESAR</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">LECHUGA</a></li>
+                                    <li><a hfer="#">ANCHOAS</a></li>
+                                    <li><a hfer="#">ALBAHACA</a></li>
+                                    <li><a hfer="#">HUEVO</a></li>
+                                    <li><a hfer="#">TROZOS DE PAN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit4" id="banner4">
+            <ul>
+                <p id="pasta_salsas"><a class="categTitulo titulo_tamaño" hfer="#">Pastas y salsas</a><br><br>
+                <ul>
+                    <li class="cuatro_banner"><a hfer="#" class="categSubTitulos">Arma tu plato!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner4"><a hfer="#">Tipos de salsas</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_salsas" name="salsa_blanca" id="c92">
+                                        <label for="c92">SALSA BLANCA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_salsas" name="salsa_roja" id="c93">
+                                        <label for="c93">SALSA ROJA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_salsas" name="salsa_verde" id="c94">
+                                        <label for="c94">SALSA VERDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner4"><a hfer="#">Tipos de pastas</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_fideos" name="moñito" id="c95">
+                                        <label for="c95">MOÑITO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_fideos" name="ñoquis" id="c96">
+                                        <label for="c96">ÑOQUIS</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_fideos" name="spaghetti" id="c97">
+                                        <label for="c97">SPAGHETTI</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_fideos" name="ravioles" id="c98">
+                                        <label for="c98">RAVIOLES</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_fideos" name="pasta_de_colores" id="c99">
+                                        <label for="c99">PASTA DE COLORES</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_fideos" name="tortellini" id="c100">
+                                        <label for="c100">TORTELLINI</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner4"><a hfer="#">Elegir adicionales</a>
+                                <ul>
+                                    <li><input type="checkbox" class="armado_pasta" name="tomate" id="c101">
+                                        <label for="c101">TOMATE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="queso" id="c102">
+                                        <label for="c102">QUESO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="acelga" id="c103">
+                                        <label for="c103">ACELGA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="jamón" id="c104">
+                                        <label for="c104">JAMÓN</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="pepino" id="c105">
+                                        <label for="c105">PEPINO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="cebolla" id="c106">
+                                        <label for="c106">CEBOLLA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="cebolla_morada" id="c107">
+                                        <label for="c107">CEBOLLA MORADA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="zanahoria" id="c108">
+                                        <label for="c108">ZANAHORIA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="palmito" id="c109">
+                                        <label for="c109">PALMITO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="choclo" id="c110">
+                                        <label for="c110">CHOCLO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="locote_verde" id="c111">
+                                        <label for="c111">LOCOTE VERDE</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="locote_rojo" id="c112">
+                                        <label for="c112">LOCOTE ROJO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="albahaca" id="c113">
+                                        <label for="c113">ALBAHACA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="orégano" id="c114">
+                                        <label for="c114">ORÉGANO</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="pepperoni" id="c115">
+                                        <label for="c115">PEPPERONI</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                    <li><input type="checkbox" class="armado_pasta" name="aceituna" id="c116">
+                                        <label for="c116">ACEITUNA</label>
+                                        <label class="precio">$100</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="cuatro_banner"><a hfer="#" class="categSubTitulos">Pastas preparadas!</a>
+                        <ul class="categContenidos">
+                            <li class="sub-banner4"><input type="checkbox" ame="pasta_normal" id="c117">
+                                <label for="c117">PASTA NORMAL</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">ÑOQUIS</a></li>
+                                    <li><a hfer="#">SALSA ROJA</a></li>
+                                    <li><a hfer="#">TOMATE</a></li>
+                                    <li><a hfer="#">CEBOLLA</a></li>
+                                    <li><a hfer="#">LOCOTE ROJO</a></li>
+                                    <li><a hfer="#">LOCOTE VERDE</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner4"><input type="checkbox" name="pasta_italiana" id="c118">
+                                <label for="c118">PASTA ITALIANA</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">SPAGHETTI</a></li>
+                                    <li><a hfer="#">SALSA BLANCA</a></li>
+                                    <li><a hfer="#">PALMITO</a></li>
+                                    <li><a hfer="#">QUESO</a></li>
+                                    <li><a hfer="#">ZANAHORIA</a></li>
+                                    <li><a hfer="#">JAMÓN</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="sub-banner4"><input type="checkbox" name="pasta_de_ravioles" id="c119">
+                                <label for="c119">PASTA DE RAVIOLES</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">RAVIOLES</a></li>
+                                    <li><a hfer="#">SALSA VERDE</a></li>
+                                    <li><a hfer="#">ALCAPARRAS</a></li>
+                                    <li><a hfer="#">ACELGA</a></li>
+                                    <li><a hfer="#">QUESO</a></li>
+                                    <li><a hfer="#">CEBOLLA MORADA</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-banner4"><input type="checkbox" ame="pasta_moñito" id="c120">
+                                <label for="c120">PASTA MOÑITO</label>
+                                <label class="precio">$100</label>
+                                <ul>
+                                    <li><a hfer="#">MOÑITO</a></li>
+                                    <li><a hfer="#">SALSA BLANCA</a></li>
+                                    <li><a hfer="#">QUESO</a></li>
+                                    <li><a hfer="#">ALBAHACA</a></li>
+                                    <li><a hfer="#">HUEVO</a></li>
+                                    <li><a hfer="#">JAMÓN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit5" id="banner5">
+            <ul>
+                <p id="quinto_banner"><a class="categTitulo titulo_tamaño" hfer="#">Cafetería</a>
+                <ul class="categContenidos">
+                    <li class="sub-banner5"><a hfer="#">Cafe</a>
+                        <ul>
+                            <li><input type="checkbox" class="Cafe" name="clasico" id="c121">
+                                <label for="c121">CAFÉ ESPRESSO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cafe" name="capuccino" id="c122">
+                                <label for="c122">CAPUCCINO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cafe" name="americano" id="c123">
+                                <label for="c123">AMERICANO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cafe" name="con leche" id="c124">
+                                <label for="c124">CAFE CON LECHE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cafe" name="cramel macchiato" id="c125">
+                                <label for="c125">CAFE CARAMEL MACCHIATO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner5"><a hfer="#">Acompañante</a>
+                        <ul>
+                            <li><input type="checkbox" class="Acompañante" name="tostado" id="c126">
+                                <label for="c126">TOSTADO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="tostado centeno" id="c127">
+                                <label for="c127">TOSTADO CENTENO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="tostado hogaza" id="c128">
+                                <label for="c128">TOSTADO HOGAZA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="tostado ingles" id="c129">
+                                <label for="c129">TOSTADO INGLES</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="huevos revueltos" id="c130">
+                                <label for="c130">HUEVOS REVUELTO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="conito ddl" id="c131">
+                                <label for="c131">CONITO DE DULCE DE LECHE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="alfajor choco" id="c132">
+                                <label for="c132">ALFAJOR DE CHOCOLATE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="macarons petit" id="c133">
+                                <label for="c133">MACARONS PETIT</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="ensalada frutas" id="c134">
+                                <label for="c134">ENSALADA DE FRUTAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="trufas choco" id="c135">
+                                <label for="c135">TRUFAS DE CHOCOLATE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Acompañante" name="media luna" id="c136">
+                                <label for="c136">MEDIALUNAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner5"><a hfer="#">Croissant</a>
+                        <ul>
+                            <li><input type="checkbox" class="Croissant" name="croissant almendras" id="c137">
+                                <label for="c137">CROISSANT DE ALMENDRAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Croissant" name="croissant ddl" id="c138">
+                                <label for="c138">CROISSANT DE DULCE DE LECHE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Croissant" name="croissant crema" id="c139">
+                                <label for="c139">CROISSANT DE CREMA PASTELERA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Croissant" name="croissant frutas" id="c140">
+                                <label for="c140">CROISSANT DE FRUTAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner5"><a hfer="#">Tortas</a>
+                        <ul>
+                            <li><input type="checkbox" class="Tortas" name="t humeda" id="c141">
+                                <label for="c141">TORTA HUMEDA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tortas" name="t manzana" id="c142">
+                                <label for="c142">TARTA DE MANZANA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tortas" name="t oreo" id="c143">
+                                <label for="c143">TORTA DE OREO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tortas" name="t rojel" id="c144">
+                                <label for="c144">TORTA ROJEL</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tortas" name="t amore" id="c145">
+                                <label for="c145">TORTA AMORE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tortas" name="t palace" id="c146">
+                                <label for="c146">TORTA PALACE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner5"><a hfer="#">Postres</a>
+                        <ul>
+                            <li><input type="checkbox" class="Postres" name="borwnie" id="c147">
+                                <label for="c147">BROWNIE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Postres" name="cheesecake" id="c148">
+                                <label for="c148">CHEESECAKE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Postres" name="crema americana" id="c149">
+                                <label for="c149">CREMA AMERICANA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Postres" name="chocotorta" id="c150">
+                                <label for="c150">CHOCOTORTA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Postres" name="cheesecake frutos r" id="c151">
+                                <label for="c151">CHEESECAKE DE FRUTOS ROJOS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Postres" name="brownie c helado" id="c152">
+                                <label for="c152">BROWNIE CON HELADO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit6" id="banner6">
+            <ul>
+                <p id="sexto_banner"><a class="categTitulo titulo_tamaño" hfer="#">Agregados</a>
+                <ul class="categContenidos">
+                    <li class="sub-banner6"><a hfer="#">Papas</a>
+                        <ul>
+                            <li><input type="checkbox" class="Papas" name="p clasicas" id="c153">
+                                <label for="c153">CLASICAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Papas" name="p rusticas" id="c154">
+                                <label for="c154">RUSTICAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Papas" name="p con cheddar" id="c155">
+                                <label for="c155">PAPAS CON CHEDDAR</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Papas" name="p con cheddar y panzeta" id="c156">
+                                <label for="c156">PAPAS CON CHEDDAR Y PANZETA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="sub-banner6"><a hfer="#">Salsas</a>
+                        <ul>
+                            <li><input type="checkbox" class="Salsas" name="vgtal salt y pesto" id="c157">
+                                <label for="c157">VEGETALES SALTEADOS Y PESTO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Salsas" name="bechamel" id="c158">
+                                <label for="c158">SALSA BECHAMEL</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Salsas" name="pomodoro" id="c159">
+                                <label for="c159">SALSA POMODORO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Salsas" name="bolognesa" id="c160">
+                                <label for="c160">SALSA BOLOGNESA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Salsas" name="filetto" id="c161">
+                                <label for="c161">SALSA FILETTO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <div class="banner backTit7" id="banner7">
+            <ul>
+                <p id="septimo_banner"><a class="categTitulo titulo_tamaño" hfer="#">Bebidas</a>
+                <ul class="categContenidos">
+                    <li class="sub-banner7"><a hfer="#">Agua</a>
+                        <ul>
+                            <li><input type="checkbox" class="Agua" name="agua" id="c162">
+                                <label for="c162">AGUA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Agua" name="agua c gas" id="c163">
+                                <label for="c163">AGUA CON GAS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Agua" name="agua saborizada" id="c164">
+                                <label for="c164">AGUA SABORIZADA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner7"><a hfer="#">Gaseosas</a>
+                        <ul>
+                            <li><input type="checkbox" class="Gaseosa" name="coca" id="c165">
+                                <label for="c165">COCA COLA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="coca zero" id="c166">
+                                <label for="c166">COCA COLA ZERO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="coca light" id="c167">
+                                <label for="c167">COCA COLA LIGHT</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="sprite" id="c168">
+                                <label for="c168">SPRITE</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="fanta" id="c169">
+                                <label for="c169">FANTA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="pso de toros" id="c170">
+                                <label for="c170">PASO DE LOS TOROS</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="schewppes" id="c171">
+                                <label for="c171">SCHEWPPES</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Gaseosa" name="agua tonica" id="c172">
+                                <label for="c172">AGUA TONICA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner7"><a hfer="#">Jugos</a>
+                        <ul>
+                            <li><input type="checkbox" class="Jugos" name="j naranja" id="c173">
+                                <label for="c173">NARANJA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Jugos" name="j mandarina" id="c174">
+                                <label for="c174">MANDARINA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Jugos" name="j manzana" id="c175">
+                                <label for="c175">MANZANA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Jugos" name="j limon" id="c176">
+                                <label for="c176">LIMON</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Jugos" name="j pomelo" id="c177">
+                                <label for="c177">POMELO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner7"><a hfer="#">Cervezas</a>
+                        <ul>
+                            <li><input type="checkbox" class="Cervezas" name="c sol" id="c178">
+                                <label for="c178">SOL</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cervezas" name="c heineken" id="c179">
+                                <label for="c179">HEINEKEN</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cervezas" name="c corona" id="c180">
+                                <label for="c180">CORONA EXTRA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cervezas" name="c qulmes" id="c181">
+                                <label for="c181">QUILMES</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Cervezas" name="c pilsen" id="c182">
+                                <label for="c182">PILSEN</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-banner7"><a hfer="#">Tragos</a>
+                        <ul>
+                            <li><input type="checkbox" class="Tragos" name="vino blanco" id="c183">
+                                <label for="c183">VINO BLANCO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="vino tinto" id="c184">
+                                <label for="c184">VINO TINTO</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="negroni" id="c185">
+                                <label for="c185">NEGRONI</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="martini" id="c186">
+                                <label for="c186">MARTINI</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="vodka" id="c187">
+                                <label for="c187">VODKA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="manhattan" id="c188">
+                                <label for="c188">MANHATTAN</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="caipirinha" id="c189">
+                                <label for="c189">CAIPIRINHA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="margarita" id="c190">
+                                <label for="c190">MARGARITA</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="daikiri" id="c191">
+                                <label for="c191">DAIKIRI</label>
+                                <label class="precio">$100</label>
+                            </li>
+                            <li><input type="checkbox" class="Tragos" name="long island" id="c192">
+                                <label for="c192">LONG ISLAND</label>
+                                <label class="precio">$100</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </ul>
+        </div>
+        <a href="#pop-up" onclick="pedidoseguro()" class="login-but categSubTitulos">Enviar Orden</a>
+        <br>
+    </form>
+    <!--
+    <footer>
+        Iña, Fiore y 🧉
+    </footer> 
+    -->
+    
+    <div class="modal1" id="popad1">
+        <div class="contenedor1">
+            <header>¡Bienvenidos!</header>
+            <label for="btn-modal1"><a href="#">X</a></label>
+        </div>
+    </div>
+    
+
+    <div class="modal2" id="popad2">
+        <div class="contenedor2">
+            <header>¡Bienvenidos!</header>
+            <label for="btn-modal2"><a href="#">X</a></label>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
