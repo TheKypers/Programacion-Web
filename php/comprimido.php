@@ -11,11 +11,20 @@ $host = "localhost";
 
 //conectamos a la base de datos
 $connection = mysqli_connect($host, $user, $pass);
+//pasar a booleano los valores de checkbox
+$i=0
+while($i<193)
+{
+    if(isset($_POST['c'+$i]))
+    {
+        
+    }
+}
 
 //hacemos llamado al imput de formulario
-$nombre = $_POST["nombre"];    
-$usuario = $_POST["usuario"];
-$contraseña = $_POST["contraseña"];
+//$nombre = $_POST["nombre"];    
+//$usuario = $_POST["usuario"];
+//$contraseña = $_POST["contraseña"];
 
 //verificamos la conexion a la base de datos
 if(!$connection)                                 // <----CHECK 
