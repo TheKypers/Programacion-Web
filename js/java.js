@@ -1,14 +1,4 @@
 // e21
-//------------checkeo pedido---------------------//
-function pedidoseguro() {
-    var txt;
-    if (confirm("Si esta segur@ de enviar el pedido por favor continue.")) {
-      txt = "SI"; 
-    } else {
-      txt = "NO";
-    }
-    //document.getElementById("demo1").innerHTML = txt;
-  }
 //--------------alertas formulario------------------//
 function formulario(){
   formularioN("comentnombre","nombre")
