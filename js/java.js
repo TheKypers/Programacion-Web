@@ -234,7 +234,6 @@ function tedioso(){
   //bandera de pedido
   var listo = true
   var coca = true
-  var pedido= " "
   //CONDICIONALES
   //-------------------------------hamburguesa
   if (c1 == false & c2 == false & c3 == false & c4 == false){ //no carne
@@ -320,6 +319,7 @@ function tedioso(){
     alert("Seleccione bebida")
   }
   /////////////////////////////////// WHILES DE PEDIDO  -----> pasar a formato y pegar en PHP
+  var pedido= " "
   if (listo){
     var i = 1
     while(i<=192){ //pedido formato Victoria
