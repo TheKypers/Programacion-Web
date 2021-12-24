@@ -14,7 +14,8 @@ $connection = mysqli_connect($host, $user, $pass);
 //pasar a booleano los valores de checkbox
 $i=1
 $total = 192+1
-
+$contador=0
+$adicionales = array()
 while($i<$total)
 {
     if(isset($_POST['c'+String($i)]))
@@ -33,7 +34,8 @@ while($i<$total)
         }
         else
         {
-
+            $contador+=1
+            array_push('c'+String($i))
         }
     }
     $i+=1
