@@ -12,13 +12,31 @@ $host = "localhost";
 //conectamos a la base de datos
 $connection = mysqli_connect($host, $user, $pass);
 //pasar a booleano los valores de checkbox
-$i=0
-while($i<193)
+$i=1
+$total = 192+1
+
+while($i<$total)
 {
-    if(isset($_POST['c'+$i]))
+    if(isset($_POST['c'+String($i)]))
     {
-        
+        if(($i>=1 and $i<=4) or ($i>=18 and $i<=29) or ($i>=56 and $i<=63) or ($i>=88 and $i<=94) or ($i>=117 and $i<=120))
+        {
+            $armado1 = $_POST['c'+String($i)]
+        }
+        if(($i>=5 and $i<=8) or ($i>=30 and $i<=35) or ($i>=95 and $i<=100))
+        {
+            $armado2 = $_POST['c'+String($i)]
+        }
+        if(($i>=121 and $i<=125) or ($i>=162 and $i<=192))
+        {
+            $bebidas = $_POST['c'+String($i)]
+        }
+        else
+        {
+
+        }
     }
+    $i+=1
 }
 
 //hacemos llamado al imput de formulario
