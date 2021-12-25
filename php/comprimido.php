@@ -22,15 +22,15 @@ while($i<$total)
     {
         if(($i>=1 and $i<=4) or ($i>=18 and $i<=29) or ($i>=56 and $i<=63) or ($i>=88 and $i<=94) or ($i>=117 and $i<=120))
         {
-            $armado1 = $_POST['c'+String($i)]
+            $armado1_combos = $_POST['c'+String($i)]
         }
         if(($i>=5 and $i<=8) or ($i>=30 and $i<=35) or ($i>=95 and $i<=100))
         {
-            $armado2 = $_POST['c'+String($i)]
+            $armado2_ = $_POST['c'+String($i)]
         }
         if(($i>=121 and $i<=125) or ($i>=162 and $i<=192))
         {
-            $bebidas = $_POST['c'+String($i)]
+            $bebida = $_POST['c'+String($i)]
         }
         else
         {
@@ -42,9 +42,12 @@ while($i<$total)
 }
 
 //hacemos llamado al imput de formulario
-//$nombre = $_POST["nombre"];    
-//$usuario = $_POST["usuario"];
-//$contraseña = $_POST["contraseña"];
+$nombre = $_POST["nombre"];    
+$apellido = $_POST["usuario"];
+$observaciones = $_POST["observaciones"];
+$nmesa = $_POST["nmesa"];
+$id_comida = $_POST["idcomida"];
+$id_formulario = $_POST["id_formulario"];
 
 //verificamos la conexion a la base de datos
 if(!$connection)                                 // <----CHECK 
@@ -69,8 +72,8 @@ if(!$connection)                                 // <----CHECK
         echo "<h3>Tabla seleccionada: </h3>"
         }
         //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
-        $instrucction_SQL = "INSERT INTO tabla(nombre, usuario,contraseña) 
-                                VALUES ('$nombre','$usuario','$contraseña')";
+        $instrucction_SQL = "INSERT INTO tabla(id_formulario , Nombre, Apellido , Observaciones , n° de mesa , id_comidaa , pedido) 
+                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$nmesa','id_comida', )"; //sacar pedido
         
         $resultado = mysqli_query($connection,$instrucction_SQL);
 
