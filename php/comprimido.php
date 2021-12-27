@@ -11,11 +11,45 @@ $host = "localhost";
 
 //conectamos a la base de datos
 $connection = mysqli_connect($host, $user, $pass);
-//pasar a booleano los valores de checkbox
+
+//variables keys
+$id_comida = $_POST["id_comida"];
+$id_formulario = $_POST["id_formulario"];
+
+//variables fijas
+$nombre = $_POST["nombre"];    
+$apellido = $_POST["apellido"];
+$observaciones = $_POST["observaciones"];
+$n_de_mesa = $_POST["nmesa"];
+
+//variables adicionales
+$adic1 = NULL
+$adic2 = NULL
+$adic3 = NULL
+$adic4 = NULL
+$adic5 = NULL
+$adic6 = NULL
+$adic7 = NULL
+$adic8 = NULL
+$adic9 = NULL
+$adic10 = NULL
+$adic11 = NULL
+$adic12 = NULL
+$adic13 = NULL
+$adic14 = NULL
+$adic15 = NULL
+$adic16 = NULL
+$adic17 = NULL
+$adic18 = NULL
+$adic19 = NULL
+$adic20 = NULL
+
+//variables de menu
 $i=1
 $total = 192+1
 $contador=0
 $adicionales = array()
+// detecta checkbox True y determina variable equivalente
 while($i<$total)
 {
     if(isset($_POST['c'+String($i)]))
@@ -41,14 +75,6 @@ while($i<$total)
     $i+=1
 }
 
-//hacemos llamado al imput de formulario
-$nombre = $_POST["nombre"];    
-$apellido = $_POST["usuario"];
-$observaciones = $_POST["observaciones"];
-$nmesa = $_POST["nmesa"];
-$id_comida = $_POST["idcomida"];
-$id_formulario = $_POST["id_formulario"];
-
 //verificamos la conexion a la base de datos
 if(!$connection)                                 // <----CHECK 
         {
@@ -72,9 +98,20 @@ if(!$connection)                                 // <----CHECK
         echo "<h3>Tabla seleccionada: </h3>"
         }
         //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
-        $instrucction_SQL = "INSERT INTO tabla(id_formulario , Nombre, Apellido , Observaciones , n° de mesa , id_comidaa , pedido) 
-                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$nmesa','id_comida', )"; //sacar pedido
+
+        // PRINCIPAL formulario_orden
+        $instrucction_SQL1 = "INSERT INTO formulario_orden( id_formulario , nombre , apellido , observaciones , n_de_mesa , id_comida ) 
+                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa','$id_comida', )"; 
+
+        // SECUNDARIA pedido_menu
+        $instrucction_SQL2 = "INSERT INTO pedido_menu( id_formulario , armado1_combos , armado2_ , bebida ) 
+                                VALUES ( '$id_formulario','$armado1_combos','$armado2_','$bebida')"; 
+        // TERCIARIA tabla_adicionales
+        $instrucction_SQL2 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
+                                VALUES ( '$id_formulario','$adic1','$adic2','$adic3','$adic4','$adic5','$adic6','$adic7','$adic8','$adic9','$adic10','$adic11','$adic12','$adic13','$adic14','$adic15','$adic16','$adic17','$adic18','$adic19','$adic20')"; 
         
+
+        //envio resultado de tablas y genero las relevantes
         $resultado = mysqli_query($connection,$instrucction_SQL);
 
         //$consulta = "SELECT * FROM tabla where id = '2'"; si quiero que nos muestre solo un registro en especifico de ID
