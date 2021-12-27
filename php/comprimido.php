@@ -12,15 +12,23 @@ $host = "localhost";
 //conectamos a la base de datos
 $connection = mysqli_connect($host, $user, $pass);
 
+//-----------VARIABLES
 //variables keys
 $id_comida = $_POST["id_comida"];
 $id_formulario = $_POST["id_formulario"];
+$id_categorias = $_POST["id_categorias"];
 
 //variables fijas
 $nombre = $_POST["nombre"];    
 $apellido = $_POST["apellido"];
 $observaciones = $_POST["observaciones"];
 $n_de_mesa = $_POST["nmesa"];
+
+$nombre_comida_n = $_POST["nombre_comida_n"]
+$tit_submenu_n = $_POST["tit_submenu_n"]
+$tit_categoria_n = $_POST["tit_categoria_n"]
+$descripcion = $_POST["descripcion"]
+$precio = $_POST["precio"]
 
 //variables adicionales
 $adic1 = NULL
@@ -99,23 +107,44 @@ if(!$connection)                                 // <----CHECK
         }
         //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
 
-        // PRINCIPAL formulario_orden
+        // PRIMERO formulario_orden
         $instrucction_SQL1 = "INSERT INTO formulario_orden( id_formulario , nombre , apellido , observaciones , n_de_mesa , id_comida ) 
                                 VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa','$id_comida', )"; 
 
-        // SECUNDARIA pedido_menu
+        // SEGUNDO pedido_menu
         $instrucction_SQL2 = "INSERT INTO pedido_menu( id_formulario , armado1_combos , armado2_ , bebida ) 
                                 VALUES ( '$id_formulario','$armado1_combos','$armado2_','$bebida')"; 
-        // TERCIARIA tabla_adicionales
-        $instrucction_SQL2 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
+
+        // TERCERO tabla_adicionales
+        $instrucction_SQL3 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
                                 VALUES ( '$id_formulario','$adic1','$adic2','$adic3','$adic4','$adic5','$adic6','$adic7','$adic8','$adic9','$adic10','$adic11','$adic12','$adic13','$adic14','$adic15','$adic16','$adic17','$adic18','$adic19','$adic20')"; 
         
+        // CUARTO tabla_precios
+        $instrucction_SQL4 = "INSERT INTO tabla_precios( id_comida , descripcion , precios )
+                                VALUES ( '$id_comida','$descripcion','$precios' )";
+        
+        // QUINTO formu_comida
+        $instrucction_SQL5 = "INSERT INTO formu_comida( id_comida , nombre_comida_n , tit_submenu_n , descripcion ) 
+                                VALUES ( '$id_comida', '$nombre_comida_n' ,'$tit_submenu_n', '$descripcion' )";
+
+        // SEXTO formu_comida
+        $instrucction_SQL6 = "INSERT INTO agregar_comida( id_comida , nombre_comida_n , tit_submenu_n , descripcion ) 
+                                VALUES ( '$id_comida', '$nombre_comida_n' ,'$tit_submenu_n', '$descripcion' )";
+        
+        //SEPTIMO formu_categorias
+        $instrucction_SQL7 = "INSERT INTO formu_categorias( id_comida , nombre_comida_n ) 
+                                VALUES ( '$id_comida', '$nombre_comida_n' )";
+
+        //OCTAVO formu_categorias
+        $instrucction_SQL8 = "INSERT INTO agregar_categorias( id_comida , nombre_comida_n ) 
+                                VALUES ( '$id_comida', '$nombre_comida_n' )";
 
         //envio resultado de tablas y genero las relevantes
         $resultado = mysqli_query($connection,$instrucction_SQL);
 
         //$consulta = "SELECT * FROM tabla where id = '2'"; si quiero que nos muestre solo un registro en especifico de ID
         $consulta = "SELECT * FROM tabla";
+        
 $result = mysqli_query($connection,$consulta);
 if(!$result)
 {
