@@ -30,28 +30,6 @@ $tit_categoria_n = $_POST["tit_categoria_n"]
 $descripcion = $_POST["descripcion"]
 $precio = $_POST["precio"]
 
-//variables adicionales
-$adic1 = NULL
-$adic2 = NULL
-$adic3 = NULL
-$adic4 = NULL
-$adic5 = NULL
-$adic6 = NULL
-$adic7 = NULL
-$adic8 = NULL
-$adic9 = NULL
-$adic10 = NULL
-$adic11 = NULL
-$adic12 = NULL
-$adic13 = NULL
-$adic14 = NULL
-$adic15 = NULL
-$adic16 = NULL
-$adic17 = NULL
-$adic18 = NULL
-$adic19 = NULL
-$adic20 = NULL
-
 //variables de menu
 $i=1
 $total = 192+1
@@ -77,10 +55,14 @@ while($i<$total)
         else
         {
             $contador+=1
-            array_push('c'+String($i))
+            array_push($adicionales, "adic"+string($contador),('c'+String($i)) //Associative Arrays
         }
     }
     $i+=1
+}
+for($x = (int($contador)+1); $x < 21; $x++)
+{
+    array_push($adicionales,"adic"+string($x),NULL)
 }
 
 //verificamos la conexion a la base de datos
@@ -117,7 +99,7 @@ if(!$connection)                                 // <----CHECK
 
         // TERCERO tabla_adicionales
         $instrucction_SQL3 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
-                                VALUES ( '$id_formulario','$adic1','$adic2','$adic3','$adic4','$adic5','$adic6','$adic7','$adic8','$adic9','$adic10','$adic11','$adic12','$adic13','$adic14','$adic15','$adic16','$adic17','$adic18','$adic19','$adic20')"; 
+                                VALUES ( '$id_formulario','$adicionales[adic1]','$adicionales[adic2]','$adicionales[adic3]','$adicionales[adic4]','$adicionales[adic5]','$adicionales[adic6]','$adicionales[adic7]','$adicionales[adic8]','$adicionales[adic9]','$adicionales[adic10]','$adicionales[adic11]','$adicionales[adic12]','$adicionales[adic13]','$adicionales[adic14]','$adicionales[adic15]','$adicionales[adic16]','$adicionales[adic17]','$adicionales[adic18]','$adicionales[adic19]','$adicionales[adic20]')"; 
         
         // CUARTO tabla_precios
         $instrucction_SQL4 = "INSERT INTO tabla_precios( id_comida , descripcion , precios )
