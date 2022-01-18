@@ -1,7 +1,6 @@
 <!--
     action="archivo.php" method="POST"
     todo esto en etiqueta de form o general que envuelva el codigo para transmitir
-
 -->
 <?php
 //validamos datos del servidor 
@@ -25,7 +24,8 @@ $n_de_mesa = $_POST["nmesa"];
 
 //variables de menu
 $i=1
-$total = 192+1
+$productos = 192
+$total = $productos +1
 $contador=0
 $adicionales = array()
 // detecta checkbox True y determina variable equivalente
@@ -84,7 +84,7 @@ if(!$connection)
 
         // PRIMERO formulario_orden (IMPRIMIR)
         $instrucction_SQL1 = "INSERT INTO formulario_orden( id_formulario , nombre , apellido , observaciones , n_de_mesa ) 
-                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa', )"; 
+                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa', )";
 
         // SEGUNDO pedido_menu (IMPRIMIR)
         $instrucction_SQL2 = "INSERT INTO pedido_menu( id_formulario , armado1_combos , armado2_ , bebida ) 
