@@ -4,12 +4,10 @@
 -->
 <?php
 //validamos datos del servidor 
-$user = "root";
-$pass = "";
-$host = "localhost";
-
 //conectamos a la base de datos
-$connection = mysqli_connect($host, $user, $pass);
+include("conexion.php");
+$connection = conectar();
+echo "se realizó exitosamente la conexión a la base de datos";
 
 //-----------VARIABLES
 //variables keys
