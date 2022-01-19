@@ -29,7 +29,7 @@ $connection = conectar();
 
 //AUXILIARES PARA PRUEBAS DE SERVIDOR 
 $id_formulario = 1;
-$nombre = "mateo"; //
+$nombre = "teo"; //
 $apellido = "denti";//
 $observaciones = "ninguna";//
 $n_de_mesa = 1;//
@@ -115,13 +115,20 @@ if(!$connection)
 
         //envio resultado de tablas y genero las relevantes
         $resultado1 = mysqli_query($connection,$instrucction_SQL1);
-        $resultado2 = mysqli_query($connection,$instrucction_SQL2); //mysqli_query(connection, query, resultmode)
+
+        //echo 'mysqli_query($connection,$instrucction_SQL1):        '.(boolval(mysqli_query($connection,$instrucction_SQL1)) ? 'true' : 'false')."\n";
+        //echo '<br>';
+        //echo '$connection:        '.(boolval($connection) ? 'true' : 'false')."\n";
+        //echo '<br>';
+        //echo '$instrucction_SQL1:        '.(boolval($instrucction_SQL1) ? 'true' : 'false')."\n";
+
+        $resultado2 = mysqli_query($connection,$instrucction_SQL2); //con nuevos valores, retorna true
         $resultado3 = mysqli_query($connection,$instrucction_SQL3);
     
         //genera consulta a tablas 
-        $consulta1 = "SELECT * FROM formulario_orden";
-        $consulta2 = "SELECT * FROM pedido_menu";
-        $consulta3 = "SELECT * FROM tabla_adicionales";
+        $consulta1 = "SELECT * FROM formulario_orden"; //
+        $consulta2 = "SELECT * FROM pedido_menu"; //OK
+        $consulta3 = "SELECT * FROM tabla_adicionales"; //
         
 formulario_orden(mysqli_query($connection,$consulta1));
 pedido_menu(mysqli_query($connection,$consulta2));
@@ -148,12 +155,13 @@ function formulario_orden($result1) { //----------------------formulario_orden
     echo "<th><h2> | </th></h2>";
     echo "<th><h2> Numero de Mesa </th></h2>";
     echo "</tr>";
-
+    //echo 'mysqli_fetch_array($result1):        '.(boolval(mysqli_fetch_array($result1)) ? 'true' : 'false')."\n";
     while($colum1 = mysqli_fetch_array($result1))
         {
+            
             echo "<tr>";
             echo "<th><h2> | </th></h2>";
-            echo "<td><h3> " . $colum2['id_formulario']. " </th></h3>";
+            echo "<td><h3> " . $colum1['id_formulario']. " </th></h3>";
             echo "<th><h2> | </th></h2>";
             echo "<td><h3> " . $colum1['nombre']. " </th></h2>";
             echo "<th><h2> | </th></h2>";
