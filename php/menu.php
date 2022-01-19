@@ -7,53 +7,59 @@
 //conectamos a la base de datos
 include("conexion.php");
 $connection = conectar();
-echo "se realizó exitosamente la conexión a la base de datos";
 
 //-----------VARIABLES
 //variables keys
-$id_comida = $_POST["id_comida"];
-$id_formulario = $_POST["id_formulario"];
+
+//$id_formulario = $_POST["id_formulario"];//ERROR
 
 //variables fijas
-$nombre = $_POST["nombre"];    
-$apellido = $_POST["apellido"];
-$observaciones = $_POST["observaciones"];
-$n_de_mesa = $_POST["nmesa"];
+
+//$nombre = $_POST["nombre"];    //ERROR
+//$apellido = $_POST["apellido"]; //ERROR
+//$observaciones = $_POST["observaciones"]; //ERROR
+//$n_de_mesa = $_POST["nmesa"]; //ERROR
+
+//AUXILIARES PARA PRUEBAS DE SERVIDOR 
+$id_formulario = 007;
+$nombre = "mateo";
+$apellido = "denti";
+$observaciones = "ninguna";
+$n_de_mesa = 1;
 
 //variables de menu
-$i=1
-$productos = 192
-$total = $productos +1
-$contador=0
-$adicionales = array()
+
+$i=1;
+$total = 192 +1;
+$contador=0;
+$adicionales = array();
 // detecta checkbox True y determina variable equivalente
 while($i<$total)
 {
-    if(isset($_POST['c'+String($i)]))
+    if(isset($_POST['c'.strval($i)]))
     {
         if(($i>=1 and $i<=4) or ($i>=18 and $i<=29) or ($i>=56 and $i<=63) or ($i>=88 and $i<=94) or ($i>=117 and $i<=120))
         {
-            $armado1_combos = $_POST['c'+String($i)]
+            $armado1_combos = $_POST['c'+String($i)];
         }
         if(($i>=5 and $i<=8) or ($i>=30 and $i<=35) or ($i>=95 and $i<=100))
         {
-            $armado2_ = $_POST['c'+String($i)]
+            $armado2_ = $_POST['c'+String($i)];
         }
         if(($i>=121 and $i<=125) or ($i>=162 and $i<=192))
         {
-            $bebida = $_POST['c'+String($i)]
+            $bebida = $_POST['c'+String($i)];
         }
-        else
-        {
-            $contador+=1
-            array_push($adicionales, "adic"+string($contador),('c'+String($i)) //Associative Arrays
-        }
+        else{
+            $contador+=1;
+            array_push($adicionales, "adic"+string($contador),('c'+String($i))); //Associative Arrays
+        }  
     }
-    $i+=1
+    $i+=1;
 }
-for($x = (int($contador)+1); $x < 21; $x++)
+for($x = (intval($contador)+1); $x < 21; $x++)
 {
-    array_push($adicionales,"adic"+string($x),NULL)
+    array_push($adicionales,"adic".strval($x),NULL);
 }
 
 //verificamos la conexion a la base de datos
@@ -63,10 +69,10 @@ if(!$connection)
         }
     else
         {
-            echo "<b><h3>Hemos conectado al servidor</h3></b>"
+            echo "<b><h3></h3></b>";
         }
         // indicamos el nombre de la base de datos
-        $datab = "base"                    //<------ nombre de base de datos entre comillas => DONE
+        $datab = "base";                    //<------ nombre de base de datos entre comillas => DONE
         //indicamos seleccionar a la base de datos
         $db = mysqli_select_db($connection,$datab);
 
@@ -74,9 +80,8 @@ if(!$connection)
         {
         echo "No se ha podido encontrar la Tabla";
         }
-        else
-        {
-        echo "<h3>Tabla seleccionada: </h3>"
+        else{
+        echo "<h3>Tabla seleccionada: </h3>";
         }
         //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
 
@@ -111,34 +116,34 @@ mysql_close( $connection );
 function formulario_orden($result1) { //----------------------formulario_orden
     if(!$result1)
     {
-        echo "No se ha podido realzar la consulta"
+        echo "No se ha podido realzar la consulta";
     }
     echo "<table>";
     echo "<tr>";
-    echo "<th><h1>id_formulario</th></h1>";
-    echo "<th><h1>Nombre</th></h1>";
-    echo "<th><h1>Apellido</th></h1>";
-    echo "<th><h1>Observaciones</th></h1>";
-    echo "<th><h1>Numero de Mesa</th></h1>";
+    echo "<th><h2>id_formulario</th></h2>";
+    echo "<th><h2>Nombre</th></h21>";
+    echo "<th><h2>Apellido</th></h2>";
+    echo "<th><h2>Observaciones</th></h2>";
+    echo "<th><h2>Numero de Mesa</th></h2>";
     echo "</tr>";
 
     while($colum1 = mysql_fetch_array($result1))
         {
             echo "<tr>";
-            echo "<td><h2>" . $colum1['id_formulario']. "</th></h2>";
-            echo "<td><h2>" . $colum1['nombre']. "</th></h2>";
-            echo "<td><h2>" . $colum1['apellido']. "</th></h2>";
-            echo "<td><h2>" . $colum1['observaciones']. "</th></h2>";
-            echo "<td><h2>" . $colum1['n_de_mesa']. "</th></h2>";
+            echo "<td><h3>" . $colum1['id_formulario']. "</th></h2>";
+            echo "<td><h3>" . $colum1['nombre']. "</th></h2>";
+            echo "<td><h3>" . $colum1['apellido']. "</th></h2>";
+            echo "<td><h3>" . $colum1['observaciones']. "</th></h2>";
+            echo "<td><h3>" . $colum1['n_de_mesa']. "</th></h2>";
             echo "</tr>";
         }
         echo "</table>";
-    return
+    return;
 }
 function pedido_menu($result2) {  //------------------------------pedido_menu
     if(!$result2)
     {
-        echo "No se ha podido realzar la consulta"
+        echo "No se ha podido realzar la consulta";
     }
     echo "<table>";
     echo "<tr>";
@@ -158,12 +163,12 @@ function pedido_menu($result2) {  //------------------------------pedido_menu
             echo "</tr>";
         }
         echo "</table>";
-    return
+    return;
 }
 function tabla_adicionales($result3,$adicionales) {  //---------tabla_adicionales
     if(!$result3)
     {
-        echo "No se ha podido realzar la consulta"
+        echo "No se ha podido realzar la consulta";
     }
     echo "<table>";
     echo "<tr>";
@@ -217,7 +222,7 @@ function tabla_adicionales($result3,$adicionales) {  //---------tabla_adicionale
             echo "</tr>";
         }
         echo "</table>";
-    return
+    return;
 }
 
 ?>
