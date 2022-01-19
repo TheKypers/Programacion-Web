@@ -21,7 +21,7 @@ $connection = conectar();
 //$n_de_mesa = $_POST["nmesa"]; //ERROR
 
 //AUXILIARES PARA PRUEBAS DE SERVIDOR 
-$id_formulario = 007;
+$id_formulario = 1;
 $nombre = "mateo";
 $apellido = "denti";
 $observaciones = "ninguna";
@@ -34,6 +34,12 @@ $total = 192 +1;
 $contador=0;
 $adicionales = array();
 // detecta checkbox True y determina variable equivalente
+
+// Variables predefinidas en caso de error
+$armado1_combos="c1";
+$armado2_="c5";
+$bebida="c121";
+
 while($i<$total)
 {
     if(isset($_POST['c'.strval($i)]))
@@ -52,16 +58,16 @@ while($i<$total)
         }
         else{
             $contador+=1;
-            array_push($adicionales, "adic"+string($contador),('c'+String($i))); //Associative Arrays
+            array_push($adicionales, ('c'.strvar($i))); //Associative Arrays
         }  
     }
     $i+=1;
 }
 for($x = (intval($contador)+1); $x < 21; $x++)
 {
-    array_push($adicionales,"adic".strval($x),NULL);
+    array_push($adicionales, NULL);
 }
-
+//echo var_dump($adicionales); //var_dump => TODO & print_r => LISTA LIMPIA
 //verificamos la conexion a la base de datos
 if(!$connection)
         {
@@ -69,40 +75,42 @@ if(!$connection)
         }
     else
         {
-            echo "<b><h3></h3></b>";
+            echo "<b><h3>Conectado</h3></b>";
         }
         // indicamos el nombre de la base de datos
-        $datab = "base";                    //<------ nombre de base de datos entre comillas => DONE
+        $db = "base";                    //<------ nombre de base de datos entre comillas => DONE
         //indicamos seleccionar a la base de datos
-        $db = mysqli_select_db($connection,$datab);
+        $db = mysqli_select_db($connection,$db);
 
         if (!$db)
         {
         echo "No se ha podido encontrar la Tabla";
         }
         else{
-        echo "<h3>Tabla seleccionada: </h3>";
+        echo "<h3>Se encontro la base de datos: </h3>";
         }
         //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
 
         // PRIMERO formulario_orden (IMPRIMIR)
         $instrucction_SQL1 = "INSERT INTO formulario_orden( id_formulario , nombre , apellido , observaciones , n_de_mesa ) 
                                 VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa', )";
-
         // SEGUNDO pedido_menu (IMPRIMIR)
         $instrucction_SQL2 = "INSERT INTO pedido_menu( id_formulario , armado1_combos , armado2_ , bebida ) 
                                 VALUES ( '$id_formulario','$armado1_combos','$armado2_','$bebida')"; 
-
+        
         // TERCERO tabla_adicionales (IMPRIMIR)
         $instrucction_SQL3 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
-                                VALUES ( '$id_formulario','$adicionales[adic1]','$adicionales[adic2]','$adicionales[adic3]','$adicionales[adic4]','$adicionales[adic5]','$adicionales[adic6]','$adicionales[adic7]','$adicionales[adic8]','$adicionales[adic9]','$adicionales[adic10]','$adicionales[adic11]','$adicionales[adic12]','$adicionales[adic13]','$adicionales[adic14]','$adicionales[adic15]','$adicionales[adic16]','$adicionales[adic17]','$adicionales[adic18]','$adicionales[adic19]','$adicionales[adic20]')"; 
+                                VALUES ( '$id_formulario','$adicionales[0]','$adicionales[1]','$adicionales[2]','$adicionales[3]','$adicionales[4]','$adicionales[5]','$adicionales[6]','$adicionales[7]','$adicionales[8]','$adicionales[9]','$adicionales[10]','$adicionales[11]','$adicionales[12]','$adicionales[13]','$adicionales[14]','$adicionales[15]','$adicionales[16]','$adicionales[17]','$adicionales[18]','$adicionales[19]')"; 
 
 
         //envio resultado de tablas y genero las relevantes
-        $resultado1 = mysqli_query($connection,$instrucction_SQL1);
-        $resultado2 = mysqli_query($connection,$instrucction_SQL2);
+        $resultado1 = mysqli_query($connection,$instrucction_SQL1,);
+        $resultado2 = mysqli_query($connection,$instrucction_SQL2); //mysqli_query(connection, query, resultmode)
         $resultado3 = mysqli_query($connection,$instrucction_SQL3);
-
+        echo '$resultado2:        '.(boolval($resultado2) ? 'true' : 'false')."\n";
+        //echo 'mysqli_query($connection,$instrucction_SQL1):        '.(boolval(mysqli_query($connection,$instrucction_SQL1)) ? 'true' : 'false')."\n";
+        //echo '$instrucction_SQL1:        '.(boolval($instrucction_SQL1) ? 'true' : 'false')."\n";
+        //echo '$connection:        '.(boolval($connection) ? 'true' : 'false')."\n";
         //$consulta = "SELECT * FROM tabla where id = '2'"; si quiero que nos muestre solo un registro en especifico de ID
         $consulta1 = "SELECT * FROM formulario_orden";
         $consulta2 = "SELECT * FROM pedido_menu";
@@ -112,7 +120,7 @@ formulario_orden(mysqli_query($connection,$consulta1));
 pedido_menu(mysqli_query($connection,$consulta2));
 tabla_adicionales(mysqli_query($connection,$consulta3),$adicionales);
 
-mysql_close( $connection );
+mysqli_close( $connection );
 function formulario_orden($result1) { //----------------------formulario_orden
     if(!$result1)
     {
@@ -127,7 +135,7 @@ function formulario_orden($result1) { //----------------------formulario_orden
     echo "<th><h2>Numero de Mesa</th></h2>";
     echo "</tr>";
 
-    while($colum1 = mysql_fetch_array($result1))
+    while($colum1 = mysqli_fetch_array($result1))
         {
             echo "<tr>";
             echo "<td><h3>" . $colum1['id_formulario']. "</th></h2>";
@@ -147,19 +155,19 @@ function pedido_menu($result2) {  //------------------------------pedido_menu
     }
     echo "<table>";
     echo "<tr>";
-    echo "<th><h1>id_formulario</th></h1>";
-    echo "<th><h1>Armado 1/ Combo</th></h1>";
-    echo "<th><h1>Armado 2</th></h1>";
-    echo "<th><h1>Bebida</th></h1>";
+    echo "<th><h2>id_formulario</th></h2>";
+    echo "<th><h2>Armado 1/ Combo</th></h2>";
+    echo "<th><h2>Armado 2</th></h2>";
+    echo "<th><h2>Bebida</th></h2>";
     echo "</tr>";
 
-    while($colum2 = mysql_fetch_array($result2))
+    while($colum2 = mysqli_fetch_array($result2))
         {
             echo "<tr>";
-            echo "<td><h2>" . $colum2['id_formulario']. "</th></h2>";
-            echo "<td><h2>" . $colum2['armado1_combos']. "</th></h2>";
-            echo "<td><h2>" . $colum2['armado2_']. "</th></h2>";
-            echo "<td><h2>" . $colum2['bebida']. "</th></h2>";
+            echo "<td><h3>" . $colum2['id_formulario']. "</th></h3>";
+            echo "<td><h3>" . $colum2['armado1_combos']. "</th></h3>";
+            echo "<td><h3>" . $colum2['armado2_']. "</th></h3>";
+            echo "<td><h3>" . $colum2['bebida']. "</th></h3>";
             echo "</tr>";
         }
         echo "</table>";
@@ -172,53 +180,53 @@ function tabla_adicionales($result3,$adicionales) {  //---------tabla_adicionale
     }
     echo "<table>";
     echo "<tr>";
-    echo "<th><h1>id_formulario</th></h1>";
-    echo "<th><h1>adic1</th></h1>";
-    echo "<th><h1>adic2</th></h1>";
-    echo "<th><h1>adic3</th></h1>";
-    echo "<th><h1>adic4</th></h1>";
-    echo "<th><h1>adic5</th></h1>";
-    echo "<th><h1>adic6</th></h1>";
-    echo "<th><h1>adic7</th></h1>";
-    echo "<th><h1>adic8</th></h1>";
-    echo "<th><h1>adic9</th></h1>";
-    echo "<th><h1>adic10</th></h1>";
-    echo "<th><h1>adic11</th></h1>";
-    echo "<th><h1>adic12</th></h1>";
-    echo "<th><h1>adic13</th></h1>";
-    echo "<th><h1>adic14</th></h1>";
-    echo "<th><h1>adic15</th></h1>";
-    echo "<th><h1>adic16</th></h1>";
-    echo "<th><h1>adic17</th></h1>";
-    echo "<th><h1>adic18</th></h1>";
-    echo "<th><h1>adic19</th></h1>";
-    echo "<th><h1>adic20</th></h1>";
+    echo "<th><h2>id_formulario</th></h1>";
+    echo "<th><h2>adic1</th></h2>";
+    echo "<th><h2>adic2</th></h2>";
+    echo "<th><h2>adic3</th></h2>";
+    echo "<th><h2>adic4</th></h2>";
+    echo "<th><h2>adic5</th></h2>";
+    //echo "<th><h2>adic6</th></h2>";
+    //echo "<th><h2>adic7</th></h2>";
+    //echo "<th><h2>adic8</th></h2>";
+    //echo "<th><h2>adic9</th></h2>";
+    //echo "<th><h2>adic10</th></h2>";
+    //echo "<th><h2>adic11</th></h2>";
+    //echo "<th><h2>adic12</th></h2>";
+    //echo "<th><h2>adic13</th></h2>";
+    //echo "<th><h2>adic14</th></h2>";
+    //echo "<th><h2>adic15</th></h2>";
+    //echo "<th><h2>adic16</th></h2>";
+    //echo "<th><h2>adic17</th></h2>";
+    //echo "<th><h2>adic18</th></h2>";
+    //echo "<th><h2>adic19</th></h2>";
+    //echo "<th><h2>adic20</th></h2>";
     echo "</tr>";
 
-    while($colum3 = mysql_fetch_array($result3))
+    while($colum3 = mysqli_fetch_array($result3))
         {
             echo "<tr>";
-            echo "<td><h2>" . $colum3['id_formulario']. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic1] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic2] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic3] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic4] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic5] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic6] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic7] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic8] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic9] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic10] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic11] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic12] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic13] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic14] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic15] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic16] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic17] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic18] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic19] ]. "</th></h2>";
-            echo "<td><h2>" . $colum2[ $adicionales[adic20] ]. "</th></h2>";
+            echo "<td><h3>" . $colum3['id_formulario']. "</th></h2>";
+            echo "<td><h3>" . $colum2[ $adicionales[adic1] ]. "</th></h3>";
+            echo "<td><h3>" . $colum2[ $adicionales[adic2] ]. "</th></h3>";
+            echo "<td><h3>" . $colum2[ $adicionales[adic3] ]. "</th></h3>";
+            echo "<td><h3>" . $colum2[ $adicionales[adic4] ]. "</th></h3>";
+            echo "<td><h3>" . $colum2[ $adicionales[adic5] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic6] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic7] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic8] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic9] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic10] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic11] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic12] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic13] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic14] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic15] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic16] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic17] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic18] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic19] ]. "</th></h3>";
+            //echo "<td><h3>" . $colum2[ $adicionales[adic20] ]. "</th></h3>";
             echo "</tr>";
         }
         echo "</table>";
