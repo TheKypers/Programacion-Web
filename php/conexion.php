@@ -10,7 +10,7 @@ function conectar(){
     if($conexion->connect_errno){
         die("La conexion con la base de datos ha fallado". $conexion->connect_errno);
     }
-    else { echo "conectado ";}
+    else { echo " - Estoy conectado? ";}
     return $conexion;
 }
 ?>

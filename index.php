@@ -1077,7 +1077,7 @@
                                 <label class="precio">$100</label>
                             </li>
                             <li><input type="checkbox" class="Gaseosa" name="c171" id="c171">
-                                <label for="c171">SCHEWPPES</label>
+                                <label for="c171">SCHWEPPES</label>
                                 <label class="precio">$100</label>
                             </li>
                             <li><input type="checkbox" class="Gaseosa" name="c172" id="c172">
@@ -1206,8 +1206,129 @@
             <label for="btn-modal2"><a href="#">X</a></label>
         </div>
     </div>
-
-
 </body>
+
+<!----------------------------------------PHP -->
+<?php
+//validamos datos del servidor 
+//conectamos a la base de datos
+include "php\conexion.php" ;
+$connection = conectar();
+//-----------VARIABLES
+//variables keys
+
+//$id_formulario = $_POST["id_formulario"];//ERROR
+
+//variables fijas
+
+//$nombre = $_POST["nombre"];    //ERROR
+//$apellido = $_POST["apellido"]; //ERROR
+//$observaciones = $_POST["observaciones"]; //ERROR
+//$n_de_mesa = $_POST["nmesa"]; //ERROR
+
+//AUXILIARES PARA PRUEBAS DE SERVIDOR 
+$id_formulario = 1;
+$nombre = "mateo"; //
+$apellido = "denti";//
+$observaciones = "ninguna";//
+$n_de_mesa = 1;//
+$armado1_combos="c3";
+$armado2_="c6";
+$bebida="c124";
+
+// Variables predefinidas en caso de error
+//$armado1_combos=NULL;
+//$armado2_=NULL;
+//$bebida=NULL;
+
+//variables de menu
+$i=1;
+$total = 192 +1;
+$contador=0;
+$adicionales = array();
+// detecta checkbox True y determina variable equivalente
+
+while($i<$total)
+{
+    if(isset($_POST['c'.strval($i)]))
+    {
+        if(($i>=1 and $i<=4) or ($i>=18 and $i<=29) or ($i>=56 and $i<=63) or ($i>=88 and $i<=94) or ($i>=117 and $i<=120))
+        {
+            $armado1_combos = $_POST['c'+String($i)];
+        }
+        if(($i>=5 and $i<=8) or ($i>=30 and $i<=35) or ($i>=95 and $i<=100))
+        {
+            $armado2_ = $_POST['c'+String($i)];
+        }
+        if(($i>=121 and $i<=125) or ($i>=162 and $i<=192))
+        {
+            $bebida = $_POST['c'+String($i)];
+        }
+        else{
+            $contador+=1;
+            array_push($adicionales, ('c'.strvar($i))); //Associative Arrays
+        }  
+    }
+    $i+=1;
+}
+for($x = (intval($contador)+1); $x < 21; $x++)
+{
+    array_push($adicionales, NULL); //echo var_dump($adicionales); //var_dump => TODO & print_r => LISTA LIMPIA
+}
+
+//verificamos la conexion a la base de datos
+if(!$connection)
+        {
+            echo "" . mysql_error();
+        }
+    else
+        {
+            echo "<br>- Si, pero no a lo que querías";
+        }
+        // indicamos el nombre de la base de datos
+        $db = "base";                    //<------ nombre de base de datos entre comillas => DONE
+        //indicamos seleccionar a la base de datos
+        $db = mysqli_select_db($connection,$db);
+
+        if (!$db)
+        {
+        echo "No se ha podido encontrar la Tabla";
+        }
+        else{
+        echo "";
+        }
+        //insertamos datos de registro al mysql xamp, indicando el nombre de la tabla y sus atributos
+
+        // PRIMERO formulario_orden (IMPRIMIR)
+        $instrucction_SQL1 = "INSERT INTO formulario_orden( id_formulario , nombre , apellido , observaciones , n_de_mesa ) 
+                                VALUES ( '$id_formulario','$nombre','$apellido','$observaciones', '$n_de_mesa')";
+        /*
+        echo "<br>";
+        echo "<br>".$instrucction_SQL1; 
+        echo "<br>";        
+        */ 
+        // SEGUNDO pedido_menu (IMPRIMIR)
+        $instrucction_SQL2 = "INSERT INTO pedido_menu( id_formulario , armado1_combos , armado2_ , bebida ) 
+                                VALUES ( '$id_formulario','$armado1_combos','$armado2_','$bebida')"; 
+        /*
+        echo "<br>".$instrucction_SQL2;  
+        echo "<br>";
+        */
+        // TERCERO tabla_adicionales (IMPRIMIR)
+        $instrucction_SQL3 = "INSERT INTO tabla_adicionales( id_formulario , adic1 , adic2 , adic3 , adic4 , adic5 , adic6 , adic7 , adic8 , adic9 , adic10 , adic11 , adic12 , adic13 , adic14 , adic15 , adic16 , adic17 , adic18 , adic19 , adic20)
+                                VALUES ( '$id_formulario','$adicionales[0]','$adicionales[1]','$adicionales[2]','$adicionales[3]','$adicionales[4]','$adicionales[5]','$adicionales[6]','$adicionales[7]','$adicionales[8]','$adicionales[9]','$adicionales[10]','$adicionales[11]','$adicionales[12]','$adicionales[13]','$adicionales[14]','$adicionales[15]','$adicionales[16]','$adicionales[17]','$adicionales[18]','$adicionales[19]')"; 
+        /*
+        echo "<br>".$instrucction_SQL3;
+        echo "<br>";
+        */
+
+        //envio resultado de tablas y genero las relevantes
+        $resultado1 = mysqli_query($connection,$instrucction_SQL1);
+        $resultado2 = mysqli_query($connection,$instrucction_SQL2); //con nuevos valores, retorna true
+        $resultado3 = mysqli_query($connection,$instrucction_SQL3);
+        
+//cerramos conexion con db
+mysqli_close( $connection );
+?>
 
 </html>
